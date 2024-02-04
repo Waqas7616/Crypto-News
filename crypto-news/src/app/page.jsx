@@ -1,9 +1,10 @@
 
-// import Image from "next/image";
+
 
 import Button from "./components/button/Button";
 import LatestNews from "./components/latestNews/LatestNews";
 import Navbar from "./components/navbar/Navbar";
+import BlogCard from "./components/blogCard/BlogCard";
 
 export default function Home() {
   return (
@@ -34,9 +35,13 @@ export default function Home() {
           <div className="maindetails w-[25%] mt-5">
             <LatestNews />
           </div>
-          <div className="blog w-[50%]">
-            wjkadjfkaj
+          <div className="blog w-[50%] px-5">
+            <BlogCard />
           </div>
+          <div className="third w-[25%] bg-red">
+            akdfkjdafk
+          </div>
+
         </div>
       </div>
     </>

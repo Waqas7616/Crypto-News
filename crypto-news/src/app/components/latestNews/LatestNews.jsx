@@ -6,7 +6,7 @@ function LatestNews() {
         <div>
 
 
-            <div class="flex gap-x-3">
+            <div class="flex ">
                 <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-gray-700">
                     <div class="relative z-10 w-7 h-7 flex justify-center items-center">
                         <div class="w-2 h-2 rounded-full bg-blue dark:bg-gray-600"></div>
@@ -28,8 +28,8 @@ function LatestNews() {
     return (
 
         <div className="latestNews relative  h-[80vh] overflow-auto">
-            <h2>Latest News</h2>
-            <p>Hot feeds everyday</p>
+            <h2 className='text-blackColor text-[24px] font-[500]'>Latest News</h2>
+            <p className='text-lightBlack font-[400] text-[16px]'>Hot feeds everyday</p>
             {repeatedNews}
         </div>
 
