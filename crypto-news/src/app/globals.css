@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* HOMEPAGE STYLES */
+
+/* SCROLLBAR  */
+.latestNews::-webkit-scrollbar {
+    width: 3px;
+}
+
+.latestNews::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 10px;
+    width: 10px !important;
+}
+
+.latestNews::-webkit-scrollbar-track {
+    background-color: #D2D2D2;
+    margin: 2px !important;
+}
