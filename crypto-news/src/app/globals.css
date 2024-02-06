@@ -20,3 +20,39 @@
     background-color: #D2D2D2;
     margin: 2px !important;
 }
+
+.press-release::-webkit-scrollbar {
+    width: 40%;
+    margin: auto !important;
+    height: 4px;
+}
+
+.press-release::-webkit-scrollbar-thumb {
+    background-color: #2196F3;
+    border-radius: 10px;
+}
+
+.press-release::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.tab::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #EEEEEE;
+}
+
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #2196F3;
+    border-radius: 2px;
+}

@@ -27,7 +27,7 @@ function LatestNews() {
     ));
     return (
 
-        <div className="latestNews relative  h-[80vh] overflow-auto">
+        <div className="latestNews relative  h-[90vh] overflow-auto">
             <h2 className='text-blackColor text-[24px] font-[500]'>Latest News</h2>
             <p className='text-lightBlack font-[400] text-[16px]'>Hot feeds everyday</p>
             {repeatedNews}
