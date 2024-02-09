@@ -4,34 +4,34 @@ import Button from '../button/Button'
 function Features() {
     const features = Array.from({ length: 5 }, (_, index) => (
         <div>
-            <h2 className='text-blackColor text-[15px] font-[500]'>
+            <h2 className='text-blackColor text-[15px] font-[500] dark:text-white'>
                 Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem
 
             </h2>
-            <p className="my-3 text-lightBlack font-[500]">Jan 27, 2024</p>
+            <p className="my-3 text-lightBlack font-[500] dark:text-white">Jan 27, 2024</p>
             <hr />
         </div>
     ))
     return (
         <div className='pl-3'>
-            <h2 className='text-blackColor text-[24px] font-[500]'>
+            <h2 className='text-blackColor text-[24px] font-[500] dark:text-blue'>
                 Features
             </h2>
             <hr />
             {features}
 
             <div className="inputsec mt-3">
-                <h2 className="text-blackColor text-[20px] font-[500]">Bitcoin. Blockchain. Web3
+                <h2 className="text-blackColor text-[20px] font-[500] dark:text-white">Bitcoin. Blockchain. Web3
                 </h2>
                 <div className="input flex items-center justify-between mt-2">
-                    <input className='border-b-[1px] border-lightBlack outline-none' type="text" placeholder='Enter your email' />
+                    <input className='border-b-[1px] border-lightBlack outline-none bg-transparent' type="text" placeholder='Enter your email' />
                     <Button text="Sign up" />
                 </div>
                 <div className="check w-full flex items-center gap-2 mt-1">
                     <input id='check' type="checkbox" className='accent-blue' />
-                    <label htmlFor="check" className='text-[12px] text-lightBlack'> CryptoDayX may send me offers and promotions.</label>
+                    <label htmlFor="check" className='text-[12px] text-lightBlack text-[rgba(255,255,255,0.8)]'> CryptoDayX may send me offers and promotions.</label>
                 </div>
-                <p className="mt-3 text-[14px] text-lightBlack">By submitting my information, i agree to the <span className="text-blue underline">Privacy Policy</span>  and <span className="text-blue underline">Terms of Services.</span> </p>
+                <p className="mt-3 text-[14px] text-lightBlack  text-[rgba(255,255,255,0.8)]">By submitting my information, i agree to the <span className="text-blue underline">Privacy Policy</span>  and <span className="text-blue underline">Terms of Services.</span> </p>
             </div>
             <div className="social-icons flex items-center gap-3 mt-3">
                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">

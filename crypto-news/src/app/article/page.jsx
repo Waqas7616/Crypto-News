@@ -31,10 +31,10 @@ function Article() {
 
                     <div className="article-card mt-4 flex flex-col gap-2">
                         <Image src={binance} alt='article' />
-                        <h4 className="article-title text-blackColor font-[500] text-[15px]">
+                        <h4 className="article-title text-blackColor font-[500] text-[15px] dark:text-white">
                             AOFverse Secure $3 Million in Private Funding
                         </h4>
-                        <p className="date text-lightBlack text-[12px]">Aug 23, 2023</p>
+                        <p className="date text-lightBlack text-[12px] dark:text-[rgba(255,255,255,0.8)]">Aug 23, 2023</p>
                     </div>
                     <button className="bg-transparent mt-3 w-2/3  text-blue px-3 py-1 border-blue border-[2px] rounded-md flex items-center justify-between">
                         Next Post <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,17 +44,17 @@ function Article() {
                     </button>
                     <div className="article-card mt-4 flex flex-col gap-2">
                         <Image src={binance} alt='article' />
-                        <h4 className="article-title text-blackColor font-[500] text-[15px]">
+                        <h4 className="article-title text-blackColor font-[500] text-[15px] dark:text-white">
                             AOFverse Secure $3 Million in Private Funding
                         </h4>
-                        <p className="date text-lightBlack text-[12px]">Aug 23, 2023</p>
+                        <p className="date text-lightBlack text-[12px] dark:text-[rgba(255,255,255,0.8)]">Aug 23, 2023</p>
                     </div>
                 </div>
                 <div className=" w-[55%] pr-4">
-                    <h2 className='text-blackColor font-[500] text-[20px]'>
+                    <h2 className='text-blackColor font-[500] text-[20px] dark:text-white '>
                         Daily Active Bitcoin Addresses Hit Yearly Peak, Cross 1M as BTC
                     </h2>
-                    <p className="text-lightBlack mt-2 text-[14px]">
+                    <p className="text-lightBlack mt-2 text-[14px] dark:text-[rgba(255,255,255,0.8)]">
                         Daily active addresses on the Bitcoin network have recently hit a new yearly peak above the 1 million mark
                     </p>
                     <div className="flex items-center justify-between mt-2">
@@ -63,24 +63,24 @@ function Article() {
                                 <Image className='w-full object-cover' src={profile} alt='profile image' />
                             </div>
                             <div className="profile-info">
-                                <p className="text-blackColor font-[500] text-[10px]">Sara Ali</p>
-                                <p className="text-lightBlack text-[10px]">Jan 27,2020 at 6:00am</p>
+                                <p className="text-blackColor font-[500] text-[10px] dark:text-white">Sara Ali</p>
+                                <p className="text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">Jan 27,2020 at 6:00am</p>
                             </div>
                         </div>
                         <div className="view-info flex justify-between gap-2">
-                            <p className="flex items-center gap-1 text-lightBlack text-[10px]">
+                            <p className="flex items-center gap-1 text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">
                                 <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.4038 8.80875C16.7422 7.09743 15.5936 5.61747 14.1001 4.5518C12.6065 3.48612 10.8335 2.88145 9 2.8125C7.16655 2.88145 5.39347 3.48612 3.89993 4.5518C2.40639 5.61747 1.25785 7.09743 0.596255 8.80875C0.551574 8.93234 0.551574 9.06766 0.596255 9.19125C1.25785 10.9026 2.40639 12.3825 3.89993 13.4482C5.39347 14.5139 7.16655 15.1186 9 15.1875C10.8335 15.1186 12.6065 14.5139 14.1001 13.4482C15.5936 12.3825 16.7422 10.9026 17.4038 9.19125C17.4484 9.06766 17.4484 8.93234 17.4038 8.80875ZM9 14.0625C6.01875 14.0625 2.86875 11.8519 1.72688 9C2.86875 6.14812 6.01875 3.9375 9 3.9375C11.9813 3.9375 15.1313 6.14812 16.2731 9C15.1313 11.8519 11.9813 14.0625 9 14.0625Z" fill="#555555" />
                                     <path d="M9 5.625C8.33249 5.625 7.67997 5.82294 7.12495 6.19379C6.56994 6.56464 6.13735 7.09174 5.88191 7.70844C5.62646 8.32514 5.55963 9.00374 5.68985 9.65843C5.82008 10.3131 6.14151 10.9145 6.61352 11.3865C7.08552 11.8585 7.68689 12.1799 8.34157 12.3102C8.99626 12.4404 9.67486 12.3735 10.2916 12.1181C10.9083 11.8626 11.4354 11.4301 11.8062 10.875C12.1771 10.32 12.375 9.66751 12.375 9C12.375 8.10489 12.0194 7.24645 11.3865 6.61351C10.7536 5.98058 9.89511 5.625 9 5.625ZM9 11.25C8.55499 11.25 8.11998 11.118 7.74997 10.8708C7.37996 10.6236 7.09157 10.2722 6.92127 9.86104C6.75098 9.4499 6.70642 8.9975 6.79323 8.56105C6.88005 8.12459 7.09434 7.72368 7.40901 7.40901C7.72368 7.09434 8.12459 6.88005 8.56105 6.79323C8.99751 6.70642 9.4499 6.75097 9.86104 6.92127C10.2722 7.09157 10.6236 7.37996 10.8708 7.74997C11.118 8.11998 11.25 8.55499 11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25Z" fill="#555555" />
                                 </svg>900
                             </p>
-                            <p className="flex items-center gap-1 text-lightBlack text-[10px]">
+                            <p className="flex items-center gap-1 text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">
                                 <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z" stroke="#555555" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z" stroke="#555555" stroke-width="1.6875" stroke-linejoin="round" />
                                 </svg>45
                             </p>
-                            <p className="flex items-center gap-1 text-lightBlack text-[10px]">
+                            <p className="flex items-center gap-1 text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_316_4843)">
                                         <path d="M9 1.5C13.1423 1.5 16.5 4.85775 16.5 9C16.5 13.1423 13.1423 16.5 9 16.5C4.85775 16.5 1.5 13.1423 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5ZM9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3ZM9 4.5C9.1837 4.50002 9.361 4.56747 9.49828 4.68954C9.63556 4.81161 9.72326 4.97981 9.74475 5.16225L9.75 5.25V8.6895L11.7802 10.7198C11.9148 10.8547 11.9929 11.0358 11.9987 11.2263C12.0045 11.4167 11.9376 11.6023 11.8116 11.7452C11.6855 11.8881 11.5098 11.9777 11.3201 11.9958C11.1305 12.0139 10.941 11.9591 10.7902 11.8425L10.7198 11.7802L8.46975 9.53025C8.35318 9.41358 8.27832 9.26175 8.25675 9.09825L8.25 9V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5Z" fill="#555555" />
@@ -240,39 +240,39 @@ function Article() {
                         </div>
                     </div>
                     <Image src={blog} className='w-full mt-3' />
-                    <p className="desc mt-4 text-lightBlack text-[14px]">
+                    <p className="desc mt-4 text-lightBlack text-[14px] dark:text-[rgba(255,255,255,0.8)] ">
                         While Bitcoin mining has come under considerable scrutiny for its environmental impact, it's essential to avoid exaggerating its hazards beyond those posed by traditional solid mineral extraction, such as gold mining. Here's why:
                     </p>
-                    <h6 className="text-blackColor font-[500] text-[15px] mt-4">Scale and Visibility:</h6>
-                    <p className="mt-3 text-lightBlack text-[14px]">Bitcoin mining's environmental impact often garners attention due to its visibility in the digital asset space. However, the scale of gold mining operations globally is vast, often involving massive open-pit mines and extensive chemical processing. While Bitcoin mining's energy consumption is notable, the widespread and visible effects of gold mining on landscapes and ecosystems cannot be underestimated compared to Bitcoin’s.</p>
-                    <h6 className="text-blackColor font-[500] text-[15px] mt-4">Historical Context:</h6>
-                    <p className="mt-3 text-lightBlack text-[14px]">Gold mining has a long history of environmental degradation, spanning centuries and leaving lasting scars on landscapes and communities. In comparison, Bitcoin mining is a relatively nascent industry, and its environmental challenges are still evolving. While it's crucial to address the environmental impact of Bitcoin mining, it's equally important to contextualize it within the broader history and scale of resource extraction.</p>
-                    <h6 className="text-blackColor font-[500] text-[15px] mt-4">Innovation and Mitigation Efforts:</h6>
-                    <p className="mt-3 text-lightBlack text-[14px]">Both Bitcoin and gold mining industries are exploring innovations and mitigation strategies to reduce their environmental footprints. From the adoption of renewable energy sources in Bitcoin mining operations to the development of more sustainable mining practices in the gold industry, efforts are underway to address environmental concerns across both sectors. As technology advances, opportunities for reducing environmental impact will continue to emerge in both industries.
+                    <h6 className="text-blackColor font-[500] text-[15px] mt-4 dark:text-white">Scale and Visibility:</h6>
+                    <p className="mt-3 text-lightBlack text-[14px] dark:text-[rgba(255,255,255,0.8)]">Bitcoin mining's environmental impact often garners attention due to its visibility in the digital asset space. However, the scale of gold mining operations globally is vast, often involving massive open-pit mines and extensive chemical processing. While Bitcoin mining's energy consumption is notable, the widespread and visible effects of gold mining on landscapes and ecosystems cannot be underestimated compared to Bitcoin’s.</p>
+                    <h6 className="text-blackColor font-[500] text-[15px] mt-4 dark:text-white">Historical Context:</h6>
+                    <p className="mt-3 text-lightBlack text-[14px] dark:text-[rgba(255,255,255,0.8)]">Gold mining has a long history of environmental degradation, spanning centuries and leaving lasting scars on landscapes and communities. In comparison, Bitcoin mining is a relatively nascent industry, and its environmental challenges are still evolving. While it's crucial to address the environmental impact of Bitcoin mining, it's equally important to contextualize it within the broader history and scale of resource extraction.</p>
+                    <h6 className="text-blackColor font-[500] text-[15px] mt-4 dark:text-white">Innovation and Mitigation Efforts:</h6>
+                    <p className="mt-3 text-lightBlack text-[14px] dark:text-[rgba(255,255,255,0.8)]">Both Bitcoin and gold mining industries are exploring innovations and mitigation strategies to reduce their environmental footprints. From the adoption of renewable energy sources in Bitcoin mining operations to the development of more sustainable mining practices in the gold industry, efforts are underway to address environmental concerns across both sectors. As technology advances, opportunities for reducing environmental impact will continue to emerge in both industries.
                         While scrutiny of Bitcoin mining's environmental impact is warranted, it should not be exaggerated beyond that of solid minerals such as gold. Both industries pose environmental challenges that require attention and action. By fostering equitable scrutiny and promoting sustainability across all resource extraction sectors, we can work towards a more balanced and responsible approach to managing our planet's natural resources.</p>
 
                     {/* POST REACTION  */}
                     <h2 className="text-blackColor font-[500] text-[20px] mt-8">Post Reactions</h2>
 
                     <div className="reaction-buttons flex gap-5 mt-4 items-center">
-                        <button className='relative'>
+                        <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
                             <svg width="50" height="50" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.83577 35C0.83577 16.1316 16.1316 0.83577 35 0.83577C53.8684 0.83577 69.1642 16.1316 69.1642 35C69.1642 53.8684 53.8684 69.1642 35 69.1642C16.1316 69.1642 0.83577 53.8684 0.83577 35Z" fill="#D53025" stroke="#333333" stroke-width="1.67153" />
                                 <path d="M21.2914 41.8226L28.1912 41.74C29.3259 41.7234 30.0601 42.913 29.5262 43.9042C28.5583 45.7133 27.2902 48.4062 26.631 51.124C26.2973 52.4952 27.3235 53.8169 28.7502 53.8169H29.084C30.3438 53.8169 31.395 53.0652 31.7788 51.95C32.5881 49.5875 34.2818 46.7293 36.1006 44.7633L37.0434 43.7142C38.2615 42.3678 38.9207 40.6165 38.904 38.8075L38.7204 23.4676C38.6954 21.0968 36.7347 19.2052 34.3402 19.2299L30.227 19.2795L27.8575 19.3043L23.6441 19.3538C21.5166 19.3786 19.7228 20.9234 19.4141 23.005L17.2699 37.2462C16.9028 39.6831 18.8134 41.8556 21.2914 41.8226Z" fill="white" />
                                 <path d="M41.2738 39.1385L41.0652 21.6179C41.0485 20.2632 42.1498 19.148 43.5181 19.1315L50.0592 19.0571C51.4275 19.0406 52.5538 20.131 52.5705 21.4857L52.7791 39.0064C52.7958 40.3611 51.6945 41.4763 50.3262 41.4928L43.7851 41.5671C42.4084 41.5837 41.2904 40.4933 41.2738 39.1385ZM44.9531 22.7826C44.9615 23.8069 45.8125 24.633 46.847 24.6165C47.8816 24.6082 48.7159 23.7656 48.6993 22.7413C48.6909 21.717 47.8399 20.891 46.8053 20.9075C45.7708 20.9157 44.9448 21.7583 44.9531 22.7826Z" fill="white" />
                             </svg>
-                            <p className="text-lightBlack text-[12px]">Dislike</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white">Dislike</p>
                         </button>
-                        <button className='relative'>
+                        <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
                             <svg width="50" height="50" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M69.1739 35C69.1739 53.8737 53.8737 69.1739 35 69.1739C16.1263 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1263 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 35Z" fill="white" stroke="#333333" stroke-width="1.65211" />
                                 <path d="M43.2931 19.0909H42.4838C39.9057 19.0826 37.4278 20.0821 35.5839 21.8664C35.2585 22.1803 34.7412 22.1803 34.4158 21.8664C32.572 20.0821 30.094 19.0826 27.516 19.0909H26.7067C20.2239 19.1157 14.9844 24.3198 14.9844 30.7383C14.9844 35.2072 16.9284 39.4532 20.3241 42.3939L34.9999 55.1234L49.6757 42.3939C53.0714 39.4532 55.0154 35.199 55.0154 30.7383C55.0154 24.3115 49.7758 19.1074 43.2931 19.0909Z" fill="#D53025" />
                             </svg>
-                            <p className="text-lightBlack text-[12px]">Love</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white">Love</p>
                         </button>
-                        <button className='relative'>
+                        <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
                             <svg width="50" height="50" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M69.1739 34.9999C69.1739 53.8736 53.8737 69.1737 35 69.1737C16.1263 69.1737 0.826056 53.8736 0.826056 34.9999C0.826056 16.1262 16.1263 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 34.9999Z" fill="#FEDF06" stroke="#333333" stroke-width="1.65211" />
@@ -283,9 +283,9 @@ function Article() {
                                 <path d="M49.2238 20.4446C49.2238 20.4446 46.0117 18.0325 41.8984 18.9164" stroke="#3C3C3B" stroke-width="3.05393" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M22.7099 39.6255C21.8338 38.5103 20.7742 36.4121 20.7742 36.4121C20.7742 36.4121 19.7146 38.5103 18.8386 39.6255C17.1699 41.7402 18.6801 43.7392 20.7742 43.7392C22.8684 43.7392 24.3785 41.7402 22.7099 39.6255Z" fill="#C4E6F7" />
                             </svg>
-                            <p className="text-lightBlack text-[12px]">Sad</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white dark:text-white">Sad</p>
                         </button>
-                        <button className='relative'>
+                        <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
                             <svg width="50" height="50" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M69.1739 35C69.1739 53.8737 53.8737 69.1739 35 69.1739C16.1263 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1263 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 35Z" fill="#FEDF06" stroke="#333333" stroke-width="1.65211" />
@@ -295,9 +295,9 @@ function Article() {
                                 <path d="M41.7236 29.6709C40.9727 27.3497 41.8988 24.9789 43.7928 24.3841C45.6867 23.7894 47.8226 25.1854 48.5735 27.5066C49.3243 29.8278 48.3982 32.1986 46.5043 32.7934C44.6104 33.3881 42.4745 31.9921 41.7236 29.6709Z" fill="#3C3C3B" />
                                 <path d="M49.5422 18.718C49.5422 18.718 46.33 16.3059 42.2168 17.1898" stroke="#3C3C3B" stroke-width="3.05393" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <p className="text-lightBlack text-[12px]">Wow</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white">Wow</p>
                         </button>
-                        <button className='relative'>
+                        <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
                             <svg width="50" height="50" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M69.1739 35C69.1739 53.8737 53.8738 69.1739 35 69.1739C16.1263 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1263 0.826056 35 0.826056C53.8738 0.826056 69.1739 16.1262 69.1739 35Z" fill="url(#paint0_linear_206_7985)" stroke="#333333" stroke-width="1.65211" />
@@ -313,9 +313,9 @@ function Article() {
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            <p className="text-lightBlack text-[12px]">Angry</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white">Angry</p>
                         </button>
-                        <button className='relative'>
+                        <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
                             <svg width="50" height="50" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M69.1739 35C69.1739 53.8737 53.8737 69.1739 35 69.1739C16.1262 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1262 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 35Z" fill="#FEDF06" stroke="#333333" stroke-width="1.65211" />
@@ -326,7 +326,7 @@ function Article() {
                                 <path d="M44.2617 26.0702L53.773 22.543" stroke="#3C3C3B" stroke-width="3.05393" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M44.2617 26.2021L53.773 29.7294" stroke="#3C3C3B" stroke-width="3.05393" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <p className="text-lightBlack text-[12px]">Funny</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white">Funny</p>
                         </button>
                     </div>
 
@@ -346,11 +346,11 @@ function Article() {
                     {/* FORM */}
                     <div className="form mt-8">
                         <div className="inputFields gap-5 flex items-center">
-                            <input className='flex-1 outline-none border-[#dddddd] text-lightBlack border-[1px] py-3 px-4 rounded-[8px]' type="text" placeholder='Name' />
-                            <input className='flex-1 outline-none border-[#dddddd] text-lightBlack border-[1px] py-3 px-4 rounded-[8px]' type="email" placeholder='Email' />
+                            <input className='flex-1 outline-none border-[#dddddd] text-lightBlack border-[1px] py-3 px-4 rounded-[8px] dark:bg-transparent' type="text" placeholder='Name' />
+                            <input className='flex-1 outline-none border-[#dddddd] text-lightBlack border-[1px] py-3 px-4 rounded-[8px] dark:bg-transparent' type="email" placeholder='Email' />
                         </div>
                         <div className="textarea relative mt-3 border-[#dddddd] text-lightBlack border-[1px] py-3 px-4 rounded-[8px]">
-                            <textarea className='w-full h-full outline-none' name="" id="" placeholder='Add Comment'></textarea>
+                            <textarea className='w-full h-full outline-none dark:bg-transparent' name="" id="" placeholder='Add Comment'></textarea>
                             <button className="bg-blue text-white text-right px-3 py-1 block rounded-[8px] ml-auto">Post</button>
                         </div>
                     </div>
@@ -359,31 +359,34 @@ function Article() {
                 <div className=" w-[25%]">
                     <Image src={akion} />
                     <Image src={ad} className='mt-5' />
-                    <h2 className="text-blackColor mt-8 font-[500] text-[20px]">Related Posts</h2>
+                    <h2 className="text-blackColor mt-8 font-[500] text-[20px] dark:text-white">Related Posts</h2>
                     <div className="post-card mt-3">
                         <div className="post-banner relative">
                             <Image className='w-full' src={post} />
                             <p className="absolute bg-[#14C885] rounded-[4px] top-2 left-2 text-white text-[10px] px-2 py-1">Cryptocurrency</p>
                         </div>
-                        <h4 className="mt-4 text-blackColor font-[500] text-[14px]">From Shiba Inu to BabyDoge, Top 5 Altcoins Under $0.0001 to Watch</h4>
-                        <p className="mt-1 text-lightBlack text-[12px] font-semibold">Aug 23, 2023</p>
+                        <h4 className="mt-4 text-blackColor font-[500] text-[14px] dark:text-white">From Shiba Inu to BabyDoge, Top 5 Altcoins Under $0.0001 to Watch</h4>
+                        <p className="mt-1 text-lightBlack text-[12px] font-semibold dark:text-[rgba(255,255,255,0.8)]">Aug 23, 2023</p>
                     </div>
+
                     <div className="post-card mt-3">
                         <div className="post-banner relative">
                             <Image className='w-full' src={post} />
                             <p className="absolute bg-[#14C885] rounded-[4px] top-2 left-2 text-white text-[10px] px-2 py-1">Cryptocurrency</p>
                         </div>
-                        <h4 className="mt-4 text-blackColor font-[500] text-[14px]">From Shiba Inu to BabyDoge, Top 5 Altcoins Under $0.0001 to Watch</h4>
-                        <p className="mt-1 text-lightBlack text-[12px] font-semibold">Aug 23, 2023</p>
+                        <h4 className="mt-4 text-blackColor font-[500] text-[14px] dark:text-white">From Shiba Inu to BabyDoge, Top 5 Altcoins Under $0.0001 to Watch</h4>
+                        <p className="mt-1 text-lightBlack text-[12px] font-semibold dark:text-[rgba(255,255,255,0.8)]">Aug 23, 2023</p>
                     </div>
+
                     <div className="post-card mt-3">
                         <div className="post-banner relative">
                             <Image className='w-full' src={post} />
                             <p className="absolute bg-[#14C885] rounded-[4px] top-2 left-2 text-white text-[10px] px-2 py-1">Cryptocurrency</p>
                         </div>
-                        <h4 className="mt-4 text-blackColor font-[500] text-[14px]">From Shiba Inu to BabyDoge, Top 5 Altcoins Under $0.0001 to Watch</h4>
-                        <p className="mt-1 text-lightBlack text-[12px] font-semibold">Aug 23, 2023</p>
+                        <h4 className="mt-4 text-blackColor font-[500] text-[14px] dark:text-white">From Shiba Inu to BabyDoge, Top 5 Altcoins Under $0.0001 to Watch</h4>
+                        <p className="mt-1 text-lightBlack text-[12px] font-semibold dark:text-[rgba(255,255,255,0.8)]">Aug 23, 2023</p>
                     </div>
+
 
                 </div>
             </div>
