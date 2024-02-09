@@ -12,7 +12,7 @@ import Features from '../components/features/Features';
 function page() {
     return (
         <div>
-            <Navbar />
+
             <div className='w-11/12 m-auto mt-5 flex gap-4'>
                 <div className='w-3/4'>
                     <h2 className="title text-blackColor font-[500] text-[20px]">BlockChain</h2>

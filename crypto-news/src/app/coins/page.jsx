@@ -82,7 +82,7 @@ function Coins() {
     // }, [])
     return (
         <div>
-            <Navbar />
+
             <div className='w-11/12 m-auto'>
                 <h2 className='mt-3 text-blackColor font-[500] text-[20px]'>Top Fallers</h2>
                 <div className="tabs flex items-center  mt-3">

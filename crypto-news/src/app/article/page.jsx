@@ -19,7 +19,7 @@ function Article() {
     }
     return (
         <div>
-            <Navbar />
+
             <div className="w-11/12 flex gap-3 mt-5 m-auto">
                 <div className=" w-[20%]">
                     <button className="bg-transparent w-2/3  text-blue px-3 py-1 border-blue border-[2px] rounded-md flex items-center justify-between">
