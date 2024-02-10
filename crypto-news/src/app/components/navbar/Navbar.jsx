@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/app/images/Logo.svg'
+import otherLogo from '@/app/images/whitelogo.svg'
 import Button from '../button/Button';
 
 function Navbar({ isNightMode, toggleMode }) {
@@ -81,8 +83,8 @@ function Navbar({ isNightMode, toggleMode }) {
                     {
                         coinData.map((coin) => (
                             <div className="flex gap-1 items-center" key={coin.id}>
-                                <h4 className='text-[15px] text-[#333333]'>{coin.abb}</h4>
-                                <p className='text-[12px] text-[#333333]'>Price: <span className='text-[#2196F3]'>{coin.price}</span></p>
+                                <h4 className='text-[15px] text-[#333333] dark:text-white'>{coin.abb}</h4>
+                                <p className='text-[12px] text-[#333333] dark:text-white'>Price: <span className='text-[#2196F3]'>{coin.price}</span></p>
                                 <p className='text-[12px] text-[#E04957]'>({coin.change})</p>
                             </div>
                         ))
@@ -92,7 +94,7 @@ function Navbar({ isNightMode, toggleMode }) {
                 <div className="nightToggle flex items-center">
                     <div className="languages">
 
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black bg-[transparent]  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">English <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black bg-[transparent]  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:text-white" type="button">English <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                         </svg>
                         </button>
@@ -125,20 +127,20 @@ function Navbar({ isNightMode, toggleMode }) {
 
                 </div>
             </div>
-            <hr />
+            <hr className='dark:text-blue' />
             <div className="m-auto my-2 flex items-center justify-between w-11/12 ">
                 <div className="logo">
-                    <Image src={logo} alt='logo' />
+                    <Image src={isNightMode ? otherLogo : logo} alt='logo' />
                 </div>
                 <div className="menu flex items-center justify-between gap-3">
                     <ul className='flex items-center gap-3'>
-                        <li className='text-blackColor tex-[24px] font-[500]'>Home</li>
-                        <li className='text-blackColor tex-[24px] font-[500]'>Blockchain</li>
-                        <li className='text-blackColor tex-[24px] font-[500]'>Cryptocurrency</li>
-                        <li className='text-blackColor tex-[24px] font-[500]'>NFTs</li>
-                        <li className='text-blackColor tex-[24px] font-[500]'>Resources</li>
-                        <li className='text-blackColor tex-[24px] font-[500]'>Developers</li>
-                        <li className='text-blackColor tex-[24px] font-[500]'>More</li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href="/">Home</Link></li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href='/blockchain'>Blockchain</Link></li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href='/coins'>Cryptocurrency</Link></li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href='/article'>NFTs</Link></li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>Resources</li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>Developers</li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>More</li>
                     </ul>
                     <Button text='Sign in' />
                 </div>

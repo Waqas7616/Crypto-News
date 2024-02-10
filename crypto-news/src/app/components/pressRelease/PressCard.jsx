@@ -12,11 +12,11 @@ function PressCard() {
         </div>
         <div className="coin-detail flex flex-col gap-1">
           <p className="text-red text-[12px]">Press Release</p>
-          <h6 className='text-blackColor text-[14px] font-[500]'>AOFverse Secure $3 Million in Private Funding Round Led by Animoca...</h6>
+          <h6 className='text-blackColor text-[14px] font-[500] dark:text-white'>AOFverse Secure $3 Million in Private Funding Round Led by Animoca...</h6>
           <div className="flex justify-between items-center">
-            <p className='text-lightBlack text-[10px]'>Aug 23, 2024</p>
-            <p className='text-lightBlack text-[10px]'>374 views / 0 likes</p>
-            <p className='text-lightBlack text-[10px]'>7 mnt read time</p>
+            <p className='text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]'>Aug 23, 2024</p>
+            <p className='text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]'>374 views / 0 likes</p>
+            <p className='text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]'>7 mnt read time</p>
           </div>
         </div>
       </div>
