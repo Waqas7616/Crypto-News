@@ -82,18 +82,18 @@ function Coins() {
     // }, [])
     return (
         <div>
-            <Navbar />
+
             <div className='w-11/12 m-auto'>
-                <h2 className='mt-3 text-blackColor font-[500] text-[20px]'>Top Fallers</h2>
+                <h2 className='mt-3 text-blackColor font-[500] text-[20px] dark:text-white'>Top Fallers</h2>
                 <div className="tabs flex items-center  mt-3">
                     <div className={tabs === 0 ? "tab pr-3 relative active" : "tab pr-3 relative"} onClick={() => setTabs(0)}>
-                        <h5 className={tabs === 0 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer"}>Top Fallers</h5>
+                        <h5 className={tabs === 0 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer dark:text-white"}>Top Fallers</h5>
                     </div>
                     <div className={tabs === 1 ? "tab pr-3 relative active" : "tab pr-3 relative"} onClick={() => setTabs(1)}>
-                        <h5 className={tabs === 1 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer"}>Top Gainers</h5>
+                        <h5 className={tabs === 1 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer dark:text-white"}>Top Gainers</h5>
                     </div>
                     <div className={tabs === 2 ? "tab pr-3 relative active" : "tab pr-3 relative"} onClick={() => setTabs(2)}>
-                        <h5 className={tabs === 2 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer"}>All Coins</h5>
+                        <h5 className={tabs === 2 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer dark:text-white"}>All Coins</h5>
                     </div>
                 </div>
                 <div className="tab-content">
@@ -101,8 +101,8 @@ function Coins() {
 
 
                         <div class="relative overflow-x-auto mt-3">
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-white">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-[#212121] dark:text-white">
                                     <tr>
                                         <th scope="col" class="px-6 py-3">
                                             Cryptocurrency
@@ -126,10 +126,10 @@ function Coins() {
                                 </thead>
                                 <tbody>
                                     {coinData.map((coin) => (
-                                        <tr key={coin.id} class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <tr key={coin.id} class="bg-white border-b dark:bg-[#212121] dark:border-gray-700">
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div className="flex items-center gap-3">
-                                                    <p>{coin.id}</p>
+                                                    <p className='text-[14px] text-white'>{coin.id}</p>
                                                     <Image src={coin.image} alt='coin' />
                                                     <p className="text-blue">{coin.name}</p>
                                                 </div>

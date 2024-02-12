@@ -2,19 +2,25 @@ import React from 'react'
 import PressCard from './PressCard'
 
 function PressRelease() {
-    
-    
+
+
     return (
-        <div className='w-full flex gap-5 overflow-x-scroll press-release'>
-            <PressCard/>
-            <PressCard/>
-            <PressCard/>
-            <PressCard/>
-            <PressCard/>
-            <PressCard/>
-            <PressCard/>
-            <PressCard/>
-        </div>
+        <>
+            <h2 className='text-blackColor text-[24px] font-[500] dark:text-blue mt-12'>
+                Sponsored Press Releases
+            </h2>
+            <div className='w-full flex gap-5 overflow-x-scroll press-release'>
+
+                <PressCard />
+                <PressCard />
+                <PressCard />
+                <PressCard />
+                <PressCard />
+                <PressCard />
+                <PressCard />
+                <PressCard />
+            </div>
+        </>
     )
 }
 

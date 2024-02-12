@@ -102,19 +102,22 @@ function NFTCard() {
     ]
     return (
         <div>
-            <div className='flex flex-wrap gap-3 items-center'>
+            <h2 className='text-blackColor text-[24px] font-[500]  dark:text-blue'>
+                News By Catagories
+            </h2>
+            <div className='flex flex-wrap gap-3 items-center mt-3'>
                 {data.slice(0, display).map((nft) => (
                     <div className='w-[22%]' key={nft.id}>
-                        <h3>{nft.title}</h3>
-                        <hr />
+                        <h3 className='text-blackColor dark:text-white my-2'>{nft.title}</h3>
+                        <hr className='mb-3'/>
                         <div className="preview-image">
                             <Image className='w-full object-cover' src={nft.image} alt='blogImage' />
                         </div>
-                        <p>{nft.desc1}</p>
-                        <hr />
-                        <p>{nft.desc2}</p>
-                        <hr />
-                        <p>{nft.desc3}</p>
+                        <p className='text-[14px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2'>{nft.desc1}</p>
+                        <hr className='mb-3'/>
+                        <p className='text-[14px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2'>{nft.desc2}</p>
+                        <hr className='mb-3'/>
+                        <p className='text-[14px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2'>{nft.desc3}</p>
                     </div>
                 ))}
             </div>
