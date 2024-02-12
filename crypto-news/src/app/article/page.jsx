@@ -283,7 +283,7 @@ function Article() {
                                 <path d="M49.2238 20.4446C49.2238 20.4446 46.0117 18.0325 41.8984 18.9164" stroke="#3C3C3B" stroke-width="3.05393" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M22.7099 39.6255C21.8338 38.5103 20.7742 36.4121 20.7742 36.4121C20.7742 36.4121 19.7146 38.5103 18.8386 39.6255C17.1699 41.7402 18.6801 43.7392 20.7742 43.7392C22.8684 43.7392 24.3785 41.7402 22.7099 39.6255Z" fill="#C4E6F7" />
                             </svg>
-                            <p className="text-lightBlack text-[12px] dark:text-white dark:text-white">Sad</p>
+                            <p className="text-lightBlack text-[12px] dark:text-white ">Sad</p>
                         </button>
                         <button className='relative '>
                             <div className="absolute rounded-full text-[10px] w-[20px] h-[20px] flex justify-center items-center bg-blue text-white top-[-5px] right-0">56</div>
@@ -1228,7 +1228,7 @@ function Article() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 
