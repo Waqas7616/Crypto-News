@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../components/navbar/Navbar';
 import Image from 'next/image';
 import coin from '@/app/images/Cryptocurrency.png'
+import Link from 'next/link';
 function Coins() {
     const [tabs, setTabs] = useState(0)
     const coinData = [
@@ -249,7 +250,8 @@ function Coins() {
                                             <div className="flex items-center gap-3">
                                                 <p>{coin.id}</p>
                                                 <Image src={coin.image} alt='coin' />
-                                                <p className="text-blue">{coin.name}</p>
+                                                <Link href='/coindetail'><p className="text-blue" >{coin.name}</p></Link>
+
                                             </div>
                                         </th>
                                         <td class="px-6 py-4">

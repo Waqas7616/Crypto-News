@@ -77,7 +77,7 @@ function Navbar({ isNightMode, toggleMode }) {
 
 
     return (
-        <div className="navbar ">
+        <div className="navbar hidden md:block">
             <div className='w-11/12 m-auto mb-2 flex justify-between items-center'>
                 <div className="coins flex items-center gap-2">
                     {

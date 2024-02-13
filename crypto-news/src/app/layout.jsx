@@ -5,6 +5,7 @@ import Button from "./components/button/Button";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 import blackLogo from '@/app/images/Logo.svg'
+import MobileMenu from "./components/mobileNavbar/MobileMenu";
 
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -23,8 +24,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${isNightMode ? 'dark' : 'light'} `}>
 
       <body className="dark:bg-[#212121]">
+        <MobileMenu isNightMode={isNightMode} toggleMode={toggleMode} />
         <Navbar isNightMode={isNightMode} toggleMode={toggleMode} />
-        <div className="searchSection flex items-center justify-between mt-5 w-11/12 m-auto">
+        <div className=" hidden md:flex searchSection  items-center justify-between mt-5 w-11/12 m-auto">
           <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white">Sponsored: <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 4H23.5V16H5.5V4ZM14.5 7C15.2956 7 16.0587 7.31607 16.6213 7.87868C17.1839 8.44129 17.5 9.20435 17.5 10C17.5 10.7956 17.1839 11.5587 16.6213 12.1213C16.0587 12.6839 15.2956 13 14.5 13C13.7044 13 12.9413 12.6839 12.3787 12.1213C11.8161 11.5587 11.5 10.7956 11.5 10C11.5 9.20435 11.8161 8.44129 12.3787 7.87868C12.9413 7.31607 13.7044 7 14.5 7ZM9.5 6C9.5 6.53043 9.28929 7.03914 8.91421 7.41421C8.53914 7.78929 8.03043 8 7.5 8V12C8.03043 12 8.53914 12.2107 8.91421 12.5858C9.28929 12.9609 9.5 13.4696 9.5 14H19.5C19.5 13.4696 19.7107 12.9609 20.0858 12.5858C20.4609 12.2107 20.9696 12 21.5 12V8C20.9696 8 20.4609 7.78929 20.0858 7.41421C19.7107 7.03914 19.5 6.53043 19.5 6H9.5ZM1.5 8H3.5V18H19.5V20H1.5V8Z" fill="#2196F3" />
           </svg></span>Traders are buying <span className="font-[500]">Meme Kombat.</span> <span className="text-blue">Can This Stake to Earn Meme Coin with Utility Explode?</span> </h3>
