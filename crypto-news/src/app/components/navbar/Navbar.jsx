@@ -76,7 +76,7 @@ function Navbar({ isNightMode, toggleMode }) {
   // }, [])
 
   return (
-    <div className="navbar w-100">
+    <div className="navbar w-100 hidden md:block">
       <div className="w-11/12 m-auto mb-2 flex justify-between items-center">
         <div className="coins flex items-center gap-2">
           {coinData.map((coin) => (
@@ -87,7 +87,9 @@ function Navbar({ isNightMode, toggleMode }) {
               <p className="text-[9px] lg:text-[12px] 2xl:text-[15px] text-[#333333] dark:text-white">
                 Price: <span className="text-[#2196F3]">{coin.price}</span>
               </p>
-              <p className="text-[9px] lg:text-[12px] 2xl:text-[15px] text-[#E04957]">({coin.change})</p>
+              <p className="text-[9px] lg:text-[12px] 2xl:text-[15px] text-[#E04957]">
+                ({coin.change})
+              </p>
             </div>
           ))}
         </div>
