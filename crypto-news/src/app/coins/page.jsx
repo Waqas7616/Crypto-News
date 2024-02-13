@@ -101,9 +101,9 @@ function Coins() {
                     <div className={tabs === 0 ? "content1 block" : "content1 hidden"}>
 
 
-                        <div class="relative overflow-x-auto mt-3">
+                        <div class=" overflow-x-auto mt-5 ">
                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-white">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-[#212121] dark:text-white">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-[#0b0b0b] dark:text-white">
                                     <tr>
                                         <th scope="col" class="px-6 py-3">
                                             Cryptocurrency
@@ -127,7 +127,7 @@ function Coins() {
                                 </thead>
                                 <tbody>
                                     {coinData.map((coin) => (
-                                        <tr key={coin.id} class="bg-white border-b dark:bg-[#212121] dark:border-gray-700">
+                                        <tr key={coin.id} class="bg-white border-b dark:bg-[#0b0b0b] dark:border-gray-700">
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div className="flex items-center gap-3">
                                                     <p className='text-[14px] text-white'>{coin.id}</p>

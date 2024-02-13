@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${isNightMode ? 'dark' : 'light'} `}>
 
-      <body className="dark:bg-[#212121]">
+      <body className="dark:bg-[#0b0b0b]">
         <MobileMenu isNightMode={isNightMode} toggleMode={toggleMode} />
         <Navbar isNightMode={isNightMode} toggleMode={toggleMode} />
         <div className=" hidden md:flex searchSection  items-center justify-between mt-5 w-11/12 m-auto">

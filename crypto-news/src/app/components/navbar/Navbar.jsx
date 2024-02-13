@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/app/images/Logo.svg'
@@ -7,6 +8,7 @@ import otherLogo from '@/app/images/whitelogo.svg'
 import Button from '../button/Button';
 
 function Navbar({ isNightMode, toggleMode }) {
+    const [languages, setLanguages] = useState(false)
     const coinData = [
         {
             id: 1,
@@ -91,33 +93,37 @@ function Navbar({ isNightMode, toggleMode }) {
                     }
 
                 </div>
-                <div className="nightToggle flex items-center">
-                    <div className="languages">
+                <div className="nightToggle flex  items-center relative">
+                    <div className="languages flex flex-col  ">
 
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black bg-[transparent]  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:text-white" type="button">English <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <button onClick={() => setLanguages(!languages)} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black bg-[transparent]  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:text-white" type="button">English <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
                         </svg>
                         </button>
 
                         {/* <!-- Dropdown menu --> */}
-                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                                </li>
-                            </ul>
-                        </div>
+
+                        {languages &&
+                            <div id="dropdown" className="z-10 absolute bottom-[-400%] left-0  bg-blue divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Arabic</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hindi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Latin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
 
                     </div>
+
                     <button onClick={toggleMode}>{isNightMode ? <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z" stroke="white" stroke-width="2" />
                         <path d="M12 5V3M12 21V19M16.95 7.05L18.364 5.636M5.636 18.364L7.05 16.95M19 12H21M3 12H5M16.95 16.95L18.364 18.364M5.636 5.636L7.05 7.05" stroke="white" stroke-width="2" stroke-linecap="round" />
@@ -132,18 +138,170 @@ function Navbar({ isNightMode, toggleMode }) {
                 <div className="logo">
                     <Image src={isNightMode ? otherLogo : logo} alt='logo' />
                 </div>
-                <div className="menu flex items-center justify-between gap-3">
+                <Menu as='div' className="menu flex items-center justify-between gap-3 relative">
                     <ul className='flex items-center gap-3'>
                         <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href="/">Home</Link></li>
                         <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href='/blockchain'>Blockchain</Link></li>
                         <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href='/coins'>Cryptocurrency</Link></li>
                         <li className='text-blackColor tex-[24px] font-[500] dark:text-white'><Link href='/article'>NFTs</Link></li>
-                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>Resources</li>
+                        <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>  <Menu.Button className="inline-flex w-full justify-center rounded-md  px-4 py-2   text-blackColor  dark:text-white">
+                            Resources
+                            {/* <ChevronDownIcon
+                                className="-mr-1 ml-2 h-5 w-5 text-violet-200 hover:text-violet-100"
+                                aria-hidden="true"
+                            /> */}
+                        </Menu.Button>
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-100"
+                                enterFrom="transform opacity-0 scale-95"
+                                enterTo="transform opacity-100 scale-100"
+                                leave="transition ease-in duration-75"
+                                leaveFrom="transform opacity-100 scale-100"
+                                leaveTo="transform opacity-0 scale-95"
+                            >
+                                <Menu.Items className="absolute  mt-2 left-0 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-[#0b0b0b] shadow-lg ring-1 ">
+                                    <div className="px-1 py-1 ">
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <div className='flex justify-between gap-8 px-2 py-4 z-[999]'>
+
+                                                    <div className="first flex gap-8 justify-between mr-auto">
+                                                        <div className='flex-1'>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#001F54]' ><a href="#"> News </a></h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#FF9770]' ><a href="#"> Authors Program </a></h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#80A1D4]' ><a href="#"> Selection </a></h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#F49CBB]' ><a href="#"> Video </a></h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#8CB369]' ><a href="#"> Analytics </a></h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#F08080]' ><a href="#"> Video </a></h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] border-l-[2px] px-3 border-rounded border-[#99D98C]' ><a href="#"> Analytics </a></h6>
+
+                                                        </div>
+                                                        <div className='flex-1'>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] px-3 border-l-[2px] border-[#F08080]'>Education</h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] px-3 border-l-[2px] border-[#D8A48F]'>Personalities</h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] px-3 border-l-[2px] border-[#4F772D]'>Opinion</h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] px-3 border-l-[2px] border-[#274C77]'>Overview</h6>
+                                                            <h6 className='text-blackColor dark:text-white mb-5 cursor-pointer text-[14px] font-[500] px-3 border-l-[2px] border-[#9A031E]'>Events</h6>
+                                                        </div>
+                                                    </div>
+                                                    <svg width="2" height="302" viewBox="1 1 1 302" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="2" height="502" fill={isNightMode ? 'white' : '#aaaaaa'} />
+                                                    </svg>
+                                                    <div className="tags flex flex-col ml-auto">
+                                                        <div className="innertags flex items-center flex-wrap gap-4 mb-3">
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#bitcoin</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#Blockchain</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#cryptocurrency</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#IT</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#Ethereum</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#NFT</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#Token</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#Exchange</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#Web3</button>
+                                                            <button className="py-1 px-2 bg-[#eeeeee] text-[14px] dark:bg-[#212121]">#bitcoin</button>
+                                                        </div>
+                                                        <h6 >
+                                                            <a href="#" className="flex items-center gap-2 text-blackColor text-[14px] mb-3 dark:text-white">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_206_7384)">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 4.74104V8.00004C19.394 8.00004 19.7841 8.07764 20.148 8.2284C20.512 8.37916 20.8427 8.60014 21.1213 8.87872C21.3999 9.15729 21.6209 9.48801 21.7716 9.85199C21.9224 10.216 22 10.6061 22 11C22 11.394 21.9224 11.7841 21.7716 12.1481C21.6209 12.5121 21.3999 12.8428 21.1213 13.1214C20.8427 13.3999 20.512 13.6209 20.148 13.7717C19.7841 13.9224 19.394 14 19 14V17C19 18.648 17.119 19.589 15.8 18.6L13.74 17.054C12.6389 16.2284 11.3567 15.6772 9.99999 15.446V18.29C10.0001 18.9438 9.76389 19.5755 9.33489 20.0688C8.9059 20.5621 8.31304 20.8837 7.66561 20.9743C7.01818 21.0649 6.35981 20.9185 5.81187 20.5619C5.26393 20.2053 4.86336 19.6627 4.68399 19.034L3.11399 13.538C2.54901 12.8708 2.18133 12.0593 2.05228 11.1945C1.92323 10.3298 2.03793 9.44628 2.38348 8.64318C2.72903 7.84008 3.29173 7.14928 4.00834 6.64844C4.72495 6.14759 5.56705 5.85655 6.43999 5.80804L9.45799 5.64004C10.9346 5.55787 12.3706 5.12638 13.648 4.38104L15.992 3.01304C17.326 2.23604 19 3.19704 19 4.74104ZM5.63399 15.078L6.60699 18.485C6.65382 18.65 6.75873 18.7924 6.90237 18.886C7.046 18.9796 7.21864 19.018 7.38842 18.9943C7.5582 18.9705 7.71365 18.8861 7.82606 18.7567C7.93847 18.6272 8.00025 18.4615 7.99999 18.29V15.28L6.43999 15.193C6.16852 15.178 5.89885 15.1395 5.63399 15.078ZM17 4.74104L14.655 6.11004C13.2304 6.94048 11.6418 7.45032 9.99999 7.60404V13.423C11.787 13.669 13.488 14.366 14.94 15.454L17 17V4.74104ZM7.99999 7.72404L6.54999 7.80404C5.87544 7.84129 5.23936 8.13006 4.76731 8.61336C4.29526 9.09666 4.02154 9.73937 4.00019 10.4146C3.97885 11.0899 4.21141 11.7486 4.65199 12.2607C5.09257 12.7729 5.70914 13.1013 6.37999 13.181L6.54999 13.196L7.99999 13.276V7.72404ZM19 10V12C19.2549 11.9998 19.5 11.9022 19.6854 11.7272C19.8707 11.5522 19.9822 11.3131 19.9972 11.0586C20.0121 10.8042 19.9293 10.5537 19.7657 10.3582C19.6021 10.1628 19.3701 10.0371 19.117 10.007L19 10Z" fill={isNightMode ? 'white' : '#555555'} />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_206_7384">
+                                                                            <rect width="24" height="24" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                                Steller Upgrade Postponede Due to Software Glitch
+                                                            </a>
+
+
+                                                        </h6>
+                                                        <h6 >
+                                                            <a href="#" className="flex items-center gap-2 text-blackColor text-[14px] mb-3 dark:text-white">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_206_7384)">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 4.74104V8.00004C19.394 8.00004 19.7841 8.07764 20.148 8.2284C20.512 8.37916 20.8427 8.60014 21.1213 8.87872C21.3999 9.15729 21.6209 9.48801 21.7716 9.85199C21.9224 10.216 22 10.6061 22 11C22 11.394 21.9224 11.7841 21.7716 12.1481C21.6209 12.5121 21.3999 12.8428 21.1213 13.1214C20.8427 13.3999 20.512 13.6209 20.148 13.7717C19.7841 13.9224 19.394 14 19 14V17C19 18.648 17.119 19.589 15.8 18.6L13.74 17.054C12.6389 16.2284 11.3567 15.6772 9.99999 15.446V18.29C10.0001 18.9438 9.76389 19.5755 9.33489 20.0688C8.9059 20.5621 8.31304 20.8837 7.66561 20.9743C7.01818 21.0649 6.35981 20.9185 5.81187 20.5619C5.26393 20.2053 4.86336 19.6627 4.68399 19.034L3.11399 13.538C2.54901 12.8708 2.18133 12.0593 2.05228 11.1945C1.92323 10.3298 2.03793 9.44628 2.38348 8.64318C2.72903 7.84008 3.29173 7.14928 4.00834 6.64844C4.72495 6.14759 5.56705 5.85655 6.43999 5.80804L9.45799 5.64004C10.9346 5.55787 12.3706 5.12638 13.648 4.38104L15.992 3.01304C17.326 2.23604 19 3.19704 19 4.74104ZM5.63399 15.078L6.60699 18.485C6.65382 18.65 6.75873 18.7924 6.90237 18.886C7.046 18.9796 7.21864 19.018 7.38842 18.9943C7.5582 18.9705 7.71365 18.8861 7.82606 18.7567C7.93847 18.6272 8.00025 18.4615 7.99999 18.29V15.28L6.43999 15.193C6.16852 15.178 5.89885 15.1395 5.63399 15.078ZM17 4.74104L14.655 6.11004C13.2304 6.94048 11.6418 7.45032 9.99999 7.60404V13.423C11.787 13.669 13.488 14.366 14.94 15.454L17 17V4.74104ZM7.99999 7.72404L6.54999 7.80404C5.87544 7.84129 5.23936 8.13006 4.76731 8.61336C4.29526 9.09666 4.02154 9.73937 4.00019 10.4146C3.97885 11.0899 4.21141 11.7486 4.65199 12.2607C5.09257 12.7729 5.70914 13.1013 6.37999 13.181L6.54999 13.196L7.99999 13.276V7.72404ZM19 10V12C19.2549 11.9998 19.5 11.9022 19.6854 11.7272C19.8707 11.5522 19.9822 11.3131 19.9972 11.0586C20.0121 10.8042 19.9293 10.5537 19.7657 10.3582C19.6021 10.1628 19.3701 10.0371 19.117 10.007L19 10Z" fill={isNightMode ? 'white' : '#555555'} />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_206_7384">
+                                                                            <rect width="24" height="24" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                                Steller Upgrade Postponede Due to Software Glitch
+                                                            </a>
+
+
+                                                        </h6>
+                                                        <h6 >
+                                                            <a href="#" className="flex items-center gap-2 text-blackColor text-[14px] mb-3 dark:text-white">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_206_7384)">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 4.74104V8.00004C19.394 8.00004 19.7841 8.07764 20.148 8.2284C20.512 8.37916 20.8427 8.60014 21.1213 8.87872C21.3999 9.15729 21.6209 9.48801 21.7716 9.85199C21.9224 10.216 22 10.6061 22 11C22 11.394 21.9224 11.7841 21.7716 12.1481C21.6209 12.5121 21.3999 12.8428 21.1213 13.1214C20.8427 13.3999 20.512 13.6209 20.148 13.7717C19.7841 13.9224 19.394 14 19 14V17C19 18.648 17.119 19.589 15.8 18.6L13.74 17.054C12.6389 16.2284 11.3567 15.6772 9.99999 15.446V18.29C10.0001 18.9438 9.76389 19.5755 9.33489 20.0688C8.9059 20.5621 8.31304 20.8837 7.66561 20.9743C7.01818 21.0649 6.35981 20.9185 5.81187 20.5619C5.26393 20.2053 4.86336 19.6627 4.68399 19.034L3.11399 13.538C2.54901 12.8708 2.18133 12.0593 2.05228 11.1945C1.92323 10.3298 2.03793 9.44628 2.38348 8.64318C2.72903 7.84008 3.29173 7.14928 4.00834 6.64844C4.72495 6.14759 5.56705 5.85655 6.43999 5.80804L9.45799 5.64004C10.9346 5.55787 12.3706 5.12638 13.648 4.38104L15.992 3.01304C17.326 2.23604 19 3.19704 19 4.74104ZM5.63399 15.078L6.60699 18.485C6.65382 18.65 6.75873 18.7924 6.90237 18.886C7.046 18.9796 7.21864 19.018 7.38842 18.9943C7.5582 18.9705 7.71365 18.8861 7.82606 18.7567C7.93847 18.6272 8.00025 18.4615 7.99999 18.29V15.28L6.43999 15.193C6.16852 15.178 5.89885 15.1395 5.63399 15.078ZM17 4.74104L14.655 6.11004C13.2304 6.94048 11.6418 7.45032 9.99999 7.60404V13.423C11.787 13.669 13.488 14.366 14.94 15.454L17 17V4.74104ZM7.99999 7.72404L6.54999 7.80404C5.87544 7.84129 5.23936 8.13006 4.76731 8.61336C4.29526 9.09666 4.02154 9.73937 4.00019 10.4146C3.97885 11.0899 4.21141 11.7486 4.65199 12.2607C5.09257 12.7729 5.70914 13.1013 6.37999 13.181L6.54999 13.196L7.99999 13.276V7.72404ZM19 10V12C19.2549 11.9998 19.5 11.9022 19.6854 11.7272C19.8707 11.5522 19.9822 11.3131 19.9972 11.0586C20.0121 10.8042 19.9293 10.5537 19.7657 10.3582C19.6021 10.1628 19.3701 10.0371 19.117 10.007L19 10Z" fill={isNightMode ? 'white' : '#555555'} />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_206_7384">
+                                                                            <rect width="24" height="24" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                                Steller Upgrade Postponede Due to Software Glitch
+                                                            </a>
+
+
+                                                        </h6>
+                                                        <h6 >
+                                                            <a href="#" className="flex items-center gap-2 text-blackColor text-[14px] mb-3 dark:text-white">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_206_7384)">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 4.74104V8.00004C19.394 8.00004 19.7841 8.07764 20.148 8.2284C20.512 8.37916 20.8427 8.60014 21.1213 8.87872C21.3999 9.15729 21.6209 9.48801 21.7716 9.85199C21.9224 10.216 22 10.6061 22 11C22 11.394 21.9224 11.7841 21.7716 12.1481C21.6209 12.5121 21.3999 12.8428 21.1213 13.1214C20.8427 13.3999 20.512 13.6209 20.148 13.7717C19.7841 13.9224 19.394 14 19 14V17C19 18.648 17.119 19.589 15.8 18.6L13.74 17.054C12.6389 16.2284 11.3567 15.6772 9.99999 15.446V18.29C10.0001 18.9438 9.76389 19.5755 9.33489 20.0688C8.9059 20.5621 8.31304 20.8837 7.66561 20.9743C7.01818 21.0649 6.35981 20.9185 5.81187 20.5619C5.26393 20.2053 4.86336 19.6627 4.68399 19.034L3.11399 13.538C2.54901 12.8708 2.18133 12.0593 2.05228 11.1945C1.92323 10.3298 2.03793 9.44628 2.38348 8.64318C2.72903 7.84008 3.29173 7.14928 4.00834 6.64844C4.72495 6.14759 5.56705 5.85655 6.43999 5.80804L9.45799 5.64004C10.9346 5.55787 12.3706 5.12638 13.648 4.38104L15.992 3.01304C17.326 2.23604 19 3.19704 19 4.74104ZM5.63399 15.078L6.60699 18.485C6.65382 18.65 6.75873 18.7924 6.90237 18.886C7.046 18.9796 7.21864 19.018 7.38842 18.9943C7.5582 18.9705 7.71365 18.8861 7.82606 18.7567C7.93847 18.6272 8.00025 18.4615 7.99999 18.29V15.28L6.43999 15.193C6.16852 15.178 5.89885 15.1395 5.63399 15.078ZM17 4.74104L14.655 6.11004C13.2304 6.94048 11.6418 7.45032 9.99999 7.60404V13.423C11.787 13.669 13.488 14.366 14.94 15.454L17 17V4.74104ZM7.99999 7.72404L6.54999 7.80404C5.87544 7.84129 5.23936 8.13006 4.76731 8.61336C4.29526 9.09666 4.02154 9.73937 4.00019 10.4146C3.97885 11.0899 4.21141 11.7486 4.65199 12.2607C5.09257 12.7729 5.70914 13.1013 6.37999 13.181L6.54999 13.196L7.99999 13.276V7.72404ZM19 10V12C19.2549 11.9998 19.5 11.9022 19.6854 11.7272C19.8707 11.5522 19.9822 11.3131 19.9972 11.0586C20.0121 10.8042 19.9293 10.5537 19.7657 10.3582C19.6021 10.1628 19.3701 10.0371 19.117 10.007L19 10Z" fill={isNightMode ? 'white' : '#555555'} />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_206_7384">
+                                                                            <rect width="24" height="24" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                </svg>
+                                                                Steller Upgrade Postponede Due to Software Glitch
+                                                            </a>
+
+
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </Menu.Item>
+
+                                    </div>
+
+
+                                </Menu.Items></Transition></li>
                         <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>Developers</li>
                         <li className='text-blackColor tex-[24px] font-[500] dark:text-white'>More</li>
                     </ul>
                     <Button text='Sign in' />
-                </div>
+                    {/* <div className="dropdown-menu absolute bottom-[-400%] flex justify-between items-center right-10 bg-white dark:bg-[#212121]">
+                        <div className="news">
+                            <ul className="flex flex-col flex-wrap">
+                                <li>News</li>
+                                <li>Authors Program</li>
+                                <li>Selection</li>
+                                <li>Video</li>
+                                <li>Analytics</li>
+                                <li>Video</li>
+                                <li>Analytics</li>
+                                <li>Education</li>
+                                <li>Personalities</li>
+                                <li>Opinion</li>
+                                <li>Overview</li>
+                                <li>Events</li>
+                            </ul>
+                        </div>
+                        <div className="tags"></div>
+                    </div> */}
+                </Menu>
             </div>
             <hr />
         </div>

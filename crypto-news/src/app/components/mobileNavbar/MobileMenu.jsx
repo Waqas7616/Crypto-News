@@ -60,7 +60,7 @@ function MobileMenu({ isNightMode, toggleMode }) {
                 </div>
                 <div className="nightBtn flex gap-1 items-center">
                     <div className="search flex items-center gap-4 bg-transparent  dark:text-white py-2 px-1 rounded-md">
-                        <input type="text" placeholder="Search" className="bg-[transparent] dark:text-white" />
+                        <input type="text" placeholder="Search" className="bg-[transparent] outline-none dark:text-white" />
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.5002 21L17.1572 16.657M17.1572 16.657C17.9001 15.9141 18.4894 15.0321 18.8914 14.0615C19.2935 13.0909 19.5004 12.0506 19.5004 11C19.5004 9.94936 19.2935 8.90905 18.8914 7.93842C18.4894 6.96779 17.9001 6.08585 17.1572 5.34296C16.4143 4.60007 15.5324 4.01078 14.5618 3.60874C13.5911 3.20669 12.5508 2.99976 11.5002 2.99976C10.4496 2.99976 9.40929 3.20669 8.43866 3.60874C7.46803 4.01078 6.58609 4.60007 5.84321 5.34296C4.34288 6.84329 3.5 8.87818 3.5 11C3.5 13.1217 4.34288 15.1566 5.84321 16.657C7.34354 18.1573 9.37842 19.0002 11.5002 19.0002C13.622 19.0002 15.6569 18.1573 17.1572 16.657Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
