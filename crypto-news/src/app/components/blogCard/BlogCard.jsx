@@ -12,7 +12,7 @@ function BlogCard() {
             <div className="blogBanner mt-4">
                 <Image className='w-full' src={blog} />
             </div>
-            <h1 className='font-[500] text-[32px]  text-blackColor dark:text-blue'>Daily Active Bitcoin Addresses Hit Yearly Peak, Cross 1M as BTC</h1>
+            <h1 className='font-[500] text-[2rem]  text-blackColor dark:text-blue mt-1'>Daily Active Bitcoin Addresses Hit Yearly Peak, Cross 1M as BTC</h1>
             <p className="desc font-[500] text-[16px] text-blackColor my-3 dark:text-white">Daily active addresses on the Bitcoin network have recently hit a new yearly peak above the 1 million mark, as BTC finally breaks above</p>
             <div className="blogAuthor flex items-center justify-between mb-3 pr-3">
                 <p className="text-lightBlack text-[14px] font-[500]">By <span className="text-blue text-[14px]">Sam Wisdom Raphel</span></p>

@@ -6,7 +6,7 @@ function PressRelease() {
 
     return (
         <>
-            <h2 className='text-blackColor text-[24px] font-[500] dark:text-blue'>
+            <h2 className='text-blackColor text-[24px] font-[500] dark:text-blue mt-12'>
                 Sponsored Press Releases
             </h2>
             <div className='w-full flex gap-5 overflow-x-scroll press-release'>

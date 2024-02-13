@@ -18,7 +18,18 @@ module.exports = {
         red: '#E04957',
         blackColor: '#333333',
         lightBlack: '#555555'
-      }
+      },
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        "lg-a": "1149px",
+        xl: "1280px",
+        "xl-a": "1460px",
+
+        "2xl": "1900px",
+
+      },
     },
   },
   plugins: [],
