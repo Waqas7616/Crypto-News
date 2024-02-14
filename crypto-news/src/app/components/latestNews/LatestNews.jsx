@@ -1,5 +1,7 @@
 import React from "react";
 // import '../../../globals.css'
+import icon from "@/app/images/dropdownIcon.png";
+import Image from "next/image";
 
 function LatestNews() {
   const repeatedNews = Array.from({ length: 20 }, (_, index) => (
@@ -16,8 +18,8 @@ function LatestNews() {
             Jan 27, 6:06 am
           </p>
           <h2 class="mt-1 md:text-[7px] lg:text-[14px] xl:text-[16px] title text-blackColor dark:text-white w-[90%]">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem
+            <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem</a>
           </h2>
         </div>
       </div>
@@ -25,12 +27,18 @@ function LatestNews() {
   ));
   return (
     <div className=" relative   ">
-      <h2 className="text-blackColor md:text-[16px] lg:text-[18px] xl:text-[24px] title dark:text-blue">
-        Latest News
-      </h2>
-      <p className="text-lightBlack desc md:text-[12px] lg:text-[14px] xl:text-[16px] dark:text-white">
-        Hot feeds everyday
-      </p>
+      <div className="flex justify-between items-center">
+        <div> <h2 className="text-blackColor md:text-[16px] lg:text-[18px] xl:text-[24px] title dark:text-blue">
+          Latest News
+        </h2>
+          <p className="text-lightBlack desc md:text-[12px] lg:text-[14px] xl:text-[16px] dark:text-white">
+            Hot feeds everyday
+          </p></div>
+        <button className="bg-[#EEEEEE] md:text-[12px] lg:text-[14px] xl-a:text-[16px] dark:bg-[#212121] dark:text-white border-2 rounded-md border-[#DDDDDD] px-2 py-1 flex items-center gap-2">
+          View All
+        </button>
+      </div>
+
       <div className="page">
         <div className="latestNews md:h-[30rem] lg:h-[45rem] overflow-auto mt-5">
           {repeatedNews}

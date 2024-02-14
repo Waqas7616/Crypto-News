@@ -1,12 +1,15 @@
 import React from "react";
 import Button from "../button/Button";
+import Image from "next/image";
+import icon from "@/app/images/dropdownIcon.png";
+
 
 function Features() {
   const features = Array.from({ length: 5 }, (_, index) => (
     <div className="mt-3">
       <h2 className="text-blackColor md:text-[7px] lg:text-[14px] xl:text-[16px] title dark:text-white">
-        Lorem Ipsum is simply dummy tex of the printing and typesetting
-        industry. Lorem
+        <a href="#">Lorem Ipsum is simply dummy tex of the printing and typesetting
+          industry. Lorem</a>
       </h2>
       <p className="mb-4 text-lightBlack title dark:text-white text-[12px]">
         Jan 27, 2024
@@ -16,9 +19,15 @@ function Features() {
   ));
   return (
     <div className="pl-3">
-      <h2 className="text-blackColor text-[1.5rem] title dark:text-blue mb-3">
-        Features
-      </h2>
+      <div className="flex justify-between items-center">
+        <h2 className="text-blackColor text-[1.5rem] title dark:text-blue mb-3">
+          Features
+        </h2>
+        <button className="bg-[#EEEEEE] md:text-[12px] lg:text-[14px] xl-a:text-[16px] dark:bg-[#212121] dark:text-white border-2 rounded-md border-[#DDDDDD] px-2 py-1 flex items-center">
+          View All
+        </button>
+      </div>
+
       <hr />
       {features}
 

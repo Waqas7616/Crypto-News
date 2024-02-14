@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
               <input
                 type="text"
                 placeholder="Search"
-                className="bg-[transparent] dark:text-white md:w-[65%] lg:w-[80%] xl:w-[100%]"
+                className="bg-[transparent] dark:text-white outline-none md:w-[65%] lg:w-[80%] xl:w-[100%]"
                 value={searchQuery}
                 onChange={handleInputChange}
               />
