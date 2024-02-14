@@ -159,13 +159,15 @@ function MobileMenu({ isNightMode, toggleMode }) {
       <div className="coins flex items-center gap-3 w-11/12 m-auto mt-5">
         {coinData.slice(0, 2).map((coin) => (
           <div className="flex gap-1 items-center" key={coin.id}>
-            <h4 className="text-[12px] text-[#333333] dark:text-white">
+            <h4 className="text-[6px] sm:text-[12px] text-[#333333] dark:text-white">
               {coin.abb}
             </h4>
-            <p className="text-[12px] text-[#333333] dark:text-white">
+            <p className="text-[6px] sm:text-[12px] text-[#333333] dark:text-white">
               Price: <span className="text-[#2196F3]">{coin.price}</span>
             </p>
-            <p className="text-[12px] text-[#E04957]">({coin.change})</p>
+            <p className="text-[6px] sm:text-[12px] text-[#E04957]">
+              ({coin.change})
+            </p>
           </div>
         ))}
       </div>

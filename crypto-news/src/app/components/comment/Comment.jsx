@@ -8,10 +8,15 @@ function Comment() {
     <div className="mt-3">
       <div className="info flex items-center justify-between">
         <Image src={c} alt="profile" />
-        <h6 className="text-blackColor md:text-[9px] lg:text-[12px] font-[500] dark:text-white">
-          Artyom Khomenko
-        </h6>
-        <p className="text-lightBlack md:text-[8px] lg:text-[10px] dark:text-white">
+        <div>
+          <h6 className="text-blackColor text-[8px] md:text-[9px] lg:text-[12px] font-[500] dark:text-white">
+            Artyom Khomenko
+          </h6>
+          <p className="block md:hidden text-lightBlack text-[6px] md:text-[8px] lg:text-[10px] dark:text-white">
+            @artyom_khomenko.
+          </p>
+        </div>
+        <p className="hidden md:block text-lightBlack text-[6px] md:text-[8px] lg:text-[10px] dark:text-white">
           @artyom_khomenko.
         </p>
         <p className="text-lightBlack text-[10px] dark:text-white">4h</p>

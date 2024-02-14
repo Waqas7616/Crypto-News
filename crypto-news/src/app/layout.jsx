@@ -21,12 +21,12 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="en" className={`${isNightMode ? "dark" : "light"} `}>
-      <body className="dark:bg-[#212121]">
+      <body className="dark:bg-[#0b0b0b]">
         <MobileMenu isNightMode={isNightMode} toggleMode={toggleMode} />
         <Navbar isNightMode={isNightMode} toggleMode={toggleMode} />
         <div className=" hidden md:flex searchSection  items-center justify-between mt-5 w-11/12 m-auto">
-          <div className="bg-[#EEEEEE] w-fit p-2 rounded-sm">
-            <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white md:text-[7px] lg:text-[10px] xl:text-[14px]">
+          <div className="bg-[#EEEEEE] dark:bg-[#212121] w-fit p-2 rounded-sm">
+            <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white md:text-[7px] lg:text-[10px] xl:text-[12px] xl-a:text-[14px]">
               Sponsored:{" "}
               <span className="flex items-center gap-2">
                 <svg

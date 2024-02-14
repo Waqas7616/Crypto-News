@@ -21,13 +21,14 @@ module.exports = {
       },
       screens: {
         sm: "640px",
-        md: "768px",
+        md: "769px",
         lg: "1024px",
         "lg-a": "1149px",
         xl: "1280px",
         "xl-a": "1460px",
 
         "2xl": "1900px",
+        "3xl": "2900px",
 
       },
     },
