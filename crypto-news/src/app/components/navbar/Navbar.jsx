@@ -81,13 +81,13 @@ function Navbar({ isNightMode, toggleMode }) {
         <div className="coins flex items-center gap-2">
           {coinData.map((coin) => (
             <div className="flex gap-1 items-center" key={coin.id}>
-              <h4 className="text-[11px] lg:text-[15px] 2xl:text-[17px] text-[#333333] dark:text-white">
+              <h4 className="text-[11px] md:text-[9px] lg:text-[13px] xl:text-[15px] 2xl:text-[17px] text-[#333333] dark:text-white">
                 {coin.abb}
               </h4>
-              <p className="text-[9px] lg:text-[12px] 2xl:text-[15px] text-[#333333] dark:text-white">
+              <p className="text-[9px] md:text-[8px] lg:text-[11px] xl:text-[14px] 2xl:text-[15px] text-[#333333] dark:text-white">
                 Price: <span className="text-[#2196F3]">{coin.price}</span>
               </p>
-              <p className="text-[9px] lg:text-[12px] 2xl:text-[15px] text-[#E04957]">
+              <p className="text-[9px] md:text-[7px] lg:text-[11px] xl:text-[13px] 2xl:text-[15px] text-[#E04957]">
                 ({coin.change})
               </p>
             </div>
@@ -98,7 +98,7 @@ function Navbar({ isNightMode, toggleMode }) {
             <button
               id="dropdownDefaultButton"
               data-dropdown-toggle="dropdown"
-              class="text-black bg-[transparent]  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:text-white"
+              class="text-black bg-[transparent] md:text-[13px] lg:text-[15px] xl:text-[18px]  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:text-white"
               type="button"
             >
               English{" "}
@@ -208,25 +208,25 @@ function Navbar({ isNightMode, toggleMode }) {
         </div>
         <div className="menu flex items-center justify-between gap-3">
           <ul className="flex items-center gap-3">
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               <Link href="/">Home</Link>
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               <Link href="/blockchain">Blockchain</Link>
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               <Link href="/coins">Cryptocurrency</Link>
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               <Link href="/article">NFTs</Link>
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               Resources
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               Developers
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
+            <li className="text-blackColor text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] font-[500] dark:text-white">
               More
             </li>
           </ul>

@@ -4,11 +4,11 @@ import Button from "../button/Button";
 function Features() {
   const features = Array.from({ length: 5 }, (_, index) => (
     <div className="mt-3">
-      <h2 className="text-blackColor text-base font-[500] dark:text-white">
+      <h2 className="text-blackColor md:text-[7px] lg:text-[14px] xl:text-[16px] font-[500] dark:text-white">
         Lorem Ipsum is simply dummy tex of the printing and typesetting
         industry. Lorem
       </h2>
-      <p className="mb-4 text-lightBlack font-[500] dark:text-white text-[.75rem]">
+      <p className="mb-4 text-lightBlack font-[500] dark:text-white text-[12px]">
         Jan 27, 2024
       </p>
       <hr />
@@ -23,32 +23,32 @@ function Features() {
       {features}
 
       <div className="inputsec mt-3">
-        <h2 className="text-blackColor text-[20px] font-[500] dark:text-white">
+        <h2 className="text-blackColor md:text-[12px] lg:text-[16px] xl:text-[20px] font-[500] dark:text-white">
           Bitcoin. Blockchain. Web3
         </h2>
-        <p className="text-base">
+        <p className="md:text-[9px] lg:text-[14px] xl:text-[16px]">
           The essential read on the crypto universe, delivered straight tp your
           inbox twice a week.
         </p>
-        <div className="input flex items-center justify-between my-2">
+        <div className="input flex items-center gap-3 my-2">
           <input
-            className="border-b-[1px] border-lightBlack outline-none bg-transparent"
+            className="border-b-[1px] md:w-[80%] lg:w-[100%] md:text-[10px] lg:text-[14px] xl:text-[16px] border-lightBlack outline-none bg-transparent"
             type="text"
             placeholder="Enter your email"
           />
-          <Button text="Sign up"  />
+          <Button text="Sign up" />
         </div>
         <div className="check w-full flex items-center gap-2 mt-1">
           <input id="check" type="checkbox" className="accent-blue" />
           <label
             htmlFor="check"
-            className="text-[12px] text-lightBlack text-[rgba(255,255,255,0.8)]"
+            className="md:text-[7px] lg:text-[12px] text-lightBlack text-[rgba(255,255,255,0.8)]"
           >
             {" "}
             CryptoDayX may send me offers and promotions.
           </label>
         </div>
-        <p className="mt-3 text-[14px] text-lightBlack  text-[rgba(255,255,255,0.8)]">
+        <p className="mt-3 md:text-[8px] lg:text-[12px] xl:text-[14px] text-lightBlack  text-[rgba(255,255,255,0.8)]">
           By submitting my information, i agree to the{" "}
           <span className="text-blue underline">Privacy Policy</span> and{" "}
           <span className="text-blue underline">Terms of Services.</span>{" "}

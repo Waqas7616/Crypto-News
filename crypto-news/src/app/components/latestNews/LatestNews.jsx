@@ -12,10 +12,10 @@ function LatestNews() {
         </div>
 
         <div class="grow pt-[.3rem] pb-8 ">
-          <p class="flex gap-x-1.5 text-[.75rem]  text-red dark:text-white">
+          <p class="flex gap-x-1.5 text-[12px]  text-red dark:text-white">
             Jan 27, 6:06 am
           </p>
-          <h2 class="mt-1 text-base font-[500] text-blackColor dark:text-white w-[90%]">
+          <h2 class="mt-1 md:text-[7px] lg:text-[14px] xl:text-[16px] font-[500] text-blackColor dark:text-white w-[90%]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem
           </h2>
@@ -25,14 +25,14 @@ function LatestNews() {
   ));
   return (
     <div className=" relative   ">
-      <h2 className="text-blackColor text-[24px] font-[500] dark:text-blue">
+      <h2 className="text-blackColor md:text-[16px] lg:text-[18px] xl:text-[24px] font-[500] dark:text-blue">
         Latest News
       </h2>
-      <p className="text-lightBlack font-[400] text-[16px] dark:text-white">
+      <p className="text-lightBlack font-[400] md:text-[12px] lg:text-[14px] xl:text-[16px] dark:text-white">
         Hot feeds everyday
       </p>
       <div className="page">
-        <div className="latestNews h-[45rem] overflow-auto mt-5">
+        <div className="latestNews md:h-[30rem] lg:h-[45rem] overflow-auto mt-5">
           {repeatedNews}
         </div>
       </div>
