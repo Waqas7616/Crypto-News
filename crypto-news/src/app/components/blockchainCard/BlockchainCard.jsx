@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import blockchain from '@/app/images/blockchain.svg'
 import profile from '@/app/images/profile.png'
+import { useNightMode } from '@/app/context/NightMode'
 function BlockchainCard() {
     return (
         <div>

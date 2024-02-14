@@ -13,7 +13,7 @@ function Coins() {
             image: coin,
             price: '$2',
             last_change: '-0.3%',
-
+            status: 'featured',
             volume: '0 F2k',
             marketCap: '$3.5M`'
         },
@@ -43,7 +43,7 @@ function Coins() {
             image: coin,
             price: '$972',
             last_change: '-18.12%',
-
+            status: 'featured',
             volume: '0 F2k',
             marketCap: '$923.5M`'
         },
@@ -85,7 +85,17 @@ function Coins() {
         <div>
 
             <div className='w-11/12 m-auto'>
-                <h2 className='mt-3 text-blackColor font-[500] text-[20px] dark:text-white'>Top Fallers</h2>
+                <div className="flex justify-between items-center w-[60%] my-5">
+                    <h2 className='mt-3 text-blackColor font-[500] text-[20px] dark:text-white'>{tabs === 0 ? 'Top Fallers' : tabs === 1 ? 'Top Gainers' : 'All Coins'}</h2>
+                    {tabs === 2 &&
+
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer" />
+                            <div class="w-11 h-4 bg-[#2196F34D]   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:start-[2px] after:bg-blue after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                            <span class="ms-3 text-sm font-medium text-blue ">Featured</span>
+                        </label>
+                    }
+                </div>
                 <div className="tabs flex items-center  mt-3">
                     <div className={tabs === 0 ? "tab pr-3 relative active" : "tab pr-3 relative"} onClick={() => setTabs(0)}>
                         <h5 className={tabs === 0 ? "text-blue font-[500] text-[17px] cursor-pointer" : "text-blackColor font-[500] text-[17px] cursor-pointer dark:text-white"}>Top Fallers</h5>
