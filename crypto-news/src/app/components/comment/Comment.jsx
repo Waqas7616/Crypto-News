@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import c from "@/app/images/c.svg";
 
 function Comment() {
+  const [heartCount, setHeartCount] = useState(20);
+  const [likeCount, setLikeCount] = useState(1)
   return (
     <div className="mt-3">
       <div className="info flex items-center justify-between">
@@ -38,7 +40,7 @@ function Comment() {
         this is going{" "}
       </h6>
       <div className="iteraction-count flex items-center mt-3 gap-3">
-        <button className="like flex items-center gap-2 justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
+        <button onClick={() => setLikeCount(likeCount + 1)} className="like flex items-center gap-2 justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
           <svg
             width="14"
             height="15"
@@ -55,9 +57,9 @@ function Comment() {
               fill="#555555"
             />
           </svg>
-          1
+          {likeCount}
         </button>
-        <button className="like flex items-center gap-2  justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
+        <button onClick={() => setHeartCount(heartCount + 1)} className="like flex items-center gap-2  justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
           <svg
             width="12"
             height="11"
@@ -70,7 +72,7 @@ function Comment() {
               fill="#E04957"
             />
           </svg>
-          20
+          {heartCount}
         </button>
       </div>
       <div className="view-count flex items-center justify-between mt-3">

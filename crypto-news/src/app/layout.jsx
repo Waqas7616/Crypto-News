@@ -6,7 +6,8 @@ import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 import blackLogo from "@/app/images/Logo.svg";
 import MobileMenu from "./components/mobileNavbar/MobileMenu";
-import coin from '@/app/images/Cryptocurrency.png'
+import coined from '@/app/images/Cryptocurrency.png'
+import frame from '@/app/images/Frame 103.png'
 import Image from "next/image";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -117,7 +118,7 @@ export default function RootLayout({ children }) {
               <input
                 type="text"
                 placeholder="Search"
-                className="bg-[transparent] dark:text-white md:w-[65%] lg:w-[80%] xl:w-[100%]"
+                className="bg-[transparent] dark:text-white outline-none md:w-[65%] lg:w-[80%] xl:w-[100%]"
                 value={searchQuery}
                 onChange={handleInputChange}
               />
@@ -139,22 +140,58 @@ export default function RootLayout({ children }) {
             <Button text="Gaming" />
           </div>
           {searchQuery.length > 0 &&
-            <div className="absolute bottom-[10%] rounded-[8px] h-[300px] right-[3%] bg-white dark:bg-[#212121] w-1/3 px-3 py-5">
-              {filteredCoins.map((coin, index) => (
-                <div key={coin.id} className="flex justify-between items-center mb-4">
-                  <Image src={coin} alt="coin" />
-                  <p className="title text-[14px] text-blackColor dark:text-white">{coin.name}</p>
-                  <p className="desc text-[12px] text-lightBlack dark:text-white">{coin.abb}</p>
-                  <p className="desc bg-[#eeeeee] text-lightBlack text-[12px] rounded-[6px] px-1 py-[1px]">#786</p>
-                  <p className="desc text-blackColor text-[14px] dark:text-white">{coin.price}</p>
-                  <p className="flex gap-2 items-center text-[#EA3943] desc text-[14px]"><svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.5 0.312607L6.5 6.31261L0.5 0.312607L12.5 0.312607Z" fill="#EA3943" />
-                  </svg>
-                    {coin.change}</p>
-                  {/* Display other coin details */}
+            <div className="absolute top-[40%] rounded-[8px] h-fit right-[3%] bg-white dark:bg-[#0b0b0b] w-1/3 px-3 py-5">
+              {filteredCoins.length > 0 ? filteredCoins.map((coin, index) => (
+                <>
+                  <div key={coin.id} className="flex justify-between items-center mb-2">
+                    <Image src={coined} alt="coin" />
+                    <p className="title text-[14px] text-blackColor dark:text-white">{coin.name}</p>
+                    <p className="desc text-[12px] text-lightBlack dark:text-white">{coin.abb}</p>
+                    <p className="desc bg-[#eeeeee] text-lightBlack text-[12px] rounded-[6px] px-1 py-[1px]">#786</p>
+                    <p className="desc text-blackColor text-[14px] dark:text-white">{coin.price}</p>
+                    <p className="flex gap-2 items-center text-[#EA3943] desc text-[14px]"><svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.5 0.312607L6.5 6.31261L0.5 0.312607L12.5 0.312607Z" fill="#EA3943" />
+                    </svg>
+                      {coin.change}</p>
+
+                    {/* Display other coin details */}
+                  </div>
+                  <hr className="mb-2" />
+                  <div className="flex justify-between items-center mb-3 gap-2">
+                    <Image className="flex-[0.1] object-cover" src={frame} alt="profile" />
+                    <p className=" bg-white dark:bg-[#212121] title tex-blackColor dark:text-white px-2 text-[12px] flex-1">Daily active bitcoin addresses hit yearly peak, cross 1M as BTC
+                      and also many more, Daily active bitcoin.</p>
+                  </div>
+                </>
+
+              )) : <h2 className="title text-blackColor dark:text-white text-center text-[15px]">No Matches Found </h2>}
+              <div className="flex justify-between items-center border-t-[2px] border-[#eeeeee] pt-3 mt-12">
+                <div className="cancel flex items-center gap-2">
+                  <p className="bg-[#eeeeee] dark:bg-[#212121] p-[2px] rounded-[2px] text-blue">Esc</p>
+                  <p className=" p-[2px] rounded-[2px] text-blackColor dark:text-white">To Cancel</p>
                 </div>
-              ))}
+                <div className="enter flex items-center gap-2">
+                  <p className="bg-[#eeeeee] dark:bg-[#212121] p-[2px] rounded-[2px] "><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 7.76425 0.0858463 7.53816 0.238654 7.37146C0.391461 7.20476 0.598713 7.11111 0.814815 7.11111H10.5926C11.2409 7.11111 11.8627 6.83016 12.3211 6.33006C12.7795 5.82997 13.037 5.15169 13.037 4.44444V0.888889C13.037 0.653141 13.1229 0.427049 13.2757 0.26035C13.4285 0.0936507 13.6357 0 13.8519 0C14.068 0 14.2752 0.0936507 14.428 0.26035C14.5808 0.427049 14.6667 0.653141 14.6667 0.888889V4.44444C14.6667 5.62318 14.2374 6.75365 13.4734 7.58714C12.7094 8.42064 11.6731 8.88889 10.5926 8.88889H0.814815C0.598713 8.88889 0.391461 8.79524 0.238654 8.62854C0.0858463 8.46184 0 8.23575 0 8Z" fill="#2196F3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.238757 8.62859C0.0860032 8.46189 0.000190735 8.23584 0.000190735 8.00014C0.000190735 7.76444 0.0860032 7.53839 0.238757 7.3717L3.49802 3.81614C3.65169 3.65422 3.85752 3.56463 4.07116 3.56665C4.2848 3.56868 4.48917 3.66216 4.64024 3.82697C4.79131 3.99178 4.87701 4.21472 4.87886 4.44779C4.88072 4.68085 4.79859 4.90538 4.65017 5.07303L1.96698 8.00014L4.65017 10.9273C4.72799 11.0092 4.79006 11.1073 4.83277 11.2158C4.87547 11.3242 4.89795 11.4409 4.89889 11.5589C4.89983 11.6769 4.87921 11.794 4.83824 11.9032C4.79727 12.0125 4.73677 12.1117 4.66026 12.1952C4.58376 12.2786 4.49278 12.3446 4.39265 12.3893C4.29251 12.434 4.18521 12.4565 4.07702 12.4555C3.96883 12.4545 3.86191 12.4299 3.7625 12.3833C3.66309 12.3368 3.57318 12.269 3.49802 12.1841L0.238757 8.62859Z" fill="#2196F3" />
+                  </svg></p>
+                  <p className="p-[2px] rounded-[2px] text-blackColor dark:text-white">To Enter</p>
+                </div>
+                <div className="navigate flex items-center gap-2">
+                  <p className="bg-[#eeeeee] dark:bg-[#212121] p-[2px] rounded-[2px] text-blue">TAB</p>
+                  <p className="bg-[#eeeeee] dark:bg-[#212121] p-[2px] rounded-[2px] "><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.25 13C5.25 13.4142 5.58579 13.75 6 13.75C6.41421 13.75 6.75 13.4142 6.75 13H5.25ZM6.53033 0.46967C6.23744 0.176777 5.76256 0.176777 5.46967 0.46967L0.696699 5.24264C0.403806 5.53553 0.403806 6.01041 0.696699 6.3033C0.989592 6.59619 1.46447 6.59619 1.75736 6.3033L6 2.06066L10.2426 6.3033C10.5355 6.59619 11.0104 6.59619 11.3033 6.3033C11.5962 6.01041 11.5962 5.53553 11.3033 5.24264L6.53033 0.46967ZM6.75 13L6.75 1H5.25L5.25 13H6.75Z" fill="#2196F3" />
+                  </svg>
+                  </p>
+                  <p className="bg-[#eeeeee] dark:bg-[#212121] p-[2px] rounded-[2px] "> <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.75 1C6.75 0.585786 6.41421 0.25 6 0.25C5.58579 0.25 5.25 0.585786 5.25 1L6.75 1ZM5.46967 13.5303C5.76256 13.8232 6.23744 13.8232 6.53033 13.5303L11.3033 8.75736C11.5962 8.46447 11.5962 7.98959 11.3033 7.6967C11.0104 7.40381 10.5355 7.40381 10.2426 7.6967L6 11.9393L1.75736 7.6967C1.46447 7.40381 0.989592 7.40381 0.696699 7.6967C0.403806 7.98959 0.403806 8.46447 0.696699 8.75736L5.46967 13.5303ZM5.25 1L5.25 13H6.75L6.75 1L5.25 1Z" fill="#2196F3" />
+                  </svg>
+                  </p>
+                  <p className="p-[2px] rounded-[2px] text-blackColor dark:text-white">To Navigate</p>
+                </div>
+              </div>
             </div>
+
           }
         </div>
         {children}

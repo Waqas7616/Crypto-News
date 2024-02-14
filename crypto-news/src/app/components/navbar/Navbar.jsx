@@ -9,6 +9,7 @@ import Button from "../button/Button";
 
 function Navbar({ isNightMode, toggleMode }) {
   const [languages, setLanguages] = useState(false);
+  const [coins, setCoins] = useState(false);
   const coinData = [
     {
       id: 1,
@@ -217,15 +218,22 @@ function Navbar({ isNightMode, toggleMode }) {
           as="div"
           className="menu flex items-center justify-between gap-3 relative"
         >
-          <ul className="flex items-center gap-3">
+          <ul className="flex items-center gap-3 relative">
             <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
               <Link href="/">Home</Link>
             </li>
             <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
               <Link href="/blockchain">Blockchain</Link>
             </li>
-            <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
-              <Link href="/coins">Cryptocurrency</Link>
+            <li onClick={() => setCoins(!coins)} className="text-blackColor  tex-[24px] font-[500] dark:text-white">
+              <Link href="">Cryptocurrency</Link>
+              {coins && <div className="absolute top-[100%] left-[30%] rounded-[6px] p-3 bg-[#eeeeee] dark:bg-[#212121]">
+                <ul>
+                  <li className="text-blackColor title  text-[14px] mb-2 dark:text-white"><Link href='/coins'>Top Fallers</Link></li>
+                  <li className="text-blackColor title  text-[14px] mb-2 dark:text-white"><Link href='/coins'>Top Gainers</Link></li>
+                  <li className="text-blackColor title  text-[14px] mb-2 dark:text-white"><Link href='/coins'>All Coins</Link></li>
+                </ul>
+              </div>}
             </li>
             <li className="text-blackColor tex-[24px] font-[500] dark:text-white">
               <Link href="/article">NFTs</Link>
