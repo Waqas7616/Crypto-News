@@ -2,43 +2,44 @@ import Image from 'next/image'
 import React from 'react'
 import blockchain from '@/app/images/blockchain.svg'
 import profile from '@/app/images/profile.png'
+import { useNightMode } from '@/app/context/NightMode'
 function BlockchainCard() {
     return (
         <div>
-            <div className='flex gap-3 mt-3'>
-                <div className="image h-full">
+            <div className='flex flex-col md:flex-row gap-3 mt-5'>
+                <div className="image flex-[0.5] lg:flex-[0.7] 3xl:flex-[0.2]">
                     <Image className='w-full !h-full' src={blockchain} alt='blockchain image' />
                 </div>
-                <div className="text-section pr-4">
-                    <p className="text-red text-[12px]">Press Release</p>
-                    <h6 className='text-blackColor text-[14px] font-[500] dark:text-white'>AOFverse Secure $3 Million in Private Funding Round Led by Animoca...</h6>
-                    <p className='text-lightBlack text-[12px] dark:text-[rgba(255,255,255,0.8)]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.</p>
+                <div className="text-section pr-4 flex-1">
+                    <p className="text-red text-[14px] lg:text-[12px] 3xl:text-[24px] desc">Press Release</p>
+                    <h6 className='text-blackColor text-[14px] lg:text-[12px] xl:text-[14px] 2xl:text-[20px] 3xl:text-[40px] title dark:text-white 2xl:mt-3 3xl:mt-8'>AOFverse Secure $3 Million in Private Funding Round Led by Animoca...</h6>
+                    <p className='text-lightBlack text-[14px] lg:text-[12px]  xl:text-[14px] 2xl:text-[18px] 3xl:text-[38px] desc dark:text-[rgba(255,255,255,0.8)] 2xl:mt-3 3xl:mt-8'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.</p>
 
 
-                    <div className="flex items-center justify-between mt-1">
-                        <div className="profile flex gap-1">
+                    <div className="hidden md:flex items-center justify-between mt-1 2xl:mt-4 3xl:mt-12 flex-wrap">
+                        <div className="profile flex gap-1 items-center mb-3">
                             <div className="image">
                                 <Image className='w-full object-cover' src={profile} alt='profile image' />
                             </div>
-                            <div className="profile-info">
-                                <p className="text-blackColor font-[500] text-[10px] dark:text-white">Sara Ali</p>
-                                <p className="text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">Jan 27,2020 at 6:00am</p>
+                            <div className="profile-info ">
+                                <p className="text-blackColor  text-[10px] lg:text-[8px] 2xl:text-[12px] 3xl:text-[18px] dark:text-white title">Sara Ali</p>
+                                <p className="text-lightBlack text-[10px] lg:text-[8px] 2xl:text-[12px] 3xl:text-[18px] dark:text-[rgba(255,255,255,0.8)] desc">Jan 27,2020 at 6:00am</p>
                             </div>
                         </div>
                         <div className="view-info flex justify-between gap-2">
-                            <p className="flex items-center gap-1 text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">
+                            <p className="flex items-center gap-1 text-lightBlack text-[10px] 2xl:text-[12px] 3xl:text-[18px] desc dark:text-[rgba(255,255,255,0.8)]">
                                 <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.4038 8.80875C16.7422 7.09743 15.5936 5.61747 14.1001 4.5518C12.6065 3.48612 10.8335 2.88145 9 2.8125C7.16655 2.88145 5.39347 3.48612 3.89993 4.5518C2.40639 5.61747 1.25785 7.09743 0.596255 8.80875C0.551574 8.93234 0.551574 9.06766 0.596255 9.19125C1.25785 10.9026 2.40639 12.3825 3.89993 13.4482C5.39347 14.5139 7.16655 15.1186 9 15.1875C10.8335 15.1186 12.6065 14.5139 14.1001 13.4482C15.5936 12.3825 16.7422 10.9026 17.4038 9.19125C17.4484 9.06766 17.4484 8.93234 17.4038 8.80875ZM9 14.0625C6.01875 14.0625 2.86875 11.8519 1.72688 9C2.86875 6.14812 6.01875 3.9375 9 3.9375C11.9813 3.9375 15.1313 6.14812 16.2731 9C15.1313 11.8519 11.9813 14.0625 9 14.0625Z" fill="#555555" />
                                     <path d="M9 5.625C8.33249 5.625 7.67997 5.82294 7.12495 6.19379C6.56994 6.56464 6.13735 7.09174 5.88191 7.70844C5.62646 8.32514 5.55963 9.00374 5.68985 9.65843C5.82008 10.3131 6.14151 10.9145 6.61352 11.3865C7.08552 11.8585 7.68689 12.1799 8.34157 12.3102C8.99626 12.4404 9.67486 12.3735 10.2916 12.1181C10.9083 11.8626 11.4354 11.4301 11.8062 10.875C12.1771 10.32 12.375 9.66751 12.375 9C12.375 8.10489 12.0194 7.24645 11.3865 6.61351C10.7536 5.98058 9.89511 5.625 9 5.625ZM9 11.25C8.55499 11.25 8.11998 11.118 7.74997 10.8708C7.37996 10.6236 7.09157 10.2722 6.92127 9.86104C6.75098 9.4499 6.70642 8.9975 6.79323 8.56105C6.88005 8.12459 7.09434 7.72368 7.40901 7.40901C7.72368 7.09434 8.12459 6.88005 8.56105 6.79323C8.99751 6.70642 9.4499 6.75097 9.86104 6.92127C10.2722 7.09157 10.6236 7.37996 10.8708 7.74997C11.118 8.11998 11.25 8.55499 11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25Z" fill="#555555" />
                                 </svg>900
                             </p>
-                            <p className="flex items-center gap-1 text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">
+                            <p className="flex items-center gap-1 desc text-lightBlack text-[10px] 2xl:text-[12px] 3xl:text-[18px] dark:text-[rgba(255,255,255,0.8)]">
                                 <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z" stroke="#555555" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z" stroke="#555555" stroke-width="1.6875" stroke-linejoin="round" />
                                 </svg>45
                             </p>
-                            <p className="flex items-center gap-1 text-lightBlack text-[10px] dark:text-[rgba(255,255,255,0.8)]">
+                            <p className="flex items-center desc gap-1 text-lightBlack text-[10px] 2xl:text-[12px] 3xl:text-[18px] dark:text-[rgba(255,255,255,0.8)]">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_316_4843)">
                                         <path d="M9 1.5C13.1423 1.5 16.5 4.85775 16.5 9C16.5 13.1423 13.1423 16.5 9 16.5C4.85775 16.5 1.5 13.1423 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5ZM9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3ZM9 4.5C9.1837 4.50002 9.361 4.56747 9.49828 4.68954C9.63556 4.81161 9.72326 4.97981 9.74475 5.16225L9.75 5.25V8.6895L11.7802 10.7198C11.9148 10.8547 11.9929 11.0358 11.9987 11.2263C12.0045 11.4167 11.9376 11.6023 11.8116 11.7452C11.6855 11.8881 11.5098 11.9777 11.3201 11.9958C11.1305 12.0139 10.941 11.9591 10.7902 11.8425L10.7198 11.7802L8.46975 9.53025C8.35318 9.41358 8.27832 9.26175 8.25675 9.09825L8.25 9V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5Z" fill="#555555" />
@@ -195,6 +196,193 @@ function BlockchainCard() {
                             </svg>
 
 
+                        </div>
+                    </div>
+
+                    {/* FOR MOBILE  */}
+
+                    <div className="flex items-center justify-between md:hidden gap-1 mt-1 2xl:mt-4 3xl:mt-12 ">
+                        <div className="profile flex gap-1 items-center mb-3">
+                            <div className="image">
+                                <Image className='w-full object-cover' src={profile} alt='profile image' />
+                            </div>
+                            <div className="profile-info ">
+                                <p className="text-blackColor  text-[9px] lg:text-[8px] 2xl:text-[12px] 3xl:text-[18px] dark:text-white title">Sara Ali</p>
+                                <p className="text-lightBlack text-[9px] lg:text-[8px] 2xl:text-[12px] 3xl:text-[18px] dark:text-[rgba(255,255,255,0.8)] desc">Jan 27,2020 at 6:00am</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-col'>
+                            <div className="view-info flex justify-between gap-1">
+                                <p className="flex items-center gap-1 text-lightBlack text-[10px] 2xl:text-[12px] 3xl:text-[18px] desc dark:text-[rgba(255,255,255,0.8)]">
+                                    <svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.4038 8.80875C16.7422 7.09743 15.5936 5.61747 14.1001 4.5518C12.6065 3.48612 10.8335 2.88145 9 2.8125C7.16655 2.88145 5.39347 3.48612 3.89993 4.5518C2.40639 5.61747 1.25785 7.09743 0.596255 8.80875C0.551574 8.93234 0.551574 9.06766 0.596255 9.19125C1.25785 10.9026 2.40639 12.3825 3.89993 13.4482C5.39347 14.5139 7.16655 15.1186 9 15.1875C10.8335 15.1186 12.6065 14.5139 14.1001 13.4482C15.5936 12.3825 16.7422 10.9026 17.4038 9.19125C17.4484 9.06766 17.4484 8.93234 17.4038 8.80875ZM9 14.0625C6.01875 14.0625 2.86875 11.8519 1.72688 9C2.86875 6.14812 6.01875 3.9375 9 3.9375C11.9813 3.9375 15.1313 6.14812 16.2731 9C15.1313 11.8519 11.9813 14.0625 9 14.0625Z" fill="#555555" />
+                                        <path d="M9 5.625C8.33249 5.625 7.67997 5.82294 7.12495 6.19379C6.56994 6.56464 6.13735 7.09174 5.88191 7.70844C5.62646 8.32514 5.55963 9.00374 5.68985 9.65843C5.82008 10.3131 6.14151 10.9145 6.61352 11.3865C7.08552 11.8585 7.68689 12.1799 8.34157 12.3102C8.99626 12.4404 9.67486 12.3735 10.2916 12.1181C10.9083 11.8626 11.4354 11.4301 11.8062 10.875C12.1771 10.32 12.375 9.66751 12.375 9C12.375 8.10489 12.0194 7.24645 11.3865 6.61351C10.7536 5.98058 9.89511 5.625 9 5.625ZM9 11.25C8.55499 11.25 8.11998 11.118 7.74997 10.8708C7.37996 10.6236 7.09157 10.2722 6.92127 9.86104C6.75098 9.4499 6.70642 8.9975 6.79323 8.56105C6.88005 8.12459 7.09434 7.72368 7.40901 7.40901C7.72368 7.09434 8.12459 6.88005 8.56105 6.79323C8.99751 6.70642 9.4499 6.75097 9.86104 6.92127C10.2722 7.09157 10.6236 7.37996 10.8708 7.74997C11.118 8.11998 11.25 8.55499 11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25Z" fill="#555555" />
+                                    </svg>900
+                                </p>
+                                <p className="flex items-center gap-1 desc text-lightBlack text-[10px] 2xl:text-[12px] 3xl:text-[18px] dark:text-[rgba(255,255,255,0.8)]">
+                                    <svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z" stroke="#555555" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z" stroke="#555555" stroke-width="1.6875" stroke-linejoin="round" />
+                                    </svg>45
+                                </p>
+                                <p className="flex items-center desc gap-1 text-lightBlack text-[10px] 2xl:text-[12px] 3xl:text-[18px] dark:text-[rgba(255,255,255,0.8)]">
+                                    <svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_316_4843)">
+                                            <path d="M9 1.5C13.1423 1.5 16.5 4.85775 16.5 9C16.5 13.1423 13.1423 16.5 9 16.5C4.85775 16.5 1.5 13.1423 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5ZM9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3ZM9 4.5C9.1837 4.50002 9.361 4.56747 9.49828 4.68954C9.63556 4.81161 9.72326 4.97981 9.74475 5.16225L9.75 5.25V8.6895L11.7802 10.7198C11.9148 10.8547 11.9929 11.0358 11.9987 11.2263C12.0045 11.4167 11.9376 11.6023 11.8116 11.7452C11.6855 11.8881 11.5098 11.9777 11.3201 11.9958C11.1305 12.0139 10.941 11.9591 10.7902 11.8425L10.7198 11.7802L8.46975 9.53025C8.35318 9.41358 8.27832 9.26175 8.25675 9.09825L8.25 9V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5Z" fill="#555555" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_316_4843">
+                                                <rect width="18" height="18" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>7 minutes
+                                </p>
+                            </div>
+                            <div className="social-icons flex items-center gap-2">
+                                {/* FB  */}
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_316_4849)">
+                                        <path d="M24 12C24 5.37264 18.6274 0 12 0C5.37264 0 0 5.37264 0 12C0 17.6275 3.87456 22.3498 9.10128 23.6467V15.6672H6.62688V12H9.10128V10.4198C9.10128 6.33552 10.9498 4.4424 14.9597 4.4424C15.72 4.4424 17.0318 4.59168 17.5685 4.74048V8.06448C17.2853 8.03472 16.7933 8.01984 16.1822 8.01984C14.2147 8.01984 13.4544 8.76528 13.4544 10.703V12H17.3741L16.7006 15.6672H13.4544V23.9122C19.3963 23.1946 24.0005 18.1354 24.0005 12H24Z" fill="#0866FF" />
+                                        <path d="M16.7007 15.6672L17.3742 12H13.4545V10.703C13.4545 8.76526 14.2148 8.01982 16.1823 8.01982C16.7934 8.01982 17.2854 8.0347 17.5686 8.06446V4.74046C17.0319 4.59118 15.7201 4.44238 14.9598 4.44238C10.9498 4.44238 9.10135 6.3355 9.10135 10.4198V12H6.62695V15.6672H9.10135V23.6467C10.0297 23.8771 11.0007 24 12.0001 24C12.4921 24 12.9774 23.9697 13.454 23.9121V15.6672H16.7002H16.7007Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_316_4849">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                {/* Twitter  */}
+                                <svg width="18" height="18" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.3263 0.903809H20.6998L13.3297 9.3273L22 20.7898H15.2112L9.89404 13.8378L3.80995 20.7898H0.434432L8.31744 11.7799L0 0.903809H6.96111L11.7674 7.25814L17.3263 0.903809ZM16.1423 18.7706H18.0116L5.9454 2.81694H3.93946L16.1423 18.7706Z" fill="black" />
+                                </svg>
+
+                                {/* Third Icon  */}
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 0C5.37281 0 0 5.37281 0 12C0 15.3141 1.34344 18.3141 3.51469 20.4853L1.22906 22.7709C0.775312 23.2247 1.09688 24 1.73813 24H12C18.6272 24 24 18.6272 24 12C24 5.37281 18.6272 0 12 0Z" fill="#FF4500" />
+                                    <path d="M18.8022 14.3944C20.3498 14.3944 21.6044 13.1398 21.6044 11.5922C21.6044 10.0446 20.3498 8.79004 18.8022 8.79004C17.2546 8.79004 16 10.0446 16 11.5922C16 13.1398 17.2546 14.3944 18.8022 14.3944Z" fill="url(#paint0_radial_316_4855)" />
+                                    <path d="M5.19672 14.3944C6.74432 14.3944 7.99891 13.1398 7.99891 11.5922C7.99891 10.0446 6.74432 8.79004 5.19672 8.79004C3.64911 8.79004 2.39453 10.0446 2.39453 11.5922C2.39453 13.1398 3.64911 14.3944 5.19672 14.3944Z" fill="url(#paint1_radial_316_4855)" />
+                                    <path d="M12.0055 19.9998C16.4237 19.9998 20.0052 17.3135 20.0052 13.9998C20.0052 10.686 16.4237 7.99976 12.0055 7.99976C7.58744 7.99976 4.00586 10.686 4.00586 13.9998C4.00586 17.3135 7.58744 19.9998 12.0055 19.9998Z" fill="url(#paint2_radial_316_4855)" />
+                                    <path d="M9.64187 13.4165C9.59499 14.4327 8.91999 14.8021 8.1353 14.8021C7.35062 14.8021 6.75062 14.2818 6.79749 13.2655C6.84437 12.2493 7.51937 11.5762 8.30405 11.5762C9.08874 11.5762 9.68874 12.4002 9.64187 13.4165Z" fill="#842123" />
+                                    <path d="M17.2161 13.2646C17.263 14.2808 16.6639 14.8011 15.8783 14.8011C15.0927 14.8011 14.4177 14.4327 14.3717 13.4155C14.3248 12.3993 14.9239 11.5752 15.7095 11.5752C16.4952 11.5752 17.1702 12.2474 17.2161 13.2646Z" fill="#842123" />
+                                    <path d="M14.3716 13.5047C14.4156 14.4562 15.0466 14.8012 15.7816 14.8012C16.5166 14.8012 17.0772 14.2847 17.0331 13.3331C16.9891 12.3815 16.3581 11.759 15.6231 11.759C14.8881 11.759 14.3275 12.5531 14.3716 13.5047Z" fill="url(#paint3_radial_316_4855)" />
+                                    <path d="M9.64251 13.5047C9.59844 14.4562 8.96751 14.8012 8.23251 14.8012C7.49751 14.8012 6.93688 14.2847 6.98094 13.3331C7.02501 12.3815 7.65594 11.759 8.39094 11.759C9.12595 11.759 9.68657 12.5531 9.64251 13.5047Z" fill="url(#paint4_radial_316_4855)" />
+                                    <path d="M12.0071 15.48C11.0152 15.48 10.0646 15.5278 9.18519 15.615C9.03519 15.63 8.93957 15.7828 8.99769 15.9197C9.48988 17.0737 10.6514 17.8847 12.0071 17.8847C13.3627 17.8847 14.5233 17.0737 15.0164 15.9197C15.0746 15.7828 14.9799 15.63 14.8289 15.615C13.9496 15.5278 12.9989 15.48 12.0071 15.48Z" fill="#BBCFDA" />
+                                    <path d="M12.0056 15.7002C11.0165 15.7002 10.0687 15.7489 9.19217 15.838C9.04217 15.853 8.94748 16.0086 9.0056 16.1474C9.49685 17.3202 10.6547 18.1433 12.0047 18.1433C13.3547 18.1433 14.5134 17.3193 15.0047 16.1474C15.0628 16.0086 14.9681 15.853 14.8181 15.838C13.9415 15.7489 12.9937 15.7002 12.0047 15.7002H12.0056Z" fill="white" />
+                                    <path d="M12.0072 15.5859C11.0341 15.5859 10.1013 15.6338 9.23784 15.7209C9.09065 15.7359 8.9969 15.8888 9.05409 16.0256C9.5369 17.1797 10.6769 17.9906 12.0072 17.9906C13.3375 17.9906 14.4766 17.1797 14.9603 16.0256C15.0175 15.8888 14.9238 15.7359 14.7766 15.7209C13.9141 15.6338 12.9813 15.5859 12.0072 15.5859Z" fill="url(#paint5_radial_316_4855)" />
+                                    <path d="M16.388 7.18414C17.4846 7.18414 18.3736 6.29515 18.3736 5.19852C18.3736 4.10189 17.4846 3.21289 16.388 3.21289C15.2913 3.21289 14.4023 4.10189 14.4023 5.19852C14.4023 6.29515 15.2913 7.18414 16.388 7.18414Z" fill="url(#paint6_radial_316_4855)" />
+                                    <path d="M11.9791 8.25274C11.741 8.25274 11.5488 8.15337 11.5488 7.99962C11.5488 6.22024 12.9963 4.77368 14.7748 4.77368C15.0129 4.77368 15.2051 4.96681 15.2051 5.20399C15.2051 5.44118 15.012 5.63431 14.7748 5.63431C13.4707 5.63431 12.4095 6.69556 12.4095 7.99962C12.4095 8.15337 12.2163 8.25274 11.9791 8.25274Z" fill="url(#paint7_radial_316_4855)" />
+                                    <path d="M9.11852 13.9754C9.11852 14.3438 8.72664 14.5088 8.24383 14.5088C7.76102 14.5088 7.36914 14.3438 7.36914 13.9754C7.36914 13.607 7.76102 13.3088 8.24383 13.3088C8.72664 13.3088 9.11852 13.607 9.11852 13.9754Z" fill="#FF6101" />
+                                    <path d="M16.6439 13.9754C16.6439 14.3438 16.252 14.5088 15.7692 14.5088C15.2864 14.5088 14.8945 14.3438 14.8945 13.9754C14.8945 13.607 15.2864 13.3088 15.7692 13.3088C16.252 13.3088 16.6439 13.607 16.6439 13.9754Z" fill="#FF6101" />
+                                    <path d="M8.84836 12.9759C9.02026 12.9759 9.15961 12.8239 9.15961 12.6365C9.15961 12.4491 9.02026 12.2971 8.84836 12.2971C8.67646 12.2971 8.53711 12.4491 8.53711 12.6365C8.53711 12.8239 8.67646 12.9759 8.84836 12.9759Z" fill="#FFC49C" />
+                                    <path d="M16.2468 12.9759C16.4187 12.9759 16.558 12.8239 16.558 12.6365C16.558 12.4491 16.4187 12.2971 16.2468 12.2971C16.0749 12.2971 15.9355 12.4491 15.9355 12.6365C15.9355 12.8239 16.0749 12.9759 16.2468 12.9759Z" fill="#FFC49C" />
+                                    <defs>
+                                        <radialGradient id="paint0_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.8445 10.0836) scale(5.61576 4.89886)">
+                                            <stop stop-color="#FEFFFF" />
+                                            <stop offset="0.4" stop-color="#FEFFFF" />
+                                            <stop offset="0.51" stop-color="#F9FCFC" />
+                                            <stop offset="0.62" stop-color="#EDF3F5" />
+                                            <stop offset="0.7" stop-color="#DEE9EC" />
+                                            <stop offset="0.72" stop-color="#D8E4E8" />
+                                            <stop offset="0.76" stop-color="#CCD8DF" />
+                                            <stop offset="0.8" stop-color="#C8D5DD" />
+                                            <stop offset="0.83" stop-color="#CCD6DE" />
+                                            <stop offset="0.85" stop-color="#D8DBE2" />
+                                            <stop offset="0.88" stop-color="#EDE3E9" />
+                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                        </radialGradient>
+                                        <radialGradient id="paint1_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(5.23908 10.0836) scale(5.61577 4.89886)">
+                                            <stop stop-color="#FEFFFF" />
+                                            <stop offset="0.4" stop-color="#FEFFFF" />
+                                            <stop offset="0.51" stop-color="#F9FCFC" />
+                                            <stop offset="0.62" stop-color="#EDF3F5" />
+                                            <stop offset="0.7" stop-color="#DEE9EC" />
+                                            <stop offset="0.72" stop-color="#D8E4E8" />
+                                            <stop offset="0.76" stop-color="#CCD8DF" />
+                                            <stop offset="0.8" stop-color="#C8D5DD" />
+                                            <stop offset="0.83" stop-color="#CCD6DE" />
+                                            <stop offset="0.85" stop-color="#D8DBE2" />
+                                            <stop offset="0.88" stop-color="#EDE3E9" />
+                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                        </radialGradient>
+                                        <radialGradient id="paint2_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.219 9.29781) scale(16.9394 11.8936)">
+                                            <stop stop-color="#FEFFFF" />
+                                            <stop offset="0.4" stop-color="#FEFFFF" />
+                                            <stop offset="0.51" stop-color="#F9FCFC" />
+                                            <stop offset="0.62" stop-color="#EDF3F5" />
+                                            <stop offset="0.7" stop-color="#DEE9EC" />
+                                            <stop offset="0.72" stop-color="#D8E4E8" />
+                                            <stop offset="0.76" stop-color="#CCD8DF" />
+                                            <stop offset="0.8" stop-color="#C8D5DD" />
+                                            <stop offset="0.83" stop-color="#CCD6DE" />
+                                            <stop offset="0.85" stop-color="#D8DBE2" />
+                                            <stop offset="0.88" stop-color="#EDE3E9" />
+                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                        </radialGradient>
+                                        <radialGradient id="paint3_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.4947 14.1535) rotate(180) scale(1.41529 2.07776)">
+                                            <stop stop-color="#FF6600" />
+                                            <stop offset="0.5" stop-color="#FF4500" />
+                                            <stop offset="0.7" stop-color="#FC4301" />
+                                            <stop offset="0.82" stop-color="#F43F07" />
+                                            <stop offset="0.92" stop-color="#E53812" />
+                                            <stop offset="1" stop-color="#D4301F" />
+                                        </radialGradient>
+                                        <radialGradient id="paint4_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.45568 14.1535) scale(1.41529 2.07776)">
+                                            <stop stop-color="#FF6600" />
+                                            <stop offset="0.5" stop-color="#FF4500" />
+                                            <stop offset="0.7" stop-color="#FC4301" />
+                                            <stop offset="0.82" stop-color="#F43F07" />
+                                            <stop offset="0.92" stop-color="#E53812" />
+                                            <stop offset="1" stop-color="#D4301F" />
+                                        </radialGradient>
+                                        <radialGradient id="paint5_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.0352 18.2726) scale(4.99052 3.29162)">
+                                            <stop stop-color="#172E35" />
+                                            <stop offset="0.29" stop-color="#0E1C21" />
+                                            <stop offset="0.73" stop-color="#030708" />
+                                            <stop offset="1" />
+                                        </radialGradient>
+                                        <radialGradient id="paint6_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16.4351 3.19752) scale(4.38069)">
+                                            <stop stop-color="#FEFFFF" />
+                                            <stop offset="0.4" stop-color="#FEFFFF" />
+                                            <stop offset="0.51" stop-color="#F9FCFC" />
+                                            <stop offset="0.62" stop-color="#EDF3F5" />
+                                            <stop offset="0.7" stop-color="#DEE9EC" />
+                                            <stop offset="0.72" stop-color="#D8E4E8" />
+                                            <stop offset="0.76" stop-color="#CCD8DF" />
+                                            <stop offset="0.8" stop-color="#C8D5DD" />
+                                            <stop offset="0.83" stop-color="#CCD6DE" />
+                                            <stop offset="0.85" stop-color="#D8DBE2" />
+                                            <stop offset="0.88" stop-color="#EDE3E9" />
+                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                        </radialGradient>
+                                        <radialGradient id="paint7_radial_316_4855" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.6107 7.97299) scale(3.59065 3.59065)">
+                                            <stop offset="0.48" stop-color="#7A9299" />
+                                            <stop offset="0.67" stop-color="#172E35" />
+                                            <stop offset="0.75" />
+                                            <stop offset="0.82" stop-color="#172E35" />
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
+
+                                {/* Linkedin  */}
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_316_4873)">
+                                        <path d="M22.2283 0H1.77167C1.30179 0 0.851161 0.186657 0.518909 0.518909C0.186657 0.851161 0 1.30179 0 1.77167V22.2283C0 22.6982 0.186657 23.1488 0.518909 23.4811C0.851161 23.8133 1.30179 24 1.77167 24H22.2283C22.6982 24 23.1488 23.8133 23.4811 23.4811C23.8133 23.1488 24 22.6982 24 22.2283V1.77167C24 1.30179 23.8133 0.851161 23.4811 0.518909C23.1488 0.186657 22.6982 0 22.2283 0ZM7.15333 20.445H3.545V8.98333H7.15333V20.445ZM5.34667 7.395C4.93736 7.3927 4.53792 7.2692 4.19873 7.04009C3.85955 6.81098 3.59584 6.48653 3.44088 6.10769C3.28591 5.72885 3.24665 5.31259 3.32803 4.91145C3.40941 4.51032 3.6078 4.14228 3.89816 3.85378C4.18851 3.56529 4.55782 3.36927 4.95947 3.29046C5.36112 3.21165 5.77711 3.25359 6.15495 3.41099C6.53279 3.56838 6.85554 3.83417 7.08247 4.17481C7.30939 4.51546 7.43032 4.91569 7.43 5.325C7.43386 5.59903 7.38251 5.87104 7.27901 6.1248C7.17551 6.37857 7.02198 6.6089 6.82757 6.80207C6.63316 6.99523 6.40185 7.14728 6.14742 7.24915C5.893 7.35102 5.62067 7.40062 5.34667 7.395ZM20.4533 20.455H16.8467V14.1933C16.8467 12.3467 16.0617 11.7767 15.0483 11.7767C13.9783 11.7767 12.9283 12.5833 12.9283 14.24V20.455H9.32V8.99167H12.79V10.58H12.8367C13.185 9.875 14.405 8.67 16.2667 8.67C18.28 8.67 20.455 9.865 20.455 13.365L20.4533 20.455Z" fill="#0A66C2" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_316_4873">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                {/* Whatsapp  */}
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 23.9999L1.687 17.837C0.645998 16.033 0.0989998 13.988 0.0999998 11.891C0.103 5.33499 5.43799 0 11.993 0C15.174 0.000999998 18.16 1.24 20.406 3.48799C22.6509 5.73599 23.8869 8.72398 23.8859 11.902C23.8829 18.459 18.548 23.7939 11.993 23.7939C10.003 23.7929 8.04198 23.2939 6.30499 22.3459L0 23.9999ZM6.59698 20.193C8.27298 21.188 9.87298 21.7839 11.989 21.7849C17.437 21.7849 21.875 17.351 21.878 11.9C21.88 6.43798 17.463 2.01 11.997 2.008C6.54498 2.008 2.11 6.44199 2.108 11.892C2.107 14.117 2.75899 15.783 3.85399 17.526L2.85499 21.174L6.59698 20.193ZM17.984 14.729C17.91 14.605 17.712 14.531 17.414 14.382C17.117 14.233 15.656 13.514 15.383 13.415C15.111 13.316 14.913 13.266 14.714 13.564C14.516 13.861 13.946 14.531 13.773 14.729C13.6 14.927 13.426 14.952 13.129 14.803C12.832 14.654 11.874 14.341 10.739 13.328C9.85598 12.54 9.25898 11.567 9.08598 11.269C8.91298 10.972 9.06798 10.811 9.21598 10.663C9.34998 10.53 9.51298 10.316 9.66198 10.142C9.81298 9.96998 9.86198 9.84598 9.96198 9.64698C10.061 9.44898 10.012 9.27498 9.93698 9.12598C9.86198 8.97798 9.26798 7.51498 9.02098 6.91998C8.77898 6.34099 8.53398 6.41898 8.35198 6.40999L7.78198 6.39999C7.58398 6.39999 7.26198 6.47398 6.98998 6.77198C6.71798 7.06998 5.94999 7.78798 5.94999 9.25098C5.94999 10.714 7.01498 12.127 7.16298 12.325C7.31198 12.523 9.25798 15.525 12.239 16.812C12.948 17.118 13.502 17.301 13.933 17.438C14.645 17.664 15.293 17.632 15.805 17.556C16.376 17.471 17.563 16.837 17.811 16.143C18.059 15.448 18.059 14.853 17.984 14.729Z" fill="#25D366" />
+                                </svg>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
