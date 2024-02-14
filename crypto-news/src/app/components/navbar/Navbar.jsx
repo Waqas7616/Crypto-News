@@ -53,6 +53,7 @@ function Navbar({ isNightMode, toggleMode }) {
       change: '-12.03%'
     }
   ]
+
   // const [coinData, setCoinData] = useState([]);
   // useEffect(() => {
   //     const fetchData = async () => {
