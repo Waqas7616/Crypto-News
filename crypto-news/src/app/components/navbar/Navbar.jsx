@@ -128,7 +128,7 @@ function Navbar({ isNightMode, toggleMode }) {
             {languages && (
               <div
                 id="dropdown"
-                className="z-10 absolute bottom-[-400%] left-0  bg-blue divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                className="z-10 absolute bottom-[65%] right-[2%]  bg-[#eeeeee] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#212121]"
               >
                 <ul
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
