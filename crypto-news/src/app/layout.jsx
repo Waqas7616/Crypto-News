@@ -6,6 +6,8 @@ import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 import blackLogo from "@/app/images/Logo.svg";
 import MobileMenu from "./components/mobileNavbar/MobileMenu";
+import coin from '@/app/images/Cryptocurrency.png'
+import Image from "next/image";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +21,70 @@ export default function RootLayout({ children }) {
   const toggleMode = () => {
     setIsNightMode((prev) => !prev);
   };
+  const coinData = [
+    {
+      id: 1,
+      name: 'BitCoin',
+      abb: 'BTC',
+      price: '$89327',
+      change: '-2.03%'
+    },
+    {
+      id: 2,
+      name: 'Ethereum',
+      abb: 'ETH',
+      price: '$9327',
+      change: '2.03%'
+    },
+    {
+      id: 3,
+      name: 'Tether',
+      abb: 'USDT',
+      price: '$1327',
+      change: '3.23%'
+    },
+    {
+      id: 4,
+      name: 'BNB',
+      abb: 'BNB',
+      price: '$327',
+      change: '-7.99%'
+    },
+    {
+      id: 5,
+      name: 'Solana',
+      abb: 'SOL',
+      price: '$7',
+      change: '1.00%'
+    },
+    {
+      id: 6,
+      name: 'XRP',
+      abb: 'XRP',
+      price: '$27',
+      change: '-12.03%'
+    }
+  ]
+  const [searchQuery, setSearchQuery] = useState('')
+  const [filteredCoins, setFilteredCoins] = useState(coinData);
+
+  const filterCoins = (query) => {
+    const filtered = coinData.filter((coin) => coin.name.toLowerCase().includes(query.toLowerCase())
+
+    );
+    setFilteredCoins(filtered)
+  }
+
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+    filterCoins(e.target.value);
+  }
   return (
     <html lang="en" className={`${isNightMode ? "dark" : "light"} `}>
       <body className="dark:bg-[#0b0b0b]">
         <MobileMenu isNightMode={isNightMode} toggleMode={toggleMode} />
         <Navbar isNightMode={isNightMode} toggleMode={toggleMode} />
-        <div className=" hidden md:flex searchSection  items-center justify-between mt-5 w-11/12 m-auto">
+        <div className=" hidden md:flex  searchSection  items-center justify-between mt-5 w-11/12 m-auto">
           <div className="bg-[#EEEEEE] dark:bg-[#212121] w-fit p-2 rounded-sm">
             <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white md:text-[7px] lg:text-[10px] xl:text-[12px] xl-a:text-[14px]">
               Sponsored:{" "}
@@ -58,6 +118,8 @@ export default function RootLayout({ children }) {
                 type="text"
                 placeholder="Search"
                 className="bg-[transparent] dark:text-white md:w-[65%] lg:w-[80%] xl:w-[100%]"
+                value={searchQuery}
+                onChange={handleInputChange}
               />
               <svg
                 width="25"
@@ -76,6 +138,24 @@ export default function RootLayout({ children }) {
             </div>
             <Button text="Gaming" />
           </div>
+          {searchQuery.length > 0 &&
+            <div className="absolute bottom-[10%] rounded-[8px] h-[300px] right-[3%] bg-white dark:bg-[#212121] w-1/3 px-3 py-5">
+              {filteredCoins.map((coin, index) => (
+                <div key={coin.id} className="flex justify-between items-center mb-4">
+                  <Image src={coin} alt="coin" />
+                  <p className="title text-[14px] text-blackColor dark:text-white">{coin.name}</p>
+                  <p className="desc text-[12px] text-lightBlack dark:text-white">{coin.abb}</p>
+                  <p className="desc bg-[#eeeeee] text-lightBlack text-[12px] rounded-[6px] px-1 py-[1px]">#786</p>
+                  <p className="desc text-blackColor text-[14px] dark:text-white">{coin.price}</p>
+                  <p className="flex gap-2 items-center text-[#EA3943] desc text-[14px]"><svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5 0.312607L6.5 6.31261L0.5 0.312607L12.5 0.312607Z" fill="#EA3943" />
+                  </svg>
+                    {coin.change}</p>
+                  {/* Display other coin details */}
+                </div>
+              ))}
+            </div>
+          }
         </div>
         {children}
       </body>
