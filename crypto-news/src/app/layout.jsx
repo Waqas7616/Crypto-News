@@ -80,14 +80,13 @@ export default function RootLayout({ children }) {
     filterCoins(e.target.value);
   }
   return (
-    <html lang="en" className={`${isNightMode ? 'dark' : 'light'} `}>
-
+    <html lang="en" className={`${isNightMode ? "dark" : "light"} `}>
       <body className="dark:bg-[#0b0b0b]">
         <MobileMenu isNightMode={isNightMode} toggleMode={toggleMode} />
         <Navbar isNightMode={isNightMode} toggleMode={toggleMode} />
         <div className=" hidden md:flex  searchSection  items-center justify-between mt-5 w-11/12 m-auto">
           <div className="bg-[#EEEEEE] dark:bg-[#212121] w-fit p-2 rounded-sm">
-            <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white">
+            <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white md:text-[7px] lg:text-[10px] xl:text-[12px] xl-a:text-[14px]">
               Sponsored:{" "}
               <span className="flex items-center gap-2">
                 <svg
@@ -113,12 +112,12 @@ export default function RootLayout({ children }) {
             </h3>
           </div>
 
-          <div className="searchbox relative flex items-center justify-between gap-2">
-            <div className="search flex items-center gap-4 bg-[#EEEEEE] dark:bg-[#212121] dark:text-white py-2 px-2 rounded-md">
+          <div className="searchbox flex items-center  gap-2 ml-auto">
+            <div className="search flex items-center gap-4 bg-[#EEEEEE]  dark:text-white py-2 px-2 rounded-md md:w-[55%] lg:w-[80%] xl:w-[100%] ml-auto">
               <input
                 type="text"
                 placeholder="Search"
-                className="bg-[transparent] dark:text-white outline-none"
+                className="bg-[transparent] dark:text-white md:w-[65%] lg:w-[80%] xl:w-[100%]"
                 value={searchQuery}
                 onChange={handleInputChange}
               />

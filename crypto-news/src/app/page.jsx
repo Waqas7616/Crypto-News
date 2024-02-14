@@ -14,7 +14,7 @@ import Comment from "./components/comment/Comment";
 export default function Home() {
   return (
     <>
-      <div className="main w-11/12 m-auto mt-12">
+      <div className="main w-11/12 3xl:w-[30%] m-auto mt-12">
         {/* SEARCHBOX SECTION  */}
 
         {/* MAIN DETAILS  */}

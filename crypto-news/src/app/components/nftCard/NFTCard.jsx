@@ -122,13 +122,13 @@ function NFTCard() {
   ];
   return (
     <div>
-      <h2 className="text-blackColor text-[24px] font-[500]  dark:text-blue">
+      <h2 className="text-blackColor text-[18px] md:text-[16px] xl:text-[24px] font-[500]  dark:text-blue">
         News By Catagories
       </h2>
       <div className="flex flex-col md:flex-row flex-wrap gap-3 items-center mt-3">
         {data.slice(0, display).map((nft) => (
           <div className="w-full md:w-[22%]" key={nft.id}>
-            <h3 className="text-blackColor dark:text-white my-2">
+            <h3 className="text-blackColor text-[14px] md:text-[14px] xl:text-[18px] dark:text-white my-2">
               {nft.title}
             </h3>
             <hr className="mb-3" />
@@ -139,15 +139,15 @@ function NFTCard() {
                 alt="blogImage"
               />
             </div>
-            <p className="text-[14px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
+            <p className="text-[14px] md:text-[10px] lg:text-[16px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
               {nft.desc1}
             </p>
             <hr className="mb-3" />
-            <p className="text-[14px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
+            <p className="text-[14px] md:text-[10px] lg:text-[16px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
               {nft.desc2}
             </p>
             <hr className="mb-3" />
-            <p className="text-[14px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
+            <p className="text-[14px] md:text-[10px] lg:text-[16px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
               {nft.desc3}
             </p>
           </div>
