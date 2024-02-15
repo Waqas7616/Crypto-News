@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import blockchain from "@/app/images/blockchain.svg";
 import profile from "@/app/images/profile.png";
-import { useNightMode } from "@/app/context/NightMode";
+
 function BlockchainCard() {
     return (
         <div>
@@ -22,7 +22,7 @@ function BlockchainCard() {
                     </h6>
                     <p className="text-lightBlack text-[12px] lg:text-[12px]  xl:text-[14px]  desc dark:text-[rgba(255,255,255,0.8)] 2xl:mt-3 ">
                         Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text
+                        industry. Lorem Ipsum has been the industry&apos;s standard dummy text
                         ever since the 1500s, when an unknown printer took a galley of type
                         and scrambled it to make a type specimen book. It has survived not
                         only five centuries, but also the leap into electronic typesetting,
@@ -78,15 +78,15 @@ function BlockchainCard() {
                                     <path
                                         d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z"
                                         stroke="#555555"
-                                        stroke-width="1.125"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeWidth="1.125"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     />
                                     <path
                                         d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z"
                                         stroke="#555555"
-                                        stroke-width="1.6875"
-                                        stroke-linejoin="round"
+                                        strokeWidth="1.6875"
+                                        strokeLinejoin="round"
                                     />
                                 </svg>
                                 45
@@ -99,7 +99,7 @@ function BlockchainCard() {
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <g clip-path="url(#clip0_316_4843)">
+                                    <g clipPath="url(#clip0_316_4843)">
                                         <path
                                             d="M9 1.5C13.1423 1.5 16.5 4.85775 16.5 9C16.5 13.1423 13.1423 16.5 9 16.5C4.85775 16.5 1.5 13.1423 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5ZM9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3ZM9 4.5C9.1837 4.50002 9.361 4.56747 9.49828 4.68954C9.63556 4.81161 9.72326 4.97981 9.74475 5.16225L9.75 5.25V8.6895L11.7802 10.7198C11.9148 10.8547 11.9929 11.0358 11.9987 11.2263C12.0045 11.4167 11.9376 11.6023 11.8116 11.7452C11.6855 11.8881 11.5098 11.9777 11.3201 11.9958C11.1305 12.0139 10.941 11.9591 10.7902 11.8425L10.7198 11.7802L8.46975 9.53025C8.35318 9.41358 8.27832 9.26175 8.25675 9.09825L8.25 9V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5Z"
                                             fill="#555555"
@@ -123,7 +123,7 @@ function BlockchainCard() {
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <g clip-path="url(#clip0_316_4849)">
+                                <g clipPath="url(#clip0_316_4849)">
                                     <path
                                         d="M24 12C24 5.37264 18.6274 0 12 0C5.37264 0 0 5.37264 0 12C0 17.6275 3.87456 22.3498 9.10128 23.6467V15.6672H6.62688V12H9.10128V10.4198C9.10128 6.33552 10.9498 4.4424 14.9597 4.4424C15.72 4.4424 17.0318 4.59168 17.5685 4.74048V8.06448C17.2853 8.03472 16.7933 8.01984 16.1822 8.01984C14.2147 8.01984 13.4544 8.76528 13.4544 10.703V12H17.3741L16.7006 15.6672H13.4544V23.9122C19.3963 23.1946 24.0005 18.1354 24.0005 12H24Z"
                                         fill="#0866FF"
@@ -239,18 +239,18 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(18.8445 10.0836) scale(5.61576 4.89886)"
                                     >
-                                        <stop stop-color="#FEFFFF" />
-                                        <stop offset="0.4" stop-color="#FEFFFF" />
-                                        <stop offset="0.51" stop-color="#F9FCFC" />
-                                        <stop offset="0.62" stop-color="#EDF3F5" />
-                                        <stop offset="0.7" stop-color="#DEE9EC" />
-                                        <stop offset="0.72" stop-color="#D8E4E8" />
-                                        <stop offset="0.76" stop-color="#CCD8DF" />
-                                        <stop offset="0.8" stop-color="#C8D5DD" />
-                                        <stop offset="0.83" stop-color="#CCD6DE" />
-                                        <stop offset="0.85" stop-color="#D8DBE2" />
-                                        <stop offset="0.88" stop-color="#EDE3E9" />
-                                        <stop offset="0.9" stop-color="#FFEBEF" />
+                                        <stop stopColor="#FEFFFF" />
+                                        <stop offset="0.4" stopColor="#FEFFFF" />
+                                        <stop offset="0.51" stopColor="#F9FCFC" />
+                                        <stop offset="0.62" stopColor="#EDF3F5" />
+                                        <stop offset="0.7" stopColor="#DEE9EC" />
+                                        <stop offset="0.72" stopColor="#D8E4E8" />
+                                        <stop offset="0.76" stopColor="#CCD8DF" />
+                                        <stop offset="0.8" stopColor="#C8D5DD" />
+                                        <stop offset="0.83" stopColor="#CCD6DE" />
+                                        <stop offset="0.85" stopColor="#D8DBE2" />
+                                        <stop offset="0.88" stopColor="#EDE3E9" />
+                                        <stop offset="0.9" stopColor="#FFEBEF" />
                                     </radialGradient>
                                     <radialGradient
                                         id="paint1_radial_316_4855"
@@ -260,18 +260,18 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(5.23908 10.0836) scale(5.61577 4.89886)"
                                     >
-                                        <stop stop-color="#FEFFFF" />
-                                        <stop offset="0.4" stop-color="#FEFFFF" />
-                                        <stop offset="0.51" stop-color="#F9FCFC" />
-                                        <stop offset="0.62" stop-color="#EDF3F5" />
-                                        <stop offset="0.7" stop-color="#DEE9EC" />
-                                        <stop offset="0.72" stop-color="#D8E4E8" />
-                                        <stop offset="0.76" stop-color="#CCD8DF" />
-                                        <stop offset="0.8" stop-color="#C8D5DD" />
-                                        <stop offset="0.83" stop-color="#CCD6DE" />
-                                        <stop offset="0.85" stop-color="#D8DBE2" />
-                                        <stop offset="0.88" stop-color="#EDE3E9" />
-                                        <stop offset="0.9" stop-color="#FFEBEF" />
+                                        <stop stopColor="#FEFFFF" />
+                                        <stop offset="0.4" stopColor="#FEFFFF" />
+                                        <stop offset="0.51" stopColor="#F9FCFC" />
+                                        <stop offset="0.62" stopColor="#EDF3F5" />
+                                        <stop offset="0.7" stopColor="#DEE9EC" />
+                                        <stop offset="0.72" stopColor="#D8E4E8" />
+                                        <stop offset="0.76" stopColor="#CCD8DF" />
+                                        <stop offset="0.8" stopColor="#C8D5DD" />
+                                        <stop offset="0.83" stopColor="#CCD6DE" />
+                                        <stop offset="0.85" stopColor="#D8DBE2" />
+                                        <stop offset="0.88" stopColor="#EDE3E9" />
+                                        <stop offset="0.9" stopColor="#FFEBEF" />
                                     </radialGradient>
                                     <radialGradient
                                         id="paint2_radial_316_4855"
@@ -281,18 +281,18 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(12.219 9.29781) scale(16.9394 11.8936)"
                                     >
-                                        <stop stop-color="#FEFFFF" />
-                                        <stop offset="0.4" stop-color="#FEFFFF" />
-                                        <stop offset="0.51" stop-color="#F9FCFC" />
-                                        <stop offset="0.62" stop-color="#EDF3F5" />
-                                        <stop offset="0.7" stop-color="#DEE9EC" />
-                                        <stop offset="0.72" stop-color="#D8E4E8" />
-                                        <stop offset="0.76" stop-color="#CCD8DF" />
-                                        <stop offset="0.8" stop-color="#C8D5DD" />
-                                        <stop offset="0.83" stop-color="#CCD6DE" />
-                                        <stop offset="0.85" stop-color="#D8DBE2" />
-                                        <stop offset="0.88" stop-color="#EDE3E9" />
-                                        <stop offset="0.9" stop-color="#FFEBEF" />
+                                        <stop stopColor="#FEFFFF" />
+                                        <stop offset="0.4" stopColor="#FEFFFF" />
+                                        <stop offset="0.51" stopColor="#F9FCFC" />
+                                        <stop offset="0.62" stopColor="#EDF3F5" />
+                                        <stop offset="0.7" stopColor="#DEE9EC" />
+                                        <stop offset="0.72" stopColor="#D8E4E8" />
+                                        <stop offset="0.76" stopColor="#CCD8DF" />
+                                        <stop offset="0.8" stopColor="#C8D5DD" />
+                                        <stop offset="0.83" stopColor="#CCD6DE" />
+                                        <stop offset="0.85" stopColor="#D8DBE2" />
+                                        <stop offset="0.88" stopColor="#EDE3E9" />
+                                        <stop offset="0.9" stopColor="#FFEBEF" />
                                     </radialGradient>
                                     <radialGradient
                                         id="paint3_radial_316_4855"
@@ -302,12 +302,12 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(15.4947 14.1535) rotate(180) scale(1.41529 2.07776)"
                                     >
-                                        <stop stop-color="#FF6600" />
-                                        <stop offset="0.5" stop-color="#FF4500" />
-                                        <stop offset="0.7" stop-color="#FC4301" />
-                                        <stop offset="0.82" stop-color="#F43F07" />
-                                        <stop offset="0.92" stop-color="#E53812" />
-                                        <stop offset="1" stop-color="#D4301F" />
+                                        <stop stopColor="#FF6600" />
+                                        <stop offset="0.5" stopColor="#FF4500" />
+                                        <stop offset="0.7" stopColor="#FC4301" />
+                                        <stop offset="0.82" stopColor="#F43F07" />
+                                        <stop offset="0.92" stopColor="#E53812" />
+                                        <stop offset="1" stopColor="#D4301F" />
                                     </radialGradient>
                                     <radialGradient
                                         id="paint4_radial_316_4855"
@@ -317,12 +317,12 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(8.45568 14.1535) scale(1.41529 2.07776)"
                                     >
-                                        <stop stop-color="#FF6600" />
-                                        <stop offset="0.5" stop-color="#FF4500" />
-                                        <stop offset="0.7" stop-color="#FC4301" />
-                                        <stop offset="0.82" stop-color="#F43F07" />
-                                        <stop offset="0.92" stop-color="#E53812" />
-                                        <stop offset="1" stop-color="#D4301F" />
+                                        <stop stopColor="#FF6600" />
+                                        <stop offset="0.5" stopColor="#FF4500" />
+                                        <stop offset="0.7" stopColor="#FC4301" />
+                                        <stop offset="0.82" stopColor="#F43F07" />
+                                        <stop offset="0.92" stopColor="#E53812" />
+                                        <stop offset="1" stopColor="#D4301F" />
                                     </radialGradient>
                                     <radialGradient
                                         id="paint5_radial_316_4855"
@@ -332,9 +332,9 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(12.0352 18.2726) scale(4.99052 3.29162)"
                                     >
-                                        <stop stop-color="#172E35" />
-                                        <stop offset="0.29" stop-color="#0E1C21" />
-                                        <stop offset="0.73" stop-color="#030708" />
+                                        <stop stopColor="#172E35" />
+                                        <stop offset="0.29" stopColor="#0E1C21" />
+                                        <stop offset="0.73" stopColor="#030708" />
                                         <stop offset="1" />
                                     </radialGradient>
                                     <radialGradient
@@ -345,18 +345,18 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(16.4351 3.19752) scale(4.38069)"
                                     >
-                                        <stop stop-color="#FEFFFF" />
-                                        <stop offset="0.4" stop-color="#FEFFFF" />
-                                        <stop offset="0.51" stop-color="#F9FCFC" />
-                                        <stop offset="0.62" stop-color="#EDF3F5" />
-                                        <stop offset="0.7" stop-color="#DEE9EC" />
-                                        <stop offset="0.72" stop-color="#D8E4E8" />
-                                        <stop offset="0.76" stop-color="#CCD8DF" />
-                                        <stop offset="0.8" stop-color="#C8D5DD" />
-                                        <stop offset="0.83" stop-color="#CCD6DE" />
-                                        <stop offset="0.85" stop-color="#D8DBE2" />
-                                        <stop offset="0.88" stop-color="#EDE3E9" />
-                                        <stop offset="0.9" stop-color="#FFEBEF" />
+                                        <stop stopColor="#FEFFFF" />
+                                        <stop offset="0.4" stopColor="#FEFFFF" />
+                                        <stop offset="0.51" stopColor="#F9FCFC" />
+                                        <stop offset="0.62" stopColor="#EDF3F5" />
+                                        <stop offset="0.7" stopColor="#DEE9EC" />
+                                        <stop offset="0.72" stopColor="#D8E4E8" />
+                                        <stop offset="0.76" stopColor="#CCD8DF" />
+                                        <stop offset="0.8" stopColor="#C8D5DD" />
+                                        <stop offset="0.83" stopColor="#CCD6DE" />
+                                        <stop offset="0.85" stopColor="#D8DBE2" />
+                                        <stop offset="0.88" stopColor="#EDE3E9" />
+                                        <stop offset="0.9" stopColor="#FFEBEF" />
                                     </radialGradient>
                                     <radialGradient
                                         id="paint7_radial_316_4855"
@@ -366,10 +366,10 @@ function BlockchainCard() {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(14.6107 7.97299) scale(3.59065 3.59065)"
                                     >
-                                        <stop offset="0.48" stop-color="#7A9299" />
-                                        <stop offset="0.67" stop-color="#172E35" />
+                                        <stop offset="0.48" stopColor="#7A9299" />
+                                        <stop offset="0.67" stopColor="#172E35" />
                                         <stop offset="0.75" />
-                                        <stop offset="0.82" stop-color="#172E35" />
+                                        <stop offset="0.82" stopColor="#172E35" />
                                     </radialGradient>
                                 </defs>
                             </svg>
@@ -382,7 +382,7 @@ function BlockchainCard() {
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <g clip-path="url(#clip0_316_4873)">
+                                <g clipPath="url(#clip0_316_4873)">
                                     <path
                                         d="M22.2283 0H1.77167C1.30179 0 0.851161 0.186657 0.518909 0.518909C0.186657 0.851161 0 1.30179 0 1.77167V22.2283C0 22.6982 0.186657 23.1488 0.518909 23.4811C0.851161 23.8133 1.30179 24 1.77167 24H22.2283C22.6982 24 23.1488 23.8133 23.4811 23.4811C23.8133 23.1488 24 22.6982 24 22.2283V1.77167C24 1.30179 23.8133 0.851161 23.4811 0.518909C23.1488 0.186657 22.6982 0 22.2283 0ZM7.15333 20.445H3.545V8.98333H7.15333V20.445ZM5.34667 7.395C4.93736 7.3927 4.53792 7.2692 4.19873 7.04009C3.85955 6.81098 3.59584 6.48653 3.44088 6.10769C3.28591 5.72885 3.24665 5.31259 3.32803 4.91145C3.40941 4.51032 3.6078 4.14228 3.89816 3.85378C4.18851 3.56529 4.55782 3.36927 4.95947 3.29046C5.36112 3.21165 5.77711 3.25359 6.15495 3.41099C6.53279 3.56838 6.85554 3.83417 7.08247 4.17481C7.30939 4.51546 7.43032 4.91569 7.43 5.325C7.43386 5.59903 7.38251 5.87104 7.27901 6.1248C7.17551 6.37857 7.02198 6.6089 6.82757 6.80207C6.63316 6.99523 6.40185 7.14728 6.14742 7.24915C5.893 7.35102 5.62067 7.40062 5.34667 7.395ZM20.4533 20.455H16.8467V14.1933C16.8467 12.3467 16.0617 11.7767 15.0483 11.7767C13.9783 11.7767 12.9283 12.5833 12.9283 14.24V20.455H9.32V8.99167H12.79V10.58H12.8367C13.185 9.875 14.405 8.67 16.2667 8.67C18.28 8.67 20.455 9.865 20.455 13.365L20.4533 20.455Z"
                                         fill="#0A66C2"
@@ -463,15 +463,15 @@ function BlockchainCard() {
                                         <path
                                             d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z"
                                             stroke="#555555"
-                                            stroke-width="1.125"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.125"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                         <path
                                             d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z"
                                             stroke="#555555"
-                                            stroke-width="1.6875"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6875"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     45
@@ -484,7 +484,7 @@ function BlockchainCard() {
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
-                                        <g clip-path="url(#clip0_316_4843)">
+                                        <g clipPath="url(#clip0_316_4843)">
                                             <path
                                                 d="M9 1.5C13.1423 1.5 16.5 4.85775 16.5 9C16.5 13.1423 13.1423 16.5 9 16.5C4.85775 16.5 1.5 13.1423 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5ZM9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3ZM9 4.5C9.1837 4.50002 9.361 4.56747 9.49828 4.68954C9.63556 4.81161 9.72326 4.97981 9.74475 5.16225L9.75 5.25V8.6895L11.7802 10.7198C11.9148 10.8547 11.9929 11.0358 11.9987 11.2263C12.0045 11.4167 11.9376 11.6023 11.8116 11.7452C11.6855 11.8881 11.5098 11.9777 11.3201 11.9958C11.1305 12.0139 10.941 11.9591 10.7902 11.8425L10.7198 11.7802L8.46975 9.53025C8.35318 9.41358 8.27832 9.26175 8.25675 9.09825L8.25 9V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5Z"
                                                 fill="#555555"
@@ -508,7 +508,7 @@ function BlockchainCard() {
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <g clip-path="url(#clip0_316_4849)">
+                                    <g clipPath="url(#clip0_316_4849)">
                                         <path
                                             d="M24 12C24 5.37264 18.6274 0 12 0C5.37264 0 0 5.37264 0 12C0 17.6275 3.87456 22.3498 9.10128 23.6467V15.6672H6.62688V12H9.10128V10.4198C9.10128 6.33552 10.9498 4.4424 14.9597 4.4424C15.72 4.4424 17.0318 4.59168 17.5685 4.74048V8.06448C17.2853 8.03472 16.7933 8.01984 16.1822 8.01984C14.2147 8.01984 13.4544 8.76528 13.4544 10.703V12H17.3741L16.7006 15.6672H13.4544V23.9122C19.3963 23.1946 24.0005 18.1354 24.0005 12H24Z"
                                             fill="#0866FF"
@@ -624,18 +624,18 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(18.8445 10.0836) scale(5.61576 4.89886)"
                                         >
-                                            <stop stop-color="#FEFFFF" />
-                                            <stop offset="0.4" stop-color="#FEFFFF" />
-                                            <stop offset="0.51" stop-color="#F9FCFC" />
-                                            <stop offset="0.62" stop-color="#EDF3F5" />
-                                            <stop offset="0.7" stop-color="#DEE9EC" />
-                                            <stop offset="0.72" stop-color="#D8E4E8" />
-                                            <stop offset="0.76" stop-color="#CCD8DF" />
-                                            <stop offset="0.8" stop-color="#C8D5DD" />
-                                            <stop offset="0.83" stop-color="#CCD6DE" />
-                                            <stop offset="0.85" stop-color="#D8DBE2" />
-                                            <stop offset="0.88" stop-color="#EDE3E9" />
-                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                            <stop stopColor="#FEFFFF" />
+                                            <stop offset="0.4" stopColor="#FEFFFF" />
+                                            <stop offset="0.51" stopColor="#F9FCFC" />
+                                            <stop offset="0.62" stopColor="#EDF3F5" />
+                                            <stop offset="0.7" stopColor="#DEE9EC" />
+                                            <stop offset="0.72" stopColor="#D8E4E8" />
+                                            <stop offset="0.76" stopColor="#CCD8DF" />
+                                            <stop offset="0.8" stopColor="#C8D5DD" />
+                                            <stop offset="0.83" stopColor="#CCD6DE" />
+                                            <stop offset="0.85" stopColor="#D8DBE2" />
+                                            <stop offset="0.88" stopColor="#EDE3E9" />
+                                            <stop offset="0.9" stopColor="#FFEBEF" />
                                         </radialGradient>
                                         <radialGradient
                                             id="paint1_radial_316_4855"
@@ -645,18 +645,18 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(5.23908 10.0836) scale(5.61577 4.89886)"
                                         >
-                                            <stop stop-color="#FEFFFF" />
-                                            <stop offset="0.4" stop-color="#FEFFFF" />
-                                            <stop offset="0.51" stop-color="#F9FCFC" />
-                                            <stop offset="0.62" stop-color="#EDF3F5" />
-                                            <stop offset="0.7" stop-color="#DEE9EC" />
-                                            <stop offset="0.72" stop-color="#D8E4E8" />
-                                            <stop offset="0.76" stop-color="#CCD8DF" />
-                                            <stop offset="0.8" stop-color="#C8D5DD" />
-                                            <stop offset="0.83" stop-color="#CCD6DE" />
-                                            <stop offset="0.85" stop-color="#D8DBE2" />
-                                            <stop offset="0.88" stop-color="#EDE3E9" />
-                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                            <stop stopColor="#FEFFFF" />
+                                            <stop offset="0.4" stopColor="#FEFFFF" />
+                                            <stop offset="0.51" stopColor="#F9FCFC" />
+                                            <stop offset="0.62" stopColor="#EDF3F5" />
+                                            <stop offset="0.7" stopColor="#DEE9EC" />
+                                            <stop offset="0.72" stopColor="#D8E4E8" />
+                                            <stop offset="0.76" stopColor="#CCD8DF" />
+                                            <stop offset="0.8" stopColor="#C8D5DD" />
+                                            <stop offset="0.83" stopColor="#CCD6DE" />
+                                            <stop offset="0.85" stopColor="#D8DBE2" />
+                                            <stop offset="0.88" stopColor="#EDE3E9" />
+                                            <stop offset="0.9" stopColor="#FFEBEF" />
                                         </radialGradient>
                                         <radialGradient
                                             id="paint2_radial_316_4855"
@@ -666,18 +666,18 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(12.219 9.29781) scale(16.9394 11.8936)"
                                         >
-                                            <stop stop-color="#FEFFFF" />
-                                            <stop offset="0.4" stop-color="#FEFFFF" />
-                                            <stop offset="0.51" stop-color="#F9FCFC" />
-                                            <stop offset="0.62" stop-color="#EDF3F5" />
-                                            <stop offset="0.7" stop-color="#DEE9EC" />
-                                            <stop offset="0.72" stop-color="#D8E4E8" />
-                                            <stop offset="0.76" stop-color="#CCD8DF" />
-                                            <stop offset="0.8" stop-color="#C8D5DD" />
-                                            <stop offset="0.83" stop-color="#CCD6DE" />
-                                            <stop offset="0.85" stop-color="#D8DBE2" />
-                                            <stop offset="0.88" stop-color="#EDE3E9" />
-                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                            <stop stopColor="#FEFFFF" />
+                                            <stop offset="0.4" stopColor="#FEFFFF" />
+                                            <stop offset="0.51" stopColor="#F9FCFC" />
+                                            <stop offset="0.62" stopColor="#EDF3F5" />
+                                            <stop offset="0.7" stopColor="#DEE9EC" />
+                                            <stop offset="0.72" stopColor="#D8E4E8" />
+                                            <stop offset="0.76" stopColor="#CCD8DF" />
+                                            <stop offset="0.8" stopColor="#C8D5DD" />
+                                            <stop offset="0.83" stopColor="#CCD6DE" />
+                                            <stop offset="0.85" stopColor="#D8DBE2" />
+                                            <stop offset="0.88" stopColor="#EDE3E9" />
+                                            <stop offset="0.9" stopColor="#FFEBEF" />
                                         </radialGradient>
                                         <radialGradient
                                             id="paint3_radial_316_4855"
@@ -687,12 +687,12 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(15.4947 14.1535) rotate(180) scale(1.41529 2.07776)"
                                         >
-                                            <stop stop-color="#FF6600" />
-                                            <stop offset="0.5" stop-color="#FF4500" />
-                                            <stop offset="0.7" stop-color="#FC4301" />
-                                            <stop offset="0.82" stop-color="#F43F07" />
-                                            <stop offset="0.92" stop-color="#E53812" />
-                                            <stop offset="1" stop-color="#D4301F" />
+                                            <stop stopColor="#FF6600" />
+                                            <stop offset="0.5" stopColor="#FF4500" />
+                                            <stop offset="0.7" stopColor="#FC4301" />
+                                            <stop offset="0.82" stopColor="#F43F07" />
+                                            <stop offset="0.92" stopColor="#E53812" />
+                                            <stop offset="1" stopColor="#D4301F" />
                                         </radialGradient>
                                         <radialGradient
                                             id="paint4_radial_316_4855"
@@ -702,12 +702,12 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(8.45568 14.1535) scale(1.41529 2.07776)"
                                         >
-                                            <stop stop-color="#FF6600" />
-                                            <stop offset="0.5" stop-color="#FF4500" />
-                                            <stop offset="0.7" stop-color="#FC4301" />
-                                            <stop offset="0.82" stop-color="#F43F07" />
-                                            <stop offset="0.92" stop-color="#E53812" />
-                                            <stop offset="1" stop-color="#D4301F" />
+                                            <stop stopColor="#FF6600" />
+                                            <stop offset="0.5" stopColor="#FF4500" />
+                                            <stop offset="0.7" stopColor="#FC4301" />
+                                            <stop offset="0.82" stopColor="#F43F07" />
+                                            <stop offset="0.92" stopColor="#E53812" />
+                                            <stop offset="1" stopColor="#D4301F" />
                                         </radialGradient>
                                         <radialGradient
                                             id="paint5_radial_316_4855"
@@ -717,9 +717,9 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(12.0352 18.2726) scale(4.99052 3.29162)"
                                         >
-                                            <stop stop-color="#172E35" />
-                                            <stop offset="0.29" stop-color="#0E1C21" />
-                                            <stop offset="0.73" stop-color="#030708" />
+                                            <stop stopColor="#172E35" />
+                                            <stop offset="0.29" stopColor="#0E1C21" />
+                                            <stop offset="0.73" stopColor="#030708" />
                                             <stop offset="1" />
                                         </radialGradient>
                                         <radialGradient
@@ -730,18 +730,18 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(16.4351 3.19752) scale(4.38069)"
                                         >
-                                            <stop stop-color="#FEFFFF" />
-                                            <stop offset="0.4" stop-color="#FEFFFF" />
-                                            <stop offset="0.51" stop-color="#F9FCFC" />
-                                            <stop offset="0.62" stop-color="#EDF3F5" />
-                                            <stop offset="0.7" stop-color="#DEE9EC" />
-                                            <stop offset="0.72" stop-color="#D8E4E8" />
-                                            <stop offset="0.76" stop-color="#CCD8DF" />
-                                            <stop offset="0.8" stop-color="#C8D5DD" />
-                                            <stop offset="0.83" stop-color="#CCD6DE" />
-                                            <stop offset="0.85" stop-color="#D8DBE2" />
-                                            <stop offset="0.88" stop-color="#EDE3E9" />
-                                            <stop offset="0.9" stop-color="#FFEBEF" />
+                                            <stop stopColor="#FEFFFF" />
+                                            <stop offset="0.4" stopColor="#FEFFFF" />
+                                            <stop offset="0.51" stopColor="#F9FCFC" />
+                                            <stop offset="0.62" stopColor="#EDF3F5" />
+                                            <stop offset="0.7" stopColor="#DEE9EC" />
+                                            <stop offset="0.72" stopColor="#D8E4E8" />
+                                            <stop offset="0.76" stopColor="#CCD8DF" />
+                                            <stop offset="0.8" stopColor="#C8D5DD" />
+                                            <stop offset="0.83" stopColor="#CCD6DE" />
+                                            <stop offset="0.85" stopColor="#D8DBE2" />
+                                            <stop offset="0.88" stopColor="#EDE3E9" />
+                                            <stop offset="0.9" stopColor="#FFEBEF" />
                                         </radialGradient>
                                         <radialGradient
                                             id="paint7_radial_316_4855"
@@ -751,10 +751,10 @@ function BlockchainCard() {
                                             gradientUnits="userSpaceOnUse"
                                             gradientTransform="translate(14.6107 7.97299) scale(3.59065 3.59065)"
                                         >
-                                            <stop offset="0.48" stop-color="#7A9299" />
-                                            <stop offset="0.67" stop-color="#172E35" />
+                                            <stop offset="0.48" stopColor="#7A9299" />
+                                            <stop offset="0.67" stopColor="#172E35" />
                                             <stop offset="0.75" />
-                                            <stop offset="0.82" stop-color="#172E35" />
+                                            <stop offset="0.82" stopColor="#172E35" />
                                         </radialGradient>
                                     </defs>
                                 </svg>
@@ -767,7 +767,7 @@ function BlockchainCard() {
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <g clip-path="url(#clip0_316_4873)">
+                                    <g clipPath="url(#clip0_316_4873)">
                                         <path
                                             d="M22.2283 0H1.77167C1.30179 0 0.851161 0.186657 0.518909 0.518909C0.186657 0.851161 0 1.30179 0 1.77167V22.2283C0 22.6982 0.186657 23.1488 0.518909 23.4811C0.851161 23.8133 1.30179 24 1.77167 24H22.2283C22.6982 24 23.1488 23.8133 23.4811 23.4811C23.8133 23.1488 24 22.6982 24 22.2283V1.77167C24 1.30179 23.8133 0.851161 23.4811 0.518909C23.1488 0.186657 22.6982 0 22.2283 0ZM7.15333 20.445H3.545V8.98333H7.15333V20.445ZM5.34667 7.395C4.93736 7.3927 4.53792 7.2692 4.19873 7.04009C3.85955 6.81098 3.59584 6.48653 3.44088 6.10769C3.28591 5.72885 3.24665 5.31259 3.32803 4.91145C3.40941 4.51032 3.6078 4.14228 3.89816 3.85378C4.18851 3.56529 4.55782 3.36927 4.95947 3.29046C5.36112 3.21165 5.77711 3.25359 6.15495 3.41099C6.53279 3.56838 6.85554 3.83417 7.08247 4.17481C7.30939 4.51546 7.43032 4.91569 7.43 5.325C7.43386 5.59903 7.38251 5.87104 7.27901 6.1248C7.17551 6.37857 7.02198 6.6089 6.82757 6.80207C6.63316 6.99523 6.40185 7.14728 6.14742 7.24915C5.893 7.35102 5.62067 7.40062 5.34667 7.395ZM20.4533 20.455H16.8467V14.1933C16.8467 12.3467 16.0617 11.7767 15.0483 11.7767C13.9783 11.7767 12.9283 12.5833 12.9283 14.24V20.455H9.32V8.99167H12.79V10.58H12.8367C13.185 9.875 14.405 8.67 16.2667 8.67C18.28 8.67 20.455 9.865 20.455 13.365L20.4533 20.455Z"
                                             fill="#0A66C2"

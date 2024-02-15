@@ -6,7 +6,7 @@ import icon from "@/app/images/dropdownIcon.png";
 
 function Features() {
   const features = Array.from({ length: 5 }, (_, index) => (
-    <div className="mt-3">
+    <div className="mt-3" key={index}>
       <h2 className="text-blackColor md:text-[7px] lg:text-[14px] xl:text-[16px] title dark:text-white">
         <a href="#">Lorem Ipsum is simply dummy tex of the printing and typesetting
           industry. Lorem</a>
