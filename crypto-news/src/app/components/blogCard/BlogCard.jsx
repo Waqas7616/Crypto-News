@@ -16,11 +16,11 @@ function BlogCard() {
           </p>
         </div>
         <button className="bg-[#EEEEEE] md:text-[12px] lg:text-[14px] xl-a:text-[16px] dark:bg-[#212121] dark:text-white border-2 rounded-md border-[#DDDDDD] px-2 py-1 flex items-center gap-2">
-          Trending <Image className="mt-1" src={icon} />
+          Trending <Image className="mt-1" src={icon} alt="icon" />
         </button>
       </div>
       <div className="blogBanner mt-4">
-        <Image className="w-full" src={blog} />
+        <Image className="w-full" src={blog} alt="blog" />
       </div>
       <h1 className="title text-[16px] md:text-[20px] lg:text-[28px] xl:text-[32px]  text-blackColor dark:text-blue mt-1">
         Daily Active Bitcoin Addresses Hit Yearly Peak, Cross 1M as BTC
@@ -47,7 +47,7 @@ function BlogCard() {
       <div className="nextBlog mt-3">
         <h4 className="text-red text-[12px] md:text-[13px] lg:text-[14px] desc">Defi</h4>
         <h1 className="text-blackColor title dark:text-white text-[10px] md:text-[12px] lg:text-[18px]">
-          <a href="#"> ethererum DeFI Gets “Gasiess’ Trading with New Ox API Addres</a> s
+          <a href="#"> ethererum DeFI Gets &quot;Gasiess&apos; Trading with New Ox API Addres</a> s
         </h1>
         <div className="blogAuthor flex items-center justify-between pr-3">
           <p className="text-lightBlack text-[9px] md:text-[11px] lg:text-[14px] title dark:text-white">
@@ -69,7 +69,7 @@ function BlogCard() {
       <div className="nextBlog mt-3">
         <h4 className="text-red text-[12px] md:text-[13px] lg:text-[14px] desc">Defi</h4>
         <h1 className="text-blackColor title dark:text-white text-[10px] md:text-[12px] lg:text-[18px]">
-          <a href="#">ethererum DeFI Gets “Gasiess’ Trading with New Ox API Address</a>
+          <a href="#">ethererum DeFI Gets &quot;Gasiess&apos; Trading with New Ox API Address</a>
         </h1>
         <div className="blogAuthor flex items-center justify-between pr-3">
           <p className="text-lightBlack text-[9px] md:text-[11px] lg:text-[14px] title dark:text-white">
