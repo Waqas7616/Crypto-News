@@ -484,7 +484,7 @@ function Article() {
                 </svg>
               </div>
             </div>
-            <Image src={blog} className="w-full mt-3" />
+            <Image src={blog} alt="blog" className="w-full mt-3" />
             <p className="desc mt-4 text-lightBlack desc text-[12px] md:text-[14px] dark:text-[rgba(255,255,255,0.8)] ">
               While Bitcoin mining has come under considerable scrutiny for its
               environmental impact, it&apos;s essential to avoid exaggerating its
@@ -861,8 +861,8 @@ function Article() {
                 }}
               >
                 {[...Array(comments)].map((_, index) => (
-                  <div className="w-full md:w-[45%]">
-                    <Comment key={index} />
+                  <div className="w-full md:w-[45%]  " key={index}>
+                    <Comment />
                   </div> // Render comments based on commentsToShow state
                 ))}
               </div>
