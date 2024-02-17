@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/navbar/Navbar';
 import Image from 'next/image';
-import coin from '@/app/images/Cryptocurrency.png'
+import coin from '../images/Cryptocurrency.png'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 function Coins() {
