@@ -21,13 +21,13 @@ function PressCard() {
             Animoca...
           </h6>
           <div className="flex gap-[20px] md:justify-between items-center">
-            <p className="text-lightBlack text-[9px] md:text-[10px] lg:text-[12px] dark:text-[rgba(255,255,255,0.8)]">
+            <p className="text-lightBlack text-[9px] md:text-[10px] lg:text-[10px] dark:text-[rgba(255,255,255,0.8)]">
               Aug 23, 2024
             </p>
-            <p className="text-lightBlack text-[9px] md:text-[10px] lg:text-[12px] dark:text-[rgba(255,255,255,0.8)]">
+            <p className="text-lightBlack text-[9px] md:text-[10px] lg:text-[10px] dark:text-[rgba(255,255,255,0.8)]">
               374 views / 0 likes
             </p>
-            <p className="text-lightBlack text-[9px] md:text-[10px] lg:text-[12px] dark:text-[rgba(255,255,255,0.8)]">
+            <p className="text-lightBlack text-[9px] md:text-[10px] lg:text-[10px] dark:text-[rgba(255,255,255,0.8)]">
               7 mnt read time
             </p>
           </div>

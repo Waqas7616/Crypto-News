@@ -1,14 +1,18 @@
 "use client";
 import React, { useState, useEffect, useRef, Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu, Transition, Dialog } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/app/images/Logo.svg";
 import otherLogo from "@/app/images/whitelogo.svg";
 import Button from "../button/Button";
+import eye from "../../images/Eye.png";
+import Google from "../../images/Google.png";
+import facebook from "../../images/facebook.png";
 
 function Navbar({ isNightMode, toggleMode }) {
   const [languages, setLanguages] = useState(false);
+  let [isOpen, setIsOpen] = useState(false);
   const coinData = [
     {
       id: 1,
@@ -492,26 +496,103 @@ function Navbar({ isNightMode, toggleMode }) {
               More
             </li>
           </ul>
-          <Button text="Sign in" />
-          {/* <div className="dropdown-menu absolute bottom-[-400%] flex justify-between items-center right-10 bg-white dark:bg-[#212121]">
-                        <div className="news">
-                            <ul className="flex flex-col flex-wrap">
-                                <li>News</li>
-                                <li>Authors Program</li>
-                                <li>Selection</li>
-                                <li>Video</li>
-                                <li>Analytics</li>
-                                <li>Video</li>
-                                <li>Analytics</li>
-                                <li>Education</li>
-                                <li>Personalities</li>
-                                <li>Opinion</li>
-                                <li>Overview</li>
-                                <li>Events</li>
-                            </ul>
-                        </div>
-                        <div className="tags"></div>
-                    </div> */}
+          <Link href='/sign-in' className="bg-none text-white md:text-[12px] lg:text-[13px] xl:text-[14px]  rounded-lg px-3 py-[.4rem] bg-blue">Sign in</Link>
+          {/* <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+            <Dialog.Panel
+              className={
+                "absolute flex justify-center items-center bg-[rgba(0,0,0,0.6)] top-0 w-full h-full"
+              }
+            >
+              <div className=" w-[300px] h-[300px] md:w-[480px] md:h-[650px] bg-white rounded-lg">
+                <div className="p-5">
+                  <Dialog.Title
+                    className={"text-center text-[24px] text-[#333333] title2"}
+                  >
+                    Sign in
+                  </Dialog.Title>
+                  <Dialog.Description>
+                    
+                  </Dialog.Description>
+
+                  <div className="mt-5">
+                    <div>
+                      <label
+                        className="title text-[#181818] text-[14px]"
+                        htmlFor="email"
+                      >
+                        Email address
+                      </label>
+                      <p>
+                        <input
+                          type="text"
+                          className="bg-[#EEEEEE] focus:bg-[#FFFFFF] w-[100%] p-3  outline-[#2196F3] mt-2 rounded-md"
+                          placeholder="Email address"
+                        />
+                      </p>
+                    </div>
+                    <div className="mt-4">
+                      <label
+                        className="title text-[#181818] text-[14px]"
+                        htmlFor="password"
+                      >
+                        Password
+                      </label>
+                      <p className="relative">
+                        <input
+                          type="password"
+                          className="bg-[#EEEEEE] focus:bg-[#FFFFFF] w-[100%] p-3  outline-[#2196F3]  mt-2 rounded-md"
+                          placeholder="Enter password"
+                        />
+                        <Image
+                          src={eye}
+                          alt="eye"
+                          className="absolute right-3 top-6 z-50"
+                        />
+                      </p>
+                    </div>
+                    <div className="flex justify-between mt-4">
+                      <div className=" flex items-center gap-3 ml-[2px]">
+                        <input type="checkbox" className=" w-4 h-4" />{" "}
+                        <label
+                          className="text-[#555555] text-[14px]"
+                          htmlFor="keep signed in"
+                        >
+                          Keep signed in
+                        </label>
+                      </div>
+                      <p className="text-[#16C782] text-[14px]">
+                        Forget password?
+                      </p>
+                    </div>
+                    <button className="bg-blue w-[100%] title text-white py-3 mt-4 text-[15px] rounded-md">
+                      Continue with email
+                    </button>
+                    <div className="flex justify-center gap-4 items-center my-5">
+                      <div className="border-b-[2px] border-[#EEEEEE] w-[25%]" />
+                      <p className="text-[14px] text-[#555555] font-[500] ">
+                        or use one of these options
+                      </p>
+                      <div className="border-b-[2px] border-[#EEEEEE] w-[25%]" />
+                    </div>
+                    <button className="flex justify-center gap-2 bg-white title w-[100%] text-[#555555] border-2 border-[#E0E0E0] py-3 mt-5 text-[15px] rounded-md">
+                      <Image src={Google} alt="Google" />
+                      Continue with Google
+                    </button>
+                    <button className="flex justify-center gap-2 bg-[#475993] title w-[100%] text-[#ffffff]  py-3 mt-5 text-[15px] rounded-md">
+                      <Image src={facebook} alt="facebook" />
+                      Continue with Facebook
+                    </button>
+                  </div>
+<div className="text-center mt-12">
+                 
+                  <p className="text-[#555555] title text-[16px]">Don&apos;t have an account?{" "}  
+                  <button className="text-[#16c782] title" onClick={() => setIsOpen(false)}> Ragister</button>
+                  </p>
+                  </div>
+                </div>
+              </div>
+            </Dialog.Panel>
+          </Dialog> */}
         </Menu>
       </div>
       <hr />

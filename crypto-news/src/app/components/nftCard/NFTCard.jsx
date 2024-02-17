@@ -11,8 +11,8 @@ import img7 from "@/app/images/nft7.svg";
 import img8 from "@/app/images/nft8.svg";
 import Button from "../button/Button";
 
-function NFTCard() {
-  const dataToDisplay = 8;
+function NFTCard({ displayCount }) {
+  const dataToDisplay = displayCount;
   const [display, setDisplay] = useState(dataToDisplay);
 
   const handleLoadMore = () => {

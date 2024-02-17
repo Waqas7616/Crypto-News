@@ -36,7 +36,7 @@ export default function Home() {
         {/* NFT SECTION  */}
         <div className="flex justify-between items-start mt-12">
           <div className="w-full md:w-[75%]">
-            <NFTCard />
+            <NFTCard displayCount={8}/>
           </div>
           <div className="w-[25%] mt-20 hidden md:block">
             <Image src={ad} alt="ad" />
