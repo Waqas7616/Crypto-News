@@ -140,15 +140,15 @@ function NFTCard({ displayCount }) {
               />
             </div>
             <p className="text-[14px] md:text-[10px] lg:text-[16px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
-              {nft.desc1}
+              <a href="">{nft.desc1}</a>
             </p>
             <hr className="mb-3" />
             <p className="text-[14px] md:text-[10px] lg:text-[16px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
-              {nft.desc2}
+              <a href="">{nft.desc2}</a>
             </p>
             <hr className="mb-3" />
             <p className="text-[14px] md:text-[10px] lg:text-[16px] text-lightBlack dark:text-[rgba(255,255,255,0.8)] my-2">
-              {nft.desc3}
+              <a href="">{nft.desc3}</a>
             </p>
           </div>
         ))}

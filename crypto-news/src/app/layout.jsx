@@ -1,15 +1,17 @@
-// import { Inter } from "next/font/google";
+
 "use client";
 import React, { useState } from "react";
-import Button from "./components/button/Button";
+
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
-import blackLogo from "@/app/images/Logo.svg";
+import logo from "@/app/images/Logo.svg";
+import otherLogo from "@/app/images/whitelogo.svg";
 import MobileMenu from "./components/mobileNavbar/MobileMenu";
-import coin from '@/app/images/Cryptocurrency.png'
-import Image from "next/image";
+import Head from "next/head";
+import Footer from "./components/footer/Footer";
 
-// const inter = Inter({ subsets: ["latin"] });
+
+
 
 // export const metadata = {
 //   title: "Crypto News",
@@ -21,143 +23,19 @@ export default function RootLayout({ children }) {
   const toggleMode = () => {
     setIsNightMode((prev) => !prev);
   };
-  const coinData = [
-    {
-      id: 1,
-      name: 'BitCoin',
-      abb: 'BTC',
-      price: '$89327',
-      change: '-2.03%'
-    },
-    {
-      id: 2,
-      name: 'Ethereum',
-      abb: 'ETH',
-      price: '$9327',
-      change: '2.03%'
-    },
-    {
-      id: 3,
-      name: 'Tether',
-      abb: 'USDT',
-      price: '$1327',
-      change: '3.23%'
-    },
-    {
-      id: 4,
-      name: 'BNB',
-      abb: 'BNB',
-      price: '$327',
-      change: '-7.99%'
-    },
-    {
-      id: 5,
-      name: 'Solana',
-      abb: 'SOL',
-      price: '$7',
-      change: '1.00%'
-    },
-    {
-      id: 6,
-      name: 'XRP',
-      abb: 'XRP',
-      price: '$27',
-      change: '-12.03%'
-    }
-  ]
-  const [searchQuery, setSearchQuery] = useState('')
-  const [filteredCoins, setFilteredCoins] = useState(coinData);
 
-  const filterCoins = (query) => {
-    const filtered = coinData.filter((coin) => coin.name.toLowerCase().includes(query.toLowerCase())
 
-    );
-    setFilteredCoins(filtered)
-  }
-
-  const handleInputChange = (e) => {
-    setSearchQuery(e.target.value);
-    filterCoins(e.target.value);
-  }
   return (
     <html lang="en" className={`${isNightMode ? "dark" : "light"} `}>
+      <Head>
+        <title>crypto news</title>
+      </Head>
       <body className="dark:bg-[#0b0b0b]">
         <MobileMenu isNightMode={isNightMode} toggleMode={toggleMode} />
         <Navbar isNightMode={isNightMode} toggleMode={toggleMode} />
-        <div className=" hidden md:flex  searchSection  items-center justify-between mt-5 w-11/12 m-auto">
-          <div className="bg-[#EEEEEE] dark:bg-[#212121] w-fit p-2 rounded-sm">
-            <h3 className="flex items-center gap-[3px] text-lightBlack dark:text-white md:text-[7px] lg:text-[10px] xl:text-[12px] xl-a:text-[14px]">
-              Sponsored:{" "}
-              <span className="flex items-center gap-2">
-                <svg
-                  width="25"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.5 4H23.5V16H5.5V4ZM14.5 7C15.2956 7 16.0587 7.31607 16.6213 7.87868C17.1839 8.44129 17.5 9.20435 17.5 10C17.5 10.7956 17.1839 11.5587 16.6213 12.1213C16.0587 12.6839 15.2956 13 14.5 13C13.7044 13 12.9413 12.6839 12.3787 12.1213C11.8161 11.5587 11.5 10.7956 11.5 10C11.5 9.20435 11.8161 8.44129 12.3787 7.87868C12.9413 7.31607 13.7044 7 14.5 7ZM9.5 6C9.5 6.53043 9.28929 7.03914 8.91421 7.41421C8.53914 7.78929 8.03043 8 7.5 8V12C8.03043 12 8.53914 12.2107 8.91421 12.5858C9.28929 12.9609 9.5 13.4696 9.5 14H19.5C19.5 13.4696 19.7107 12.9609 20.0858 12.5858C20.4609 12.2107 20.9696 12 21.5 12V8C20.9696 8 20.4609 7.78929 20.0858 7.41421C19.7107 7.03914 19.5 6.53043 19.5 6H9.5ZM1.5 8H3.5V18H19.5V20H1.5V8Z"
-                    fill="#2196F3"
-                  />
-                </svg>{" "}
-                Traders are buying
-              </span>{" "}
-              <span className="font-semibold">Meme Kombat.</span>{" "}
-              <a href="">
-                <span className="text-blue font-semibold">
-                  Can This Stake to Earn Meme Coin with Utility Explode?
-                </span>
-              </a>{" "}
-            </h3>
-          </div>
 
-          <div className="searchbox flex items-center  gap-2 ml-auto">
-            <div className="search flex items-center gap-4 bg-[#EEEEEE]  dark:text-white py-2 px-2 rounded-md md:w-[55%] lg:w-[80%] xl:w-[100%] ml-auto">
-              <input
-                type="text"
-                placeholder="Search"
-                className="bg-[transparent] dark:text-white md:w-[65%] lg:w-[80%] xl:w-[100%]"
-                value={searchQuery}
-                onChange={handleInputChange}
-              />
-              <svg
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.5002 21L17.1572 16.657M17.1572 16.657C17.9001 15.9141 18.4894 15.0321 18.8914 14.0615C19.2935 13.0909 19.5004 12.0506 19.5004 11C19.5004 9.94936 19.2935 8.90905 18.8914 7.93842C18.4894 6.96779 17.9001 6.08585 17.1572 5.34296C16.4143 4.60007 15.5324 4.01078 14.5618 3.60874C13.5911 3.20669 12.5508 2.99976 11.5002 2.99976C10.4496 2.99976 9.40929 3.20669 8.43866 3.60874C7.46803 4.01078 6.58609 4.60007 5.84321 5.34296C4.34288 6.84329 3.5 8.87818 3.5 11C3.5 13.1217 4.34288 15.1566 5.84321 16.657C7.34354 18.1573 9.37842 19.0002 11.5002 19.0002C13.622 19.0002 15.6569 18.1573 17.1572 16.657Z"
-                  stroke="#AAAAAA"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <Button text="Gaming" />
-          </div>
-          {searchQuery.length > 0 &&
-            <div className="absolute bottom-[10%] rounded-[8px] h-[300px] right-[3%] bg-white dark:bg-[#212121] w-1/3 px-3 py-5">
-              {filteredCoins.map((coin, index) => (
-                <div key={coin.id} className="flex justify-between items-center mb-4">
-                  <Image src={coin} alt="coin" />
-                  <p className="title text-[14px] text-blackColor dark:text-white">{coin.name}</p>
-                  <p className="desc text-[12px] text-lightBlack dark:text-white">{coin.abb}</p>
-                  <p className="desc bg-[#eeeeee] text-lightBlack text-[12px] rounded-[6px] px-1 py-[1px]">#786</p>
-                  <p className="desc text-blackColor text-[14px] dark:text-white">{coin.price}</p>
-                  <p className="flex gap-2 items-center text-[#EA3943] desc text-[14px]"><svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.5 0.312607L6.5 6.31261L0.5 0.312607L12.5 0.312607Z" fill="#EA3943" />
-                  </svg>
-                    {coin.change}</p>
-                  {/* Display other coin details */}
-                </div>
-              ))}
-            </div>
-          }
-        </div>
         {children}
+        <Footer logo={isNightMode ? otherLogo : logo} />
       </body>
     </html>
   );

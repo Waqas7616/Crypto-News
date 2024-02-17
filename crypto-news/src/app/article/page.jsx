@@ -147,15 +147,15 @@ function Article() {
                     <path
                       d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z"
                       stroke="#555555"
-                      stroke-width="1.125"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.125"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z"
                       stroke="#555555"
-                      stroke-width="1.6875"
-                      stroke-linejoin="round"
+                      strokeWidth="1.6875"
+                      strokeLinejoin="round"
                     />
                   </svg>
                   45
@@ -168,7 +168,7 @@ function Article() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clip-path="url(#clip0_316_4843)">
+                    <g clipPath="url(#clip0_316_4843)">
                       <path
                         d="M9 1.5C13.1423 1.5 16.5 4.85775 16.5 9C16.5 13.1423 13.1423 16.5 9 16.5C4.85775 16.5 1.5 13.1423 1.5 9C1.5 4.85775 4.85775 1.5 9 1.5ZM9 3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.5913 3.63214 12.1174 4.75736 13.2426C5.88258 14.3679 7.4087 15 9 15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.4087 14.3679 5.88258 13.2426 4.75736C12.1174 3.63214 10.5913 3 9 3ZM9 4.5C9.1837 4.50002 9.361 4.56747 9.49828 4.68954C9.63556 4.81161 9.72326 4.97981 9.74475 5.16225L9.75 5.25V8.6895L11.7802 10.7198C11.9148 10.8547 11.9929 11.0358 11.9987 11.2263C12.0045 11.4167 11.9376 11.6023 11.8116 11.7452C11.6855 11.8881 11.5098 11.9777 11.3201 11.9958C11.1305 12.0139 10.941 11.9591 10.7902 11.8425L10.7198 11.7802L8.46975 9.53025C8.35318 9.41358 8.27832 9.26175 8.25675 9.09825L8.25 9V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5Z"
                         fill="#555555"
@@ -193,7 +193,7 @@ function Article() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clip-path="url(#clip0_316_4849)">
+                  <g clipPath="url(#clip0_316_4849)">
                     <path
                       d="M24 12C24 5.37264 18.6274 0 12 0C5.37264 0 0 5.37264 0 12C0 17.6275 3.87456 22.3498 9.10128 23.6467V15.6672H6.62688V12H9.10128V10.4198C9.10128 6.33552 10.9498 4.4424 14.9597 4.4424C15.72 4.4424 17.0318 4.59168 17.5685 4.74048V8.06448C17.2853 8.03472 16.7933 8.01984 16.1822 8.01984C14.2147 8.01984 13.4544 8.76528 13.4544 10.703V12H17.3741L16.7006 15.6672H13.4544V23.9122C19.3963 23.1946 24.0005 18.1354 24.0005 12H24Z"
                       fill="#0866FF"
@@ -374,7 +374,7 @@ function Article() {
                       gradientUnits="userSpaceOnUse"
                       gradientTransform="translate(15.4947 14.1535) rotate(180) scale(1.41529 2.07776)"
                     >
-                      <stop stop-color="#FF6600" />
+                      <stop stopColor="#FF6600" />
                       <stop offset="0.5" stop-color="#FF4500" />
                       <stop offset="0.7" stop-color="#FC4301" />
                       <stop offset="0.82" stop-color="#F43F07" />
@@ -389,7 +389,7 @@ function Article() {
                       gradientUnits="userSpaceOnUse"
                       gradientTransform="translate(8.45568 14.1535) scale(1.41529 2.07776)"
                     >
-                      <stop stop-color="#FF6600" />
+                      <stop stopColor="#FF6600" />
                       <stop offset="0.5" stop-color="#FF4500" />
                       <stop offset="0.7" stop-color="#FC4301" />
                       <stop offset="0.82" stop-color="#F43F07" />
@@ -404,7 +404,7 @@ function Article() {
                       gradientUnits="userSpaceOnUse"
                       gradientTransform="translate(12.0352 18.2726) scale(4.99052 3.29162)"
                     >
-                      <stop stop-color="#172E35" />
+                      <stop stopColor="#172E35" />
                       <stop offset="0.29" stop-color="#0E1C21" />
                       <stop offset="0.73" stop-color="#030708" />
                       <stop offset="1" />
@@ -417,7 +417,7 @@ function Article() {
                       gradientUnits="userSpaceOnUse"
                       gradientTransform="translate(16.4351 3.19752) scale(4.38069)"
                     >
-                      <stop stop-color="#FEFFFF" />
+                      <stop stopColor="#FEFFFF" />
                       <stop offset="0.4" stop-color="#FEFFFF" />
                       <stop offset="0.51" stop-color="#F9FCFC" />
                       <stop offset="0.62" stop-color="#EDF3F5" />
@@ -455,7 +455,7 @@ function Article() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clip-path="url(#clip0_316_4873)">
+                  <g clipPath="url(#clip0_316_4873)">
                     <path
                       d="M22.2283 0H1.77167C1.30179 0 0.851161 0.186657 0.518909 0.518909C0.186657 0.851161 0 1.30179 0 1.77167V22.2283C0 22.6982 0.186657 23.1488 0.518909 23.4811C0.851161 23.8133 1.30179 24 1.77167 24H22.2283C22.6982 24 23.1488 23.8133 23.4811 23.4811C23.8133 23.1488 24 22.6982 24 22.2283V1.77167C24 1.30179 23.8133 0.851161 23.4811 0.518909C23.1488 0.186657 22.6982 0 22.2283 0ZM7.15333 20.445H3.545V8.98333H7.15333V20.445ZM5.34667 7.395C4.93736 7.3927 4.53792 7.2692 4.19873 7.04009C3.85955 6.81098 3.59584 6.48653 3.44088 6.10769C3.28591 5.72885 3.24665 5.31259 3.32803 4.91145C3.40941 4.51032 3.6078 4.14228 3.89816 3.85378C4.18851 3.56529 4.55782 3.36927 4.95947 3.29046C5.36112 3.21165 5.77711 3.25359 6.15495 3.41099C6.53279 3.56838 6.85554 3.83417 7.08247 4.17481C7.30939 4.51546 7.43032 4.91569 7.43 5.325C7.43386 5.59903 7.38251 5.87104 7.27901 6.1248C7.17551 6.37857 7.02198 6.6089 6.82757 6.80207C6.63316 6.99523 6.40185 7.14728 6.14742 7.24915C5.893 7.35102 5.62067 7.40062 5.34667 7.395ZM20.4533 20.455H16.8467V14.1933C16.8467 12.3467 16.0617 11.7767 15.0483 11.7767C13.9783 11.7767 12.9283 12.5833 12.9283 14.24V20.455H9.32V8.99167H12.79V10.58H12.8367C13.185 9.875 14.405 8.67 16.2667 8.67C18.28 8.67 20.455 9.865 20.455 13.365L20.4533 20.455Z"
                       fill="#0A66C2"
@@ -484,22 +484,22 @@ function Article() {
                 </svg>
               </div>
             </div>
-            <Image src={blog} className="w-full mt-3" />
+            <Image src={blog} alt="blog" className="w-full mt-3" />
             <p className="desc mt-4 text-lightBlack desc text-[12px] md:text-[14px] dark:text-[rgba(255,255,255,0.8)] ">
               While Bitcoin mining has come under considerable scrutiny for its
-              environmental impact, it's essential to avoid exaggerating its
+              environmental impact, it&apos;s essential to avoid exaggerating its
               hazards beyond those posed by traditional solid mineral
-              extraction, such as gold mining. Here's why:
+              extraction, such as gold mining. Here&apos;s why:
             </p>
             <h6 className="text-blackColor title text-[15px] mt-4 dark:text-white">
               Scale and Visibility:
             </h6>
             <p className="mt-3 text-lightBlack desc text-[12px] md:text-[14px] dark:text-[rgba(255,255,255,0.8)]">
-              Bitcoin mining's environmental impact often garners attention due
+              Bitcoin mining&apos;s environmental impact often garners attention due
               to its visibility in the digital asset space. However, the scale
               of gold mining operations globally is vast, often involving
               massive open-pit mines and extensive chemical processing. While
-              Bitcoin mining's energy consumption is notable, the widespread and
+              Bitcoin mining&apos;s energy consumption is notable, the widespread and
               visible effects of gold mining on landscapes and ecosystems cannot
               be underestimated compared to Bitcoin’s.
             </p>
@@ -511,8 +511,8 @@ function Article() {
               spanning centuries and leaving lasting scars on landscapes and
               communities. In comparison, Bitcoin mining is a relatively nascent
               industry, and its environmental challenges are still evolving.
-              While it's crucial to address the environmental impact of Bitcoin
-              mining, it's equally important to contextualize it within the
+              While it&apos;s crucial to address the environmental impact of Bitcoin
+              mining, it&apos;s equally important to contextualize it within the
               broader history and scale of resource extraction.
             </p>
             <h6 className="text-blackColor title text-[15px] mt-4 dark:text-white">
@@ -527,13 +527,13 @@ function Article() {
               address environmental concerns across both sectors. As technology
               advances, opportunities for reducing environmental impact will
               continue to emerge in both industries. While scrutiny of Bitcoin
-              mining's environmental impact is warranted, it should not be
+              mining&apos;s environmental impact is warranted, it should not be
               exaggerated beyond that of solid minerals such as gold. Both
               industries pose environmental challenges that require attention
               and action. By fostering equitable scrutiny and promoting
               sustainability across all resource extraction sectors, we can work
               towards a more balanced and responsible approach to managing our
-              planet's natural resources.
+              planet&apos;s natural resources.
             </p>
 
             {/* POST REACTION  */}
@@ -558,7 +558,7 @@ function Article() {
                     d="M0.83577 35C0.83577 16.1316 16.1316 0.83577 35 0.83577C53.8684 0.83577 69.1642 16.1316 69.1642 35C69.1642 53.8684 53.8684 69.1642 35 69.1642C16.1316 69.1642 0.83577 53.8684 0.83577 35Z"
                     fill="#D53025"
                     stroke="#333333"
-                    stroke-width="1.67153"
+                    strokeWidth="1.67153"
                   />
                   <path
                     d="M21.2914 41.8226L28.1912 41.74C29.3259 41.7234 30.0601 42.913 29.5262 43.9042C28.5583 45.7133 27.2902 48.4062 26.631 51.124C26.2973 52.4952 27.3235 53.8169 28.7502 53.8169H29.084C30.3438 53.8169 31.395 53.0652 31.7788 51.95C32.5881 49.5875 34.2818 46.7293 36.1006 44.7633L37.0434 43.7142C38.2615 42.3678 38.9207 40.6165 38.904 38.8075L38.7204 23.4676C38.6954 21.0968 36.7347 19.2052 34.3402 19.2299L30.227 19.2795L27.8575 19.3043L23.6441 19.3538C21.5166 19.3786 19.7228 20.9234 19.4141 23.005L17.2699 37.2462C16.9028 39.6831 18.8134 41.8556 21.2914 41.8226Z"
@@ -589,7 +589,7 @@ function Article() {
                     d="M69.1739 35C69.1739 53.8737 53.8737 69.1739 35 69.1739C16.1263 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1263 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 35Z"
                     fill="white"
                     stroke="#333333"
-                    stroke-width="1.65211"
+                    strokeWidth="1.65211"
                   />
                   <path
                     d="M43.2931 19.0909H42.4838C39.9057 19.0826 37.4278 20.0821 35.5839 21.8664C35.2585 22.1803 34.7412 22.1803 34.4158 21.8664C32.572 20.0821 30.094 19.0826 27.516 19.0909H26.7067C20.2239 19.1157 14.9844 24.3198 14.9844 30.7383C14.9844 35.2072 16.9284 39.4532 20.3241 42.3939L34.9999 55.1234L49.6757 42.3939C53.0714 39.4532 55.0154 35.199 55.0154 30.7383C55.0154 24.3115 49.7758 19.1074 43.2931 19.0909Z"
@@ -621,10 +621,10 @@ function Article() {
                   <path
                     d="M45.5626 47.0184C43.1681 43.0533 39.3302 40.4678 35.0001 40.4678C30.6699 40.4678 26.832 43.0533 24.4375 47.0184"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M30.1355 29.9367C30.1355 27.1281 28.2165 24.8564 25.847 24.8564C23.4775 24.8564 21.5586 27.1281 21.5586 29.9367C21.5586 32.7453 23.4775 35.0169 25.847 35.0169C28.2165 35.0169 30.1355 32.737 30.1355 29.9367Z"
@@ -633,10 +633,10 @@ function Article() {
                   <path
                     d="M20.7734 20.4446C20.7734 20.4446 23.9856 18.0325 28.0988 18.9164"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M39.8633 29.9357C39.8633 27.1271 41.7822 24.8555 44.1517 24.8555C46.5212 24.8555 48.4402 27.1271 48.4402 29.9357C48.4402 32.7443 46.5212 35.0159 44.1517 35.0159C41.7822 35.0159 39.8633 32.736 39.8633 29.9357Z"
@@ -645,10 +645,10 @@ function Article() {
                   <path
                     d="M49.2238 20.4446C49.2238 20.4446 46.0117 18.0325 41.8984 18.9164"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M22.7099 39.6255C21.8338 38.5103 20.7742 36.4121 20.7742 36.4121C20.7742 36.4121 19.7146 38.5103 18.8386 39.6255C17.1699 41.7402 18.6801 43.7392 20.7742 43.7392C22.8684 43.7392 24.3785 41.7402 22.7099 39.6255Z"
@@ -675,7 +675,7 @@ function Article() {
                     d="M69.1739 35C69.1739 53.8737 53.8737 69.1739 35 69.1739C16.1263 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1263 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 35Z"
                     fill="#FEDF06"
                     stroke="#333333"
-                    stroke-width="1.65211"
+                    strokeWidth="1.65211"
                   />
                   <path
                     d="M34.9984 54.8992C39.6984 54.8992 43.5085 50.2208 43.5085 44.4496C43.5085 38.6785 39.6984 34 34.9984 34C30.2984 34 26.4883 38.6785 26.4883 44.4496C26.4883 50.2208 30.2984 54.8992 34.9984 54.8992Z"
@@ -688,10 +688,10 @@ function Article() {
                   <path
                     d="M20.457 18.718C20.457 18.718 23.6692 16.3059 27.7824 17.1898"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M41.7236 29.6709C40.9727 27.3497 41.8988 24.9789 43.7928 24.3841C45.6867 23.7894 47.8226 25.1854 48.5735 27.5066C49.3243 29.8278 48.3982 32.1986 46.5043 32.7934C44.6104 33.3881 42.4745 31.9921 41.7236 29.6709Z"
@@ -700,10 +700,10 @@ function Article() {
                   <path
                     d="M49.5422 18.718C49.5422 18.718 46.33 16.3059 42.2168 17.1898"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="text-lightBlack text-[12px] dark:text-white">
@@ -731,10 +731,10 @@ function Article() {
                   <path
                     d="M25.0879 39.707H44.9198"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M19.9323 25.6143C19.7154 27.5555 20.6165 29.3398 22.2184 29.8437C23.9621 30.3971 25.9061 29.2406 26.7905 27.2333C24.5045 26.6881 22.2184 26.1595 19.9323 25.6143Z"
@@ -743,10 +743,10 @@ function Article() {
                   <path
                     d="M16.9121 25.6387L24.0539 27.2082L30.2447 28.5712"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M50.0672 25.6143C50.2841 27.5555 49.383 29.3398 47.7811 29.8437C46.0374 30.3971 44.0934 29.2406 43.209 27.2333C45.495 26.6881 47.7811 26.1595 50.0672 25.6143Z"
@@ -755,10 +755,10 @@ function Article() {
                   <path
                     d="M53.0968 25.6387L45.9549 27.2082L39.7559 28.5712"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <defs>
                     <linearGradient
@@ -769,8 +769,8 @@ function Article() {
                       y2="68.5246"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0.106" stop-color="#E74717" />
-                      <stop offset="0.9432" stop-color="#FEDF06" />
+                      <stop offset="0.106" stopColor="#E74717" />
+                      <stop offset="0.9432" stopColor="#FEDF06" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -794,7 +794,7 @@ function Article() {
                     d="M69.1739 35C69.1739 53.8737 53.8737 69.1739 35 69.1739C16.1262 69.1739 0.826056 53.8737 0.826056 35C0.826056 16.1262 16.1262 0.826056 35 0.826056C53.8737 0.826056 69.1739 16.1262 69.1739 35Z"
                     fill="#FEDF06"
                     stroke="#333333"
-                    stroke-width="1.65211"
+                    strokeWidth="1.65211"
                   />
                   <path
                     d="M53.7473 34.7031C56.2419 34.7031 58.0774 37.0326 57.4434 39.4199C55.0405 48.457 45.9046 55.1811 34.9916 55.1811C24.0786 55.1811 14.9428 48.457 12.5399 39.4199C11.9058 37.0326 13.7497 34.7031 16.236 34.7031H53.7473Z"
@@ -807,34 +807,34 @@ function Article() {
                   <path
                     d="M25.7398 26.0702L16.2285 22.543"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M25.7398 26.2021L16.2285 29.7294"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokWinejoin="round"
                   />
                   <path
                     d="M44.2617 26.0702L53.773 22.543"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M44.2617 26.2021L53.773 29.7294"
                     stroke="#3C3C3B"
-                    stroke-width="3.05393"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.05393"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="text-lightBlack text-[12px] dark:text-white">
@@ -861,8 +861,8 @@ function Article() {
                 }}
               >
                 {[...Array(comments)].map((_, index) => (
-                  <div className="w-full md:w-[45%]">
-                    <Comment key={index} />
+                  <div className="w-full md:w-[45%]  " key={index}>
+                    <Comment />
                   </div> // Render comments based on commentsToShow state
                 ))}
               </div>
@@ -915,7 +915,7 @@ function Article() {
             {/* <Image src={akion} /> */}
             <div className="hidden md:block px-5 py-3 border-2 border-[#DDDDDD] rounded-md">
               <div className="flex items-center gap-4">
-                <Image src={akion} />
+                <Image src={akion} alt="akion coin" />
                 <h1 className="title md:text-[18px] lg:text-[24px] xl:text-[32px] text-[#333333]">
                   Akoin
                 </h1>
@@ -994,13 +994,13 @@ function Article() {
                 </div>
               </div>
             </div>
-            <Image src={ad} className="mt-5 hidden md:block " />
+            <Image src={ad} alt="ad" className="mt-5 hidden md:block " />
             <h2 className="text-blackColor mt-8 font-[500] text-[20px] dark:text-white">
               Related Posts
             </h2>
             <div className="post-card mt-3">
               <div className="post-banner relative">
-                <Image className="w-full" src={post} />
+                <Image className="w-full" src={post} alt="post" />
                 <p className="absolute bg-[#14C885] rounded-[4px] top-2 left-2 text-white text-[10px] px-2 py-1">
                   Cryptocurrency
                 </p>
@@ -1016,7 +1016,7 @@ function Article() {
 
             <div className="post-card mt-3">
               <div className="post-banner relative">
-                <Image className="w-full" src={post} />
+                <Image className="w-full" src={post} alt="post" />
                 <p className="absolute bg-[#14C885] rounded-[4px] top-2 left-2 text-white text-[10px] px-2 py-1">
                   Cryptocurrency
                 </p>
@@ -1032,7 +1032,7 @@ function Article() {
 
             <div className="post-card mt-3">
               <div className="post-banner relative">
-                <Image className="w-full" src={post} />
+                <Image className="w-full" src={post} alt="post" />
                 <p className="absolute bg-[#14C885] rounded-[4px] top-2 left-2 text-white text-[10px] px-2 py-1">
                   Cryptocurrency
                 </p>

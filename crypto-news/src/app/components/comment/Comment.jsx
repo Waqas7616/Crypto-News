@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import c from "@/app/images/c.svg";
 
 function Comment() {
+  const [heartCount, setHeartCount] = useState(20);
+  const [likeCount, setLikeCount] = useState(1)
   return (
     <div className="mt-3">
       <div className="info flex items-center justify-between">
@@ -38,7 +40,7 @@ function Comment() {
         this is going{" "}
       </h6>
       <div className="iteraction-count flex items-center mt-3 gap-3">
-        <button className="like flex items-center gap-2 justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
+        <button onClick={() => setLikeCount(likeCount + 1)} className="like flex items-center gap-2 justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
           <svg
             width="14"
             height="15"
@@ -55,9 +57,9 @@ function Comment() {
               fill="#555555"
             />
           </svg>
-          1
+          {likeCount}
         </button>
-        <button className="like flex items-center gap-2  justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
+        <button onClick={() => setHeartCount(heartCount + 1)} className="like flex items-center gap-2  justify-between px-1 text-[10px] rounded-lg border-[1px] border-lightBlack dark:text-white">
           <svg
             width="12"
             height="11"
@@ -70,7 +72,7 @@ function Comment() {
               fill="#E04957"
             />
           </svg>
-          20
+          {heartCount}
         </button>
       </div>
       <div className="view-count flex items-center justify-between mt-3">
@@ -104,15 +106,15 @@ function Comment() {
             <path
               d="M9.00005 15.75C10.4722 15.7497 11.904 15.268 13.077 14.3785C14.2501 13.489 15.1002 12.2403 15.4978 10.8228C15.8953 9.40531 15.8186 7.89669 15.2792 6.52687C14.7398 5.15704 13.7673 4.00113 12.51 3.23527C11.2527 2.46941 9.77946 2.1356 8.31483 2.28472C6.8502 2.43384 5.47449 3.05771 4.39733 4.06125C3.32017 5.0648 2.60063 6.39298 2.34837 7.84341C2.09611 9.29384 2.32496 10.787 3.00005 12.0953L2.25005 15.75L5.9048 15C6.8318 15.4793 7.8848 15.75 9.00005 15.75Z"
               stroke="#555555"
-              stroke-width="1.125"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.125"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M5.625 9H5.6325V9.0075H5.625V9ZM9 9H9.0075V9.0075H9V9ZM12.375 9H12.3825V9.0075H12.375V9Z"
               stroke="#555555"
-              stroke-width="1.6875"
-              stroke-linejoin="round"
+              strokeWidth="1.6875"
+              strokeLinejoin="round"
             />
           </svg>
           3
